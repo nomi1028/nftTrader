@@ -36,8 +36,7 @@ const WalletDetailsCard = () => {
 
       .then((res) => {
         const persons = res.data;
-        if (persons) {
-          console.log(persons);
+        if (persons?.actorData) {
           setTableData(persons);
           setLoading(false);
         }
@@ -114,21 +113,24 @@ const WalletDetailsCard = () => {
                     </Col>
                   </Row>
                 </Col>
-                <Col
-                  lg={4}
-                  md={4}
-                  sm={12}
-                  xs={12}
-                  className="d-flex justify-content-end rm-flex-end"
-                >
-                  <Row className="trade-check-deal justify-content-end">
-                    <Col>
-                      <Button onClick={handler}>
-                        Check Deal<Image src="eye.svg" height={"20px"}></Image>
-                      </Button>
-                    </Col>
-                  </Row>
-                </Col>
+                {tableData ? (
+                  <Col
+                    lg={4}
+                    md={4}
+                    sm={12}
+                    xs={12}
+                    className="d-flex justify-content-end rm-flex-end"
+                  >
+                    <Row className="trade-check-deal justify-content-end">
+                      <Col>
+                        <Button onClick={handler}>
+                          Check Deal
+                          <Image src="eye.svg" height={"20px"}></Image>
+                        </Button>
+                      </Col>
+                    </Row>
+                  </Col>
+                ) : null}
               </Row>
             </div>
           </Container>
