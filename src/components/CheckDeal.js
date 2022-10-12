@@ -13,7 +13,6 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import React from "react";
 
 const CheckDeal = ({ tableData }) => {
-  console.log(tableData, "data");
   return (
     <>
       <Typography
@@ -227,11 +226,13 @@ const CheckDeal = ({ tableData }) => {
                   />
                 </Typography>
 
-                <CardContent>
-                  <Typography gutterBottom variant="p" component="div">
-                    {tableData?.actorData?.Tokenname}
-                  </Typography>
-                </CardContent>
+                {tableData ? (
+                  <CardContent>
+                    <Typography gutterBottom variant="p" component="div">
+                      {tableData?.actorData?.Tokenname}
+                    </Typography>
+                  </CardContent>
+                ) : null}
                 {/* <CardActions>
                   <Avatar
                     sx={{ width: "25px", height: "25px" }}
@@ -286,7 +287,7 @@ const CheckDeal = ({ tableData }) => {
                     component="img"
                     alt="green iguana"
                     height="140"
-                    image={tableData?.actorData.makerImageURL}
+                    image={tableData?.actorData?.makerImageURL}
                   />
                 </Typography>
 
