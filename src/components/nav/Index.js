@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "../wallet/connector";
+import { Typography } from "@mui/material";
 
 const Index = () => {
   const { active, account, library, connector, activate, deactivate } =
@@ -39,6 +40,9 @@ const Index = () => {
       console.log(ex);
     }
   }
+  useEffect(() => {
+    connect();
+  }, []);
 
   async function disconnect() {
     try {
@@ -112,7 +116,7 @@ const Index = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              {address ? (
+              {account ? (
                 <>
                   <div
                     className="rounded-pill address_bar"
@@ -170,7 +174,7 @@ const Index = () => {
                     </div>
                     <div className="d-flex flex-column">
                       <div className="username">Username is not set</div>
-                      <div className="address">{address}</div>
+                      <div className="address"> {account?.slice(0, 19)}</div>
                     </div>
                   </div>
                   &nbsp; &nbsp;
@@ -189,15 +193,31 @@ const Index = () => {
                   >
                     Buy Crypto
                   </Button>
-
-                  <Button
-                    className="text-primary bg-white rounded-pill  nav-btn"
-                    variant="outline-primary"
-                    // onClick={handleShow}
-                    onClick={connect}
-                  >
-                    Connect Wallet
-                  </Button>
+                  {account && (
+                    <Typography
+                      sx={{
+                        padding: "5px",
+                        border: "2px solid white",
+                        // backgroundColor: "white",
+                        borderRadius: "25px",
+                        color: "white",
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "10px" }}>
+                        {account?.slice(0, 19)}
+                      </Typography>
+                    </Typography>
+                  )}
+                  {account ? null : (
+                    <Button
+                      className="text-primary bg-white rounded-pill  nav-btn"
+                      variant="outline-primary"
+                      // onClick={handleShow}
+                      onClick={connect}
+                    >
+                      Connect Wallet
+                    </Button>
+                  )}
                 </>
               )}
             </Nav>
@@ -207,11 +227,12 @@ const Index = () => {
       <Modal
         show={walletInfo}
         onHide={() => setWalletInfo(false)}
-        contentClassName="modalPosition"
+        // contentClassName="modalPosition"
+        sx={{ position: "relative", right: "0", top: "20" }}
       >
         <Modal.Header className="border-bottom text-right display-4">
           <Modal.Title>Connected Wallet address</Modal.Title>
-          <Modal.Title>{address}</Modal.Title>
+          <Modal.Title>{account?.slice(0, 19)}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <h6>Balance</h6>
@@ -225,7 +246,9 @@ const Index = () => {
             </div>
           </div>
           <button className="buyCrypto ">Buy Crypto</button>
-          <button className="disconnect">Disconnect</button>
+          <button onClick={disconnect} className="disconnect">
+            Disconnect
+          </button>
         </Modal.Body>
       </Modal>
       <Modal show={show} onHide={handleClose} className="align-items-center">

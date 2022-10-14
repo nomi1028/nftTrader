@@ -1,8 +1,12 @@
+import { useWeb3React } from "@web3-react/core";
 import React from "react";
 import { Container, Image } from "react-bootstrap";
 // import { Icon } from '@iconify/react';
 
 const WalletDetails = ({ wallet }) => {
+  const { active, account, library, connector, activate, deactivate } =
+    useWeb3React();
+  console.log(account);
   return (
     <div>
       <Container fluid className="wallet-details-box">
@@ -29,10 +33,10 @@ const WalletDetails = ({ wallet }) => {
         <Image src="/sad_logo.svg"></Image>
         <div className="text-center">
           <p style={{ fontWeight: "600", fontSize: "1.875rem" }}>
-            {wallet ? "No Result" : "Connect Your Wallet First"}
+            {account ? "No Result" : "Connect Your Wallet First"}
           </p>
           <p style={{ fontWeight: "300", fontSize: "1rem" }}>
-            {wallet
+            {account
               ? "Please Try Again"
               : "Please, connect your wallet if you want to browse this page"}
           </p>

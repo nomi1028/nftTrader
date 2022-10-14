@@ -10,9 +10,17 @@ import {
   Typography,
 } from "@mui/material";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
-import React from "react";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import React, { useState } from "react";
+import moment from "moment";
+import Modal from "react-bootstrap/Modal";
 
-const CheckDeal = ({ tableData }) => {
+const CheckDeal = ({ tableData, unixTime, Time }) => {
+  const [modalState, setModalState] = useState(false);
+  const modalHandler = () => {
+    setModalState(true);
+  };
+
   return (
     <>
       <Typography
@@ -22,6 +30,8 @@ const CheckDeal = ({ tableData }) => {
           color: "white",
           marginTop: "20px",
           marginBottom: "20px",
+          // position: "absolute",
+          // top: "0px",
         }}
       >
         <Typography
@@ -31,7 +41,16 @@ const CheckDeal = ({ tableData }) => {
             alignItems: "center",
           }}
         >
-          <Typography>Do You Accept This Trade ?</Typography>
+          <Typography sx={{ display: "flex" }}>
+            <Typography
+              sx={{ paddingX: "20px" }}
+              onClick={() => modalHandler()}
+            >
+              Close
+            </Typography>
+            <Typography>Check Your Assets</Typography>
+          </Typography>
+
           <Typography
             sx={{
               background: "white",
@@ -41,10 +60,28 @@ const CheckDeal = ({ tableData }) => {
             }}
           >
             {" "}
-            <Typography>Confirm</Typography>
+            <Typography>Cancel Deal</Typography>
           </Typography>
         </Typography>
       </Typography>
+      <Modal
+        show={false}
+        // onHide={() => setWalletInfo(false)}
+        // contentClassName="modalPosition"
+        // sx={{ position: "relative", right: "0", top: "20" }}
+      >
+        <Modal.Header className="">
+          <Modal.Title>Go Back To Trade Hub?</Modal.Title>
+          <Modal.Title></Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Typography sx={{ display: "flex" }}>
+            {" "}
+            <Button sx={{ padding: "20px" }}>Dismiss</Button>
+            <Button className="disconnect">Go back to trade hub</Button>
+          </Typography>
+        </Modal.Body>
+      </Modal>
 
       <Grid
         container
@@ -73,7 +110,7 @@ const CheckDeal = ({ tableData }) => {
                 <Avatar
                   //   sx={{ width: "25px", height: "25px" }}
                   alt="Remy Sharp"
-                  src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                  src="/favicon-32x32.png"
                 />
               </Typography>
               <Typography>
@@ -146,13 +183,33 @@ const CheckDeal = ({ tableData }) => {
                   margin: "auto",
                 }}
               >
-                <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
-                  This Trade has Expired
+                <Typography sx={{ textAlign: "center", color: "blue" }}>
+                  {unixTime ? (
+                    <>
+                      {unixTime * 1000 > Date.now()
+                        ? " This Trade will expire "
+                        : "Expired"}
+                      <Typography sx={{ fontWeight: "bold" }}>
+                        {" "}
+                        {moment.unix(unixTime).fromNow()}
+                      </Typography>
+                    </>
+                  ) : (
+                    "Not Started yet"
+                  )}
                 </Typography>
               </Typography>
             </Typography>
             <Typography sx={{ textAlign: "center" }}>
-              Expired On: September 13, 2022
+              {unixTime ? (
+                <>
+                  {unixTime * 1000 > Date.now() ? " Expire Date" : "Expired on"}
+                  {/* :{Time} */}:{moment(Time).format("MMMM DD,YYYY")}
+                  {/* :{Time} */}
+                </>
+              ) : (
+                "Not Started yet"
+              )}
             </Typography>
           </Grid>
           <Grid item md={3} sm={3} lg={3}>
@@ -165,14 +222,19 @@ const CheckDeal = ({ tableData }) => {
               }}
             >
               <Typography>
-                <Typography>Your Wallet</Typography>
-                <Typography>1111111111111111</Typography>
+                <Typography>
+                  {" "}
+                  {"<"}username not set{">"}
+                </Typography>
+                <Typography sx={{ fontSize: "10px" }}>
+                  {tableData?.actorData?.Coinname}
+                </Typography>
               </Typography>
               <Typography>
                 <Avatar
                   //   sx={{ width: "25px", height: "25px" }}
                   alt="Remy Sharp"
-                  src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                  src="/favicon-32x32.png"
                 />
               </Typography>
             </Typography>
@@ -211,7 +273,7 @@ const CheckDeal = ({ tableData }) => {
                   backgroundColor: "white",
                 }}
               >
-                1.0 ETH
+                1 NFT
               </Typography>
             </Typography>
             <Typography sx={{ padding: "40px" }}>
@@ -233,14 +295,17 @@ const CheckDeal = ({ tableData }) => {
                     </Typography>
                   </CardContent>
                 ) : null}
-                {/* <CardActions>
+                <CardActions>
                   <Avatar
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
-                    src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                    // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                    src={tableData?.actorData?.NftIcon}
                   />
-                  <Button size="small"></Button>
-                </CardActions> */}
+                  <Button size="small">
+                    {tableData?.actorData?.Tokenname}
+                  </Button>
+                </CardActions>
               </Card>
             </Typography>
           </Grid>
@@ -276,7 +341,7 @@ const CheckDeal = ({ tableData }) => {
                   backgroundColor: "white",
                 }}
               >
-                1 NFT
+                1.0 ETH
               </Typography>
             </Typography>
             <Typography sx={{ padding: "40px" }}>
@@ -300,9 +365,10 @@ const CheckDeal = ({ tableData }) => {
                   <Avatar
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
-                    src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                    // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
+                    src={tableData?.actorData?.ClientIcon}
                   />
-                  <Button size="small">Derpy Birds</Button>
+                  <Button size="small">{tableData?.actorData?.nftnname}</Button>
                 </CardActions>
               </Card>
             </Typography>

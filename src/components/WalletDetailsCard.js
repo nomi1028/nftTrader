@@ -4,8 +4,9 @@ import { useWeb3React } from "@web3-react/core";
 import axios from "axios";
 import CheckDeal from "./CheckDeal";
 import CreateTrade from "./CreateTrade";
+import moment from "moment";
 
-const WalletDetailsCard = () => {
+const WalletDetailsCard = ({ setShown }) => {
   const { active, account, library, connector, activate, deactivate } =
     useWeb3React();
 
@@ -13,8 +14,11 @@ const WalletDetailsCard = () => {
   const [loading, setLoading] = useState(true);
   const [tableData, setTableData] = useState();
   const [value, setValue] = useState(true);
+  const [unixTime, setUnixTime] = useState();
+  const [Time, setTime] = useState();
   const handler = () => {
     setValue(false);
+    setShown(false);
   };
 
   //   const [timeLeft, settimeLeft] = useState(false);
@@ -28,6 +32,7 @@ const WalletDetailsCard = () => {
 
   //   let time = new Date();
   const getdata = () => {
+    console.log("gggggggggggggggg");
     axios
       // .get(`http://localhost:5000/student/stud/${account.toString()}`)
       .get(
@@ -35,6 +40,7 @@ const WalletDetailsCard = () => {
       )
 
       .then((res) => {
+        console.log(res.data, "ggggggaaaaaaaaaaaaaaaaggggggggg");
         const persons = res.data;
         if (persons?.actorData) {
           setTableData(persons);
@@ -47,6 +53,24 @@ const WalletDetailsCard = () => {
       getdata();
     }
   }, [account]);
+  useEffect(() => {
+    if (tableData) {
+      console.log("qwer");
+      const dateStr = tableData?.actorData?.time;
+      setTime(dateStr);
+      console.log(moment(dateStr).unix(), "dateStr");
+      setUnixTime(moment(dateStr).unix());
+      // const [dateComponents, timeComponents] = dateStr.split(" ");
+      // console.log(dateComponents, "dateComponents"); // 👉️ "09/24/2022"
+      // console.log(timeComponents); // 👉️ "09:25:32"
+      // const [month, day, year] = dateComponents.split("/");
+      // const [hours, minutes, seconds] = timeComponents.split(":");
+      // const date = new Date(+year, month - 1, +day, +hours, +minutes, +seconds);
+      // console.log(date); // 👉️ Sat Sep 24 2022 09:25:32
+      // const unixTimestamp = Math.floor(date.getTime() / 1000);
+      // console.log(unixTimestamp, "unixTimestamp");
+    }
+  }, [tableData]);
 
   return loading ? (
     <h1></h1>
@@ -69,25 +93,43 @@ const WalletDetailsCard = () => {
                 <Col lg={2} md={2} sm={12} xs={12}>
                   <Row className="align-items-center justify-content-evenly trade-swaps">
                     <Col sm={3} xs={3}>
-                      <Image src="/profile.png"></Image>
+                      <Image src={tableData?.actorData?.takerImageURL}></Image>
                     </Col>
                     <Col sm={1} xs={1}>
-                      <Image
-                        src="/profile.png"
-                        style={{ width: "20px" }}
-                      ></Image>
+                      {tableData?.actorData?.NftIcontrade ? (
+                        <Image
+                          // src="/profile.png"
+                          src={tableData?.actorData?.NftIcontrade}
+                          style={{ width: "20px" }}
+                        ></Image>
+                      ) : (
+                        <Image
+                          // src="/profile.png"
+                          src="/Group 60173.png"
+                          style={{ width: "20px" }}
+                        ></Image>
+                      )}
                     </Col>
                     <Col sm={3} xs={3}>
                       <Image src="/arrows.svg"></Image>
                     </Col>
+
                     <Col sm={1} xs={1}>
-                      <Image
-                        src="/profile.png"
-                        style={{ width: "20px" }}
-                      ></Image>
+                      {tableData?.actorData?.ClientIcontrade ? (
+                        <Image
+                          src={tableData?.actorData?.ClientIcon}
+                          style={{ width: "20px" }}
+                        ></Image>
+                      ) : (
+                        <Image
+                          // src="/profile.png"
+                          src="/Group 60174.png"
+                          style={{ width: "20px" }}
+                        ></Image>
+                      )}
                     </Col>
                     <Col sm={3} xs={3}>
-                      <Image src="/ETH.png"></Image>
+                      <Image src={tableData?.actorData?.makerImageURL}></Image>
                     </Col>
                   </Row>
                 </Col>
@@ -99,8 +141,9 @@ const WalletDetailsCard = () => {
                     </Col>
                     <Col sm={1} xs={1}>
                       <Image
-                        src="/profile.png"
-                        style={{ width: "30px" }}
+                        // src="/profile.png"
+                        src={tableData?.actorData?.NftIcontrade}
+                        style={{ width: "25px" }}
                       ></Image>
                     </Col>
                     <Col sm={4} xs={4}>
@@ -109,7 +152,18 @@ const WalletDetailsCard = () => {
                       </p>
                     </Col>
                     <Col sm={4} xs={4}>
-                      {/* <Button>{timeLeft ? "New Request" : "16h 4m left"}</Button> */}
+                      <Button>
+                        {unixTime ? (
+                          <>
+                            {unixTime * 1000 > Date.now()
+                              ? " Expire will be "
+                              : "Expired"}
+                            {moment.unix(unixTime).fromNow()}
+                          </>
+                        ) : (
+                          "Not Started yet"
+                        )}
+                      </Button>
                     </Col>
                   </Row>
                 </Col>
@@ -136,7 +190,11 @@ const WalletDetailsCard = () => {
           </Container>
         </>
       ) : (
-        <>{tableData && <CheckDeal tableData={tableData} />}</>
+        <>
+          {tableData && (
+            <CheckDeal tableData={tableData} unixTime={unixTime} Time={Time} />
+          )}
+        </>
       )}
     </>
   );

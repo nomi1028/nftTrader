@@ -6,13 +6,13 @@ import WalletDetails from "../components/WalletDetails";
 import WalletDetailsCard from "../components/WalletDetailsCard";
 
 const Mytrades = ({ wallet }) => {
-  console.log(wallet, "wallet");
+  const [shown, setShown] = useState(true);
+  console.log(shown, "wallet");
 
   return (
     <div>
-      <WalletDetailsCard />
-
-      <WalletDetails wallet={wallet} />
+      <WalletDetailsCard setShown={setShown} />
+      {shown ? <WalletDetails wallet={wallet} /> : null}
     </div>
   );
 };
