@@ -6,6 +6,11 @@ import bg from "../../assets/images/bg.svg";
 import img1 from "../../assets/images/1.png";
 import img2 from "../../assets/images/2.png";
 import img3 from "../../assets/images/3.png";
+import img4 from "../../assets/images/4.png";
+import img5 from "../../assets/images/5.png";
+import img6 from "../../assets/images/6.png";
+import img7 from "../../assets/images/7.png";
+
 import gif1 from "../../assets/images/1.gif";
 import gif2 from "../../assets/images/2.gif";
 import logo from "../../assets/images/logo2.svg";
@@ -14,7 +19,13 @@ import img9 from "../../assets/images/9.png";
 import mascotte from "../../assets/images/mascotte.svg";
 import verified from "../../assets/images/verified.svg";
 import Guide from "../../assets/guide.svg";
-import Slider from "../carousel/carousel";
+import Slider1 from "../carousel/carousel1";
+import Slider2 from "../carousel/carousel2";
+import Slider3 from "../carousel/carousel3";
+import Slider4 from "../carousel/carousel4";
+import Slider5 from "../carousel/carousel5";
+import Slider6 from "../carousel/carousel6";
+import Slider7 from "../carousel/carousel7";
 import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
 import SliderBackground from "../../assets/sliderBackgroung.svg";
@@ -57,25 +68,61 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="slider1">
-          {" "}
-          <Slider />
+        <div className="slider1 ">
+        <img
+          className="d-block w-100 rounded-circle"
+          src={img1}
+          alt="Second slide"
+        />
         </div>
-        <div className="slider2">
-          {" "}
-          <Slider />
+        <div className="slider2 ">    
+        <img
+          className="d-block w-100 rounded-circle"
+          src={gif1}
+          alt="Second slide"
+        />
         </div>
         <div className="slider3">
-          {" "}
-          <Slider />
+        <img
+          className="d-block w-100 rounded-circle"
+          src={img3}
+          alt="Second slide"
+        />
         </div>
-        <div className="slider4">
-          {" "}
-          <Slider />
+        <div className="slider4 ">    
+        <img
+          className="d-block w-100 rounded-circle"
+          src={gif1}
+          alt="Second slide"
+        />
         </div>
+        {/* <div className="slider4">
+        <img
+          className="d-block w-100 rounded-circle"
+          src={gif1}
+          alt="Second slide"
+        />
+        </div> */}
         <div className="slider5">
-          {" "}
-          <Slider />
+        <img
+          className="d-block w-100 rounded-circle"
+          src={img5}
+          alt="Second slide"
+        />
+        </div>
+        <div className="slider6">
+        <img
+          className="d-block w-100 rounded-circle"
+          src={img6}
+          alt="Second slide"
+        />
+        </div>
+        <div className="slider7">
+        <img
+          className="d-block w-100 rounded-circle"
+          src={img7}
+          alt="Second slide"
+        />
         </div>
       </section>
       {/* -------------------------------- */}
@@ -84,7 +131,7 @@ const Home = () => {
           Trade NFTs & Crypto Like a Boss
         </h2>
 
-        <Row className="mt-4 justify-content-center align-items-center">
+        <Row className="mt-n1 justify-content-center align-items-center">
           <Col lg={4} md={3} sm={3} xs={3} className="text-center">
             <div className="home_section2_gif">
               <img
@@ -122,12 +169,13 @@ const Home = () => {
         </Row>
         <p
           className="text-center mt-5 mt-md-0"
-          style={{ marginTop: "-10px", fontSize: "2vw" }}
+          style={{ marginTop: "-20px", fontSize: "1.2vw" }}
         >
           Our protocol is totally on-chain, data is totally accessible.
         </p>
       </section>
       {/* ---------------------------- */}
+    
       <section className="home_section3">
         <Row className="justify-content-center m-0">
           <Col lg={5}>
@@ -170,7 +218,7 @@ const Home = () => {
           className="d-flex justify-content-center align-items-center gap-2"
           style={{ marginTop: "90px" }}
         >
-          <a href="">Check our volume data on Dune Analytics</a>
+          <a className="text-decoration-none link-primary" href="">Check our volume data on Dune Analytics</a>
           <img width="25px" src={img8} alt="" />
         </div>
       </section>
@@ -178,12 +226,14 @@ const Home = () => {
       {/* marquee tag section  */}
       <section className="mt-5 mb-1">
         <Container fluid className="home_container">
-          <div className="news position-relative">
+          <div className="news position-relative "  style={{
+                
+                background: "#00008B"}}>
             <div
-              className="title share_trades text-center text-white position-absolute"
+              className="title share_trades text-center text-white position-absolute "
               style={{
-                width: "500px",
-                background: "#0c0a41",
+                width: "600px",
+                background: "#00008B",
                 padding: "40px 50px 40px 50px",
                 zIndex: "9",
                 top: "50%",
@@ -191,10 +241,13 @@ const Home = () => {
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <h5>Share Trades With Your Community</h5>
+              <h5 className="font-bold" style={{ fontWeight:"bold"}} >Share Trades With Your Community</h5>
               <p>Access & configure a trading bot for your own Discord.</p>
+              <h6 style={{ fontWeight:"bold"}}>Read More</h6>
             </div>
             <marquee className="news-content">
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
               <img src={img9} alt="" />
               <img src={img9} alt="" />
               <img src={img9} alt="" />
@@ -381,7 +434,7 @@ const Home = () => {
           <div className="yellow-section">
             <div className="yellow-cl1">
               <img src={Logo_rotating} className="logoRotate" />
-              <h3 className="cl1-heading">
+              <h3 className="cl1-heading"  style={{ fontWeight:"bold"}}>
                 Build your application with our open technology
               </h3>
             </div>
@@ -399,7 +452,7 @@ const Home = () => {
 
       {/* Know more Section */}
       <section className="knowMore">
-        <h1 className="knowMore-heading">Want To Know More?</h1>
+        <h3 style={{ color: '#00008B',fontWeight:"bold", }} className=" text-center mt-5  ">Want To Know More?</h3>
         <div className="container">
           <div className="card-warpper">
             <div className="card1">
@@ -413,16 +466,16 @@ const Home = () => {
             <div className="card1">
               <img src={Guide} alt="guide" className="crd1-icon" />
               <div>
-                <h1 className="card1-heaing">How To Trade</h1>
-                <p className="card1-para">Learn How To Create Your Deals</p>
+                <h1 className="card1-heaing">Join Us On Discount</h1>
+                <p className="card1-para">Come Join The Best NFt Community</p>
               </div>
-              <button className="card1-button rounded-pill">Read More</button>
+              <button className="card1-button rounded-pill">Join US</button>
             </div>
             <div className="card1">
               <img src={Guide} alt="guide" className="crd1-icon" />
               <div>
-                <h1 className="card1-heaing">How To Trade</h1>
-                <p className="card1-para">Learn How To Create Your Deals</p>
+                <h1 className="card1-heaing">FAQs</h1>
+                <p className="card1-para">Find Answer To Your Questions</p>
               </div>
               <button className="card1-button rounded-pill">Read More</button>
             </div>
