@@ -17,6 +17,7 @@ import axios from "axios";
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "../wallet/connector";
 import { Typography } from "@mui/material";
+import { color } from "@mui/system";
 
 const Index = () => {
   const { active, account, library, connector, activate, deactivate } =
@@ -76,22 +77,22 @@ const Index = () => {
 
   return (
     <Style>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="primary"
-        variant="dark"
-        fixed="top"
-      >
+      <Navbar collapseOnSelect expand="lg" bg="blue" variant="dark" fixed="top">
         <Container>
+
           <Navbar.Brand href="/">
             {" "}
             <img width="190px" src={logo} alt="" />
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto nav_class">
-              <Nav.Link as={Link} to="/">
+
+            <Nav className="me-auto nav_class d-flex w-75 justify-content-center"
+            style={{fontWeight:"bold" }}
+            >
+              
+              <Nav.Link as={Link} to="/" >
                 Home
               </Nav.Link>
               <NavDropdown title="Trading center" id="collasible-nav-dropdown">
@@ -115,6 +116,7 @@ const Index = () => {
                 <NavDropdown.Item href="#action/3.3">FAQ</NavDropdown.Item>
               </NavDropdown>
             </Nav>
+
             <Nav>
               {account ? (
                 <>
@@ -188,8 +190,9 @@ const Index = () => {
               ) : (
                 <>
                   <Button
-                    className="text-primary bg-white rounded-pill  nav-btn "
-                    variant="outline-primary"
+                    className="bg-white rounded-pill  nav-btn  "
+                    
+                    style={{color:"#0000FF",padding:"12px"}}
                   >
                     Buy Crypto
                   </Button>
@@ -210,8 +213,8 @@ const Index = () => {
                   )}
                   {account ? null : (
                     <Button
-                      className="text-primary bg-white rounded-pill  nav-btn"
-                      variant="outline-primary"
+                      className=" bg-white rounded-pill  nav-btn  "
+                     style={{padding:"12px",marginLeft:"2px" ,color:"#0000FF"}}
                       // onClick={handleShow}
                       onClick={connect}
                     >
@@ -221,6 +224,7 @@ const Index = () => {
                 </>
               )}
             </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

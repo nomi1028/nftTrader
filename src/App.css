@@ -4,21 +4,20 @@
 .news {
   background: #0c0a41;
   padding: 30px 0 30px 0;
-  
 }
-.row{
+.row {
   --bs-gutter-x: 0rem !important;
 }
-.modal{
-  --bs-modal-bg:blue !important;
-  color:white;
+.modal {
+  --bs-modal-bg: blue !important;
+  color: white;
 }
-.modal-content{
+.modal-content {
   border-radius: 20px !important;
   padding: 20px !important;
   align-items: center;
 }
-.metamask-btn{
+.metamask-btn {
   background: white;
   border: none;
   width: 90%;
@@ -30,68 +29,68 @@
   align-items: center;
   font-weight: 600;
 }
-.metamask-btn-logo{
+.metamask-btn-logo {
   width: 10%;
   height: 10%;
 }
-.metamask-btn-logo img{
+.metamask-btn-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 .modal-header {
   border-bottom: none !important;
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal-title {
   order: 2;
   margin-top: 20px !important;
 }
-.btn-close{
+.btn-close {
   padding: 0 !important;
   margin: 0 !important;
   color: white !important;
   /* background: url('./assets/closeBtn.svg') !important; */
- filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg) brightness(102%) contrast(101%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg)
+    brightness(102%) contrast(101%);
 }
-.modal-body{
-display: flex !important;
-gap: 10px;
-flex-direction: column;
-place-items: center;
+.modal-body {
+  display: flex !important;
+  gap: 10px;
+  flex-direction: column;
+  place-items: center;
+
 }
 .dropdown {
   position: static !important;
 }
 /* Nav bar Style Tabash */
 .dropdown-menu {
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   margin-top: 0px !important;
   width: 100% !important;
   text-align: center !important;
   min-height: 80px;
   color: #1636b8 !important;
 }
-.nav-link{
+.nav-link {
   color: #fff !important;
 }
-.dropdown-menu.show{
+.dropdown-menu.show {
   display: inline-flex !important;
   color: #1636b8 !important;
 }
 .dropdown:hover .dropdown-menu {
   display: inline-flex;
-  margin-top: 0; 
+  margin-top: 0;
   color: #1636b8 !important;
 }
 /* Nav bar Style Tabash end */
 .news marquee {
   margin-top: 12px;
 }
-
- 
 
 /* =========== */
 
@@ -103,141 +102,192 @@ place-items: center;
 .home_banner {
   min-height: 120vh;
   width: 100% !important;
-  background-color: #332eed;
+  background-color: blue;
   position: relative;
-z-index: 1;
-overflow: hidden;
+  z-index: 1;
+  overflow: hidden;
 }
-.home_banner::after{
+.home_banner::after {
   content: "";
   width: 90%;
   height: 150%;
   border-radius: 50%;
   z-index: -1;
-  position:absolute;
-  top: 10%;
+  position: absolute;
+  top: 0%;
   left: 5%;
   background: #2001c9;
   overflow: hidden;
 }
-.header-heading{
+.header-heading {
   font-size: 3vw;
   font-weight: 600;
-
 }
 .home_container {
   --bs-gutter-x: unset !important;
   width: 100%;
   position: relative;
 }
-.slider1{
+.slider1 {
   position: absolute;
-  top:15%;
-  left: 4%;
-  width: 10%;
-  height: 10%;
+  top: 10%;
+  left: 5%;
+  width: 9%;
+  height: 9%;
 }
-.slider2{
+.slider2 {
   position: absolute;
-  top:60%;
-  left: 10%;
-  width: 10%;
-  height: 10%;
+  top: 5%;
+  right: 8%;
+  width: 20%;
+  height: 20%;
 }
-.slider3{
+.slider3 {
   position: absolute;
-  top:15%;
-  right: 5%;
-  width: 10%;
-  height: 10%;
+  top: 7%;
+  left: 35%;
+  width: 12%;
+  height: 12%;
 }
-.slider4{
+
+.slider4 {
   position: absolute;
-  top:60%;
-  right: 15%;
-  width: 10%;
-  height: 10%;
+  top: 40%;
+  left: -5%;
+  width: 20%;
+  height: 20%;
 }
-.slider5{
+.slider5 {
   position: absolute;
-  top:10%;
-  right: 50%;
-  width: 10%;
-  height: 10%;
+  bottom: 10%;
+  left: 3%;
+  width: 9%;
+  height: 9%;
 }
- .center_text {
+.slider6 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 15%;
+  height: 15%;
+}
+.slider7 {
+  position: absolute;
+  bottom: 15%;
+  right: -2%;
+  width: 15%;
+  height: 15%;
+}
+.center_text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-family: MuseoModerno !important;
-} 
+}
 
 .carousel_1 {
-  width: 170px;
-  height: 170px;
+  width: 100px;
+  height: 100px;
   /* position: absolute;
   transform: translateX(350px); */
   margin: 0 auto;
 }
 .carousel_2 {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   /* position: absolute;
   transform: translate(-140px, 50px); */
+}
+.carousel_3 {
+  width: 150px;
+  height: 150px;
+  /* position: absolute;
+  transform: translateX(350px); */
+  margin: 0 auto;
+}
+.carousel_4 {
+  width: 250px;
+  height: 250px;
+  /* position: absolute;
+  transform: translateX(350px); */
+  margin: 0 auto;
+}
+.carousel_5 {
+  width: 150px;
+  height: 150px;
+  /* position: absolute;
+  transform: translateX(350px); */
+}
+.carousel_6 {
+  width: 200px;
+  height: 200px;
+  /* position: absolute;
+  transform: translateX(350px); */
+  margin: 0 auto;
+}
+.carousel_7 {
+  width: 220px;
+  height: 220px;
+  /* position: absolute;
+  transform: translateX(350px); */
+  margin: 0 auto;
 }
 .home_section2 {
   min-height: 100vh;
   z-index: 99;
 }
-.home_section2_gif{
+.home_section2_gif {
   animation: section2 3s linear infinite;
   animation-delay: 1s;
 }
-.home_section2_gif1{
+.home_section2_gif1 {
   animation: section2 3s linear infinite;
   animation-delay: 0s;
 }
-.yellow-section{
+.yellow-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
- 
 }
-.yellow-cl1{
+.yellow-cl1 {
   display: flex;
   gap: 40px;
   place-items: center;
 }
-.logoRotate{
+.logoRotate {
   width: 30%;
   height: 30%;
 }
-.cl1-heading{
+knowMore-heading
+yellow-cl1
+.cl1-heading {
   color: blue;
   font-size: 1.2rem;
+  
 }
-.yellow-cl2{
+.yellow-cl2 {
   display: flex;
   gap: 10px;
   place-items: center;
 }
-.cl2-para{
+.cl2-para {
   color: black;
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
-.cl2-button{
+.cl2-button {
   background: blue;
   color: white;
   padding: 5px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   width: 70%;
   height: 30%;
   border: none;
 }
 @keyframes section2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -245,14 +295,15 @@ overflow: hidden;
   }
 }
 .home_section2_heading {
-  color: #3e39e6;
-  font-size: 3vw !important;
+  color: blue;
+  font-size: 2.8vw !important;
   font-weight: 600 !important;
-  max-width: 416px;
+  max-width: 370px;
   margin: auto;
+  margin-bottom: -20px;
 }
 
-.home_section4{
+.home_section4 {
   /* background-image: url('./assets/images/bg2.svg');
    min-height: 70vh; 
   padding-top: 170px;
@@ -260,11 +311,11 @@ overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
-.mascotte_div{
-   background-image: url('./assets/images/mascotte.svg');
+.mascotte_div {
+  background-image: url("./assets/images/mascotte.svg");
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -273,14 +324,13 @@ height: 100vh;
   margin-left: 160px !important;
 }
 
-.home_section5{
+.home_section5 {
   /* background: linear-gradient(#173ee1); */
   background-image: linear-gradient(#1636b8, #173ee1, #193abb);
   min-height: 100vh;
 }
 
 /* -------- collection comp style ----------- */
-
 
 .collection_img_div {
   background-image: url("./assets/images/4.png");
@@ -290,16 +340,8 @@ height: 100vh;
   height: 60px;
 }
 
-
-
-
-
-
-
-
-
 /* ------------- */
-.nft-button{
+.nft-button {
   background-color: #fff !important;
   color: rgb(45 0 247) !important;
   border-radius: 100px !important;
@@ -307,19 +349,19 @@ height: 100vh;
   padding-bottom: 0.75rem !important;
   font-size: 0.875rem !important;
 }
-.nft-button:hover{
+.nft-button:hover {
   background-color: rgb(219 255 0) !important;
 }
 
 /* others_trade Section */
 
-.others_trade{
+.others_trade {
   height: 150vh;
   width: 100%;
   background: #dbff00;
   position: relative;
 }
-.blue_section{
+.blue_section {
   background: blue;
   width: 100%;
   height: 120vh;
@@ -327,176 +369,183 @@ height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   position: relative;
- 
 }
 
-.blueColunm2{
-color: white;
-display: flex;
-flex-direction: column;
-gap: 10px;
-margin: auto;
+.blueColunm2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
 }
-.trade-buttons{
+.trade-buttons {
   display: flex;
   gap: 20px;
 }
-.trade-history-btn{
+.trade-history-btn {
   border: none;
-  padding: 20px;
- border-radius: 10px;
-  width: 40%;
-  height: 20%;
+  padding: 15px;
+  border-radius: 30px;
+  width: 35%;
+  height: 15%;
   color: blue;
   font-size: 1rem;
   font-weight: 600;
 }
-.trade-history-btn:hover{
-background: yellow;
+logoRotate
+.trade-history-btn:hover {
+  background: yellow;
 }
-.yout-trade-btn{
+.yout-trade-btn {
   border: none;
-  padding: 20px;
- border-radius: 10px;
+  padding: 15px;
+  border-radius: 30px;
   width: 30%;
   height: 20%;
   color: blue;
   font-size: 1rem;
   font-weight: 600;
 }
-.yout-trade-btn:hover{
+.yout-trade-btn:hover {
   background: yellow;
 }
-.trade-heading{
+.trade-heading {
   font-size: 3.5vw;
   font-weight: 600;
 }
-.trade-para{
+.trade-para {
   font-size: 1.5vw;
   font-weight: 300;
 }
-.sliderimg{
+.sliderimg {
   width: 200px;
   height: 200px;
   object-fit: contain;
 }
-.knowMore{
+.knowMore {
   width: 100%;
-  /* height: 100vh; */
+  height: 75vh; 
   background: white;
 }
-.blueColunm1{
+.blueColunm1 {
   /* width: 100%;
   height: 100%; */
   overflow: hidden;
   margin-left: 30%;
 }
-.knowMore-heading{
+nav-btn
+card1-button
+
+knowMore-heading
+
+knowMore
+
+
+.knowMore-heading {
   text-align: center;
   font-weight: 600;
   font-size: 1.875rem;
   padding-top: 50px;
-  color: blue;
+ 
 }
-.card-warpper{
+.card-warpper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 100px;
   margin-bottom: 50px;
 }
-.card1{
+.card1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
   place-items: center;
 }
-.crd1-icon{
+.crd1-icon {
   width: 30%;
   height: 30%;
   text-align: center;
 }
-.card1-heaing{
+.card1-heaing {
   font-size: 1.5rem;
   color: blue;
   font-weight: 700;
   text-align: center;
 }
-.card1-para{
+.card1-para {
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
 }
-.card1-button{
+.card1-button {
   border: none;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 600;
   background: blue;
   color: white;
-  padding: 5px;
+  padding: 1px;
   width: 40%;
-  height: 30%;
-  
+  height: 15%;
 }
 /* ----------------- */
 
-
 @font-face {
-  font-family: "Rubik" ;
+  font-family: "Rubik";
   src: url("/public/MuseoModerno/Rubik-Regular.ttf");
 }
 
-.navbar{
+.navbar {
   height: 88px;
   background-color: rgb(45 0 247) !important;
   padding: 0px 24px;
   /* border-radius: 0px  0px 50px 50px; */
 }
-.nftTraderLogo{
+.nftTraderLogo {
   width: 192px !important;
 }
-.navbar-nav a{
+.navbar-nav a {
   /* color: #fff !important; */
 }
 /* .navbar-nav a:hover{
   color: rgb(219 255 0) !important;
 } */
-.bg-yellow{
+.bg-yellow {
   background-color: rgb(219 255 0) !important;
 }
-.bg-blue{
+.bg-blue {
   background-color: rgb(45 0 247) !important;
 }
-.bottom-radius{
+.bottom-radius {
   border-radius: 0px 0px 264px !important;
 }
-.hub-trades{
+.hub-trades {
   width: 95%;
   padding: 0px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.hub-trades-left{
+.hub-trades-left {
   color: #fff;
 }
-.hub-trades-right button{
+.hub-trades-right button {
   font-size: 0.875rem !important;
 }
-.hub-trades-p1{
+.hub-trades-p1 {
   font-size: 3rem;
   margin-bottom: 0;
   padding-top: 80px;
   padding-bottom: 16px;
 }
-.hub-trades-p2{
+.hub-trades-p2 {
   font-size: 1rem;
   padding-bottom: 80px;
   margin-bottom: 0;
-  font-family: Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300 !important;
 }
-.footer{
+.footer {
   color: #fff;
   height: 64px;
   display: flex;
@@ -505,10 +554,11 @@ background: yellow;
   font-size: 0.75rem;
   padding: 0px 24px;
 }
-.footer ul, p{
+.footer ul,
+p {
   margin-bottom: 0;
 }
-.footer-right{
+.footer-right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,23 +566,25 @@ background: yellow;
 .footer-right li {
   list-style: none;
 }
-.footer-right div{
+.footer-right div {
   cursor: pointer;
 }
 .footer-right div:after {
-  display:block;
-  content: '';
-  border-bottom: solid 2px #fff;  
-  transform: scaleX(0);  
+  display: block;
+  content: "";
+  border-bottom: solid 2px #fff;
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-.footer-right div:hover:after { transform: scaleX(1); }
-.dot-span{
+.footer-right div:hover:after {
+  transform: scaleX(1);
+}
+.dot-span {
   font-size: 16px;
   padding: 0px 16px;
   margin: auto;
 }
-.wallet-details-box{
+.wallet-details-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -540,97 +592,102 @@ background: yellow;
   max-width: 1280px;
   margin-top: 20px;
 }
-.nav-btn{
-  font-size: .875rem !important;
+.nav-btn {
+  font-size: 0.875rem !important;
   font-weight: 600 !important;
+  
 }
-.nav-btn:hover{
+
+
+
+.nav-btn:hover {
   background-color: #dbff00 !important;
 }
-.wallet-bar ul{
+.wallet-bar ul {
   display: flex;
   align-items: center;
   margin: 0;
   gap: 3rem;
 }
-.wallet-bar ul li{
+.wallet-bar ul li {
   list-style: none;
   color: rgb(151 157 172);
   cursor: pointer;
   text-align: center;
 }
-.wallet-bar ul li:active{
+.wallet-bar ul li:active {
   color: rgb(45 0 247);
-  border-bottom : 2px solid rgb(45 0 247)
+  border-bottom: 2px solid rgb(45 0 247);
 }
-.wallet-search{
+.wallet-search {
   position: relative;
 }
-.wallet-search input{
+.wallet-search input {
   border: 1px solid rgb(151 157 172);
   color: rgb(151 157 172);
   padding: 8px 24px 8px 24px;
   height: 56px;
   border-radius: 100px;
 }
-.wallet-search input::placeholder{
+.wallet-search input::placeholder {
   color: rgb(151 157 172);
-
 }
-.wallet-search input:hover{
+.wallet-search input:hover {
   border: 1px solid rgb(45 0 247);
 }
-.wallet-search input:focus{
+
+trade-history-btn
+.wallet-search input:focus {
   outline: rgb(45 0 247);
   outline-width: thin;
 }
-.wallet-search .search-icon{
+.wallet-search .search-icon {
   position: absolute;
   right: 10px;
   top: 13px;
 }
-.wallet-details-bottom{
-  color:rgb(3 4 94);
+.wallet-details-bottom {
+  color: rgb(3 4 94);
 }
-.WalletDetailsCard{
+.WalletDetailsCard {
   border-radius: 5px;
   margin-top: 20px;
   box-shadow: 0px 6px 30px rgb(151 157 172/30%);
   padding: 40px;
 }
-.WalletDetailsCard p{
+.WalletDetailsCard p {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.activetrades-top img{
+.activetrades-top img {
   background: rgb(45 0 247);
   padding: 5px;
   border-radius: 100px;
 }
-.activetrades-top img:hover{
+.activetrades-top img:hover {
   background: rgb(3 4 94);
   padding: 5px;
   border-radius: 100px;
 }
-.trades-swap{
+.trades-swap {
   margin-top: 24px;
   margin-bottom: 60px;
 }
-.trades-swap-row{
+.trades-swap-row {
   margin-top: 32px;
 }
-.trades-swap img{
+.trades-swap img {
   width: 40px;
   border-radius: 100%;
 }
-.trade-swap-from div{
+.trade-swap-from div {
   padding: 0 !important;
 }
-.trade-swap-from p{
+.trade-swap-from p {
   font-size: 0.875rem;
   font-weight: 300;
 }
-.trade-swap-from button{
+.trade-swap-from button {
   background: none !important;
   border: 1px solid rgb(0 173 227) !important;
   color: rgb(0 173 227) !important;
@@ -638,121 +695,122 @@ background: yellow;
   border-radius: 50px;
   font-size: 0.875rem;
 }
-.trade-swap-p{
+.trade-swap-p {
   color: rgb(151 157 172);
   cursor: pointer;
 }
 .trade-swap-p:after {
-  display:block;
-  content: '';
-  border-bottom: solid 2px rgb(151 157 172);  
-  transform: scaleX(0);  
+  display: block;
+  content: "";
+  border-bottom: solid 2px rgb(151 157 172);
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-.trade-swap-p:hover:after { transform: scaleX(1); }
+.trade-swap-p:hover:after {
+  transform: scaleX(1);
+}
 
-.trade-check-deal button{
+.trade-check-deal button {
   background-color: rgb(45 0 247);
   border-radius: 50px;
   font-weight: 600;
 }
 
-.trade-check-deal button:hover{
+.trade-check-deal button:hover {
   background-color: rgb(3 4 94) !important;
 }
 
-@media(max-width : 600px){
-  .hub-trades{
-      flex-direction: column;
-      align-items: flex-start;
+@media (max-width: 600px) {
+  .hub-trades {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .hub-trades-p1{
-      font-size: 2rem;
+  .hub-trades-p1 {
+    font-size: 2rem;
   }
-  .hub-trades-p2{
-      font-size: 0.7rem;
-      padding-bottom: 20px;
+  .hub-trades-p2 {
+    font-size: 0.7rem;
+    padding-bottom: 20px;
   }
-  .wallet-details-box{
-      flex-direction: column;
-      padding-top: 0rem;
+  .wallet-details-box {
+    flex-direction: column;
+    padding-top: 0rem;
   }
-  .wallet-bar ul{
-      padding: 1rem;
+  .wallet-bar ul {
+    padding: 1rem;
   }
-  .footer{
-      flex-direction: column;
+  .footer {
+    flex-direction: column;
   }
-  .hub-trades-right button{
-      font-size:  0.75rem !important;
-      margin  : 1rem 0rem;
+  .hub-trades-right button {
+    font-size: 0.75rem !important;
+    margin: 1rem 0rem;
   }
-  .WalletDetailsCard{
-      padding: 30px;
+  .WalletDetailsCard {
+    padding: 30px;
   }
-  .trade-swap-from{
-      margin: 1.5rem 0rem;
+  .trade-swap-from {
+    margin: 1.5rem 0rem;
   }
-  .trade-check-deal{
-      justify-content: center !important;
-      align-items: center !important;
+  .trade-check-deal {
+    justify-content: center !important;
+    align-items: center !important;
   }
-  .rm-flex-end{
-      justify-content: center !important;
+  .rm-flex-end {
+    justify-content: center !important;
   }
   .trade-swap-from button {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
   }
   .trade-swap-from p {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
   }
-  .trade-swaps div{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .trade-swaps div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-
-@media screen and (max-width: 600px){
-  .images{
+@media screen and (max-width: 600px) {
+  .images {
     width: 70% !important;
   }
-.title, .title2{
-  font-size: 0.7rem !important;
-}
-.share_trades{
-  width: unset !important;
-}
+  .title,
+  .title2 {
+    font-size: 0.7rem !important;
+  }
+  .share_trades {
+    width: unset !important;
+  }
   /* .carousel_1 {
    
     transform: translateX(unset);
 
   } */
-  
 }
-@media  (max-width:1024px) {
- .blue_section{
-  grid-template-columns:1fr;
- }
- .yellow-section{
-  grid-template-columns: 1fr;
- }
- .others_trade{
-  height: auto;
- }
-.home_section4{
-  height: 200vh;
-}
-}
-@media (max-width:800px){
-  .blue_section{
+@media (max-width: 1024px) {
+  .blue_section {
     grid-template-columns: 1fr;
   }
-  .card-warpper{
+  .yellow-section {
     grid-template-columns: 1fr;
   }
-  .yellow-section{
+  .others_trade {
+    height: auto;
+  }
+  .home_section4 {
+    height: 200vh;
+  }
+}
+@media (max-width: 800px) {
+  .blue_section {
+    grid-template-columns: 1fr;
+  }
+  .card-warpper {
+    grid-template-columns: 1fr;
+  }
+  .yellow-section {
     height: auto;
   }
 }
@@ -766,10 +824,13 @@ background: yellow;
   animation-timing-function: linear;
   animation-direction: alternate;
   /* transform: translateY(0); */
- 
 }
 
 @keyframes marquee {
-  0% {transform: translateY(0);}
-  100% {transform: translateY(-100%);}
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

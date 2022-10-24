@@ -13,6 +13,7 @@ import Nav1 from "./components/nav/Index";
 function App() {
   // const [wallet, setWallet] = useState(false);
 
+
   function getLibrary(provider) {
     return new Web3(provider);
   }
