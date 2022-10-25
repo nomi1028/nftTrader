@@ -17,6 +17,25 @@ import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
 const TradSquardNFT = () => {
   return (
     <Grid container>
+      <Grid item xs={12} bgcolor="yellow">
+        <Box
+          width="100%"
+          height="100%"
+          bgcolor="blue"
+          direction="column"
+          alignItems="center"
+          p={10}
+          color="white"
+          borderRadius=" 0px 0px 200px 0px "
+        >
+          <Typography variant="h1" fontSize="45px" marginBottom={2}>
+            <h3 style={{ fontWeight: "bold", fontSize: "50px" }}>
+              Mint a TradeSquad NFT
+            </h3>
+          </Typography>
+        </Box>
+      </Grid>
+
       <Grid
         item
         p={5}
