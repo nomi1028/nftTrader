@@ -341,7 +341,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                   backgroundColor: "white",
                 }}
               >
-                1.0 ETH
+                {tableData?.actorData?.Eth} ETH
               </Typography>
             </Typography>
             <Typography sx={{ padding: "40px" }}>
