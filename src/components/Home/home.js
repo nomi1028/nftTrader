@@ -32,6 +32,8 @@ import SliderBackground from "../../assets/sliderBackgroung.svg";
 import Logo_rotating from "../../assets/logo_rotating.gif";
 import TradingProtocl from "../../layout/tradingProtocol/Index";
 import axios from "axios";
+import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
+import { Box } from "@mui/material";
 const Home = () => {
   return (
     <Container fluid className="home_container ">
@@ -66,35 +68,42 @@ const Home = () => {
           >
             Create Trade
           </button>
+          <div className="slider6  behind">
+            <img
+              className="d-block w-100 rounded-circle "
+              src={img6}
+              alt="Second slide"
+            />
+          </div>
         </div>
 
         <div className="slider1 ">
-        <img
-          className="d-block w-100 rounded-circle"
-          src={img1}
-          alt="Second slide"
-        />
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img1}
+            alt="Second slide"
+          />
         </div>
-        <div className="slider2 ">    
-        <img
-          className="d-block w-100 rounded-circle"
-          src={gif1}
-          alt="Second slide"
-        />
+        <div className="slider2 ">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={gif1}
+            alt="Second slide"
+          />
         </div>
         <div className="slider3">
-        <img
-          className="d-block w-100 rounded-circle"
-          src={img3}
-          alt="Second slide"
-        />
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img3}
+            alt="Second slide"
+          />
         </div>
-        <div className="slider4 ">    
-        <img
-          className="d-block w-100 rounded-circle"
-          src={gif1}
-          alt="Second slide"
-        />
+        <div className="slider4 ">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={gif1}
+            alt="Second slide"
+          />
         </div>
         {/* <div className="slider4">
         <img
@@ -104,78 +113,109 @@ const Home = () => {
         />
         </div> */}
         <div className="slider5">
-        <img
-          className="d-block w-100 rounded-circle"
-          src={img5}
-          alt="Second slide"
-        />
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img5}
+            alt="Second slide"
+          />
         </div>
-        <div className="slider6">
-        <img
-          className="d-block w-100 rounded-circle"
-          src={img6}
-          alt="Second slide"
-        />
-        </div>
+
         <div className="slider7">
-        <img
-          className="d-block w-100 rounded-circle"
-          src={img7}
-          alt="Second slide"
-        />
+          <img
+            className="d-block w-100 rounded-circle"
+            src={gif2}
+            alt="Second slide"
+          />
+        </div>
+        <div className="slider8">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img3}
+            alt="Second slide"
+          />
+        </div>
+        <div className="slider9">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img2}
+            alt="Second slide"
+          />
+        </div>
+        <div className="slider10">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={gif1}
+            alt="Second slide"
+          />
+        </div>
+        <div className="slider11">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={img3}
+            alt="Second slide"
+          />
+        </div>
+        <div className="slider12">
+          <img
+            className="d-block w-100 rounded-circle"
+            src={gif1}
+            alt="Second slide"
+          />
         </div>
       </section>
       {/* -------------------------------- */}
       <section className="home_section2 pt-5">
-        <h2 className="home_section2_heading text-center mt-5">
-          Trade NFTs & Crypto Like a Boss
-        </h2>
+        <Box mt={5} mb={15}>
+          <h2 className="home_section2_heading text-center mt-5">
+            Trade NFTs & Crypto Like a Boss
+          </h2>
 
-        <Row className="mt-n1 justify-content-center align-items-center">
-          <Col lg={4} md={3} sm={3} xs={3} className="text-center">
-            <div className="home_section2_gif">
-              <img
-                width="70%"
-                className="rounded-circle images"
-                src={gif2}
-                alt=""
-              />
-            </div>
-          </Col>
-          <Col lg={3} md={3} sm={3} xs={3}>
-            <div className="home_section2_gif_div text-center align-items-center">
-              <img width="10%" className="mb-4" src={logo} alt="" />
-              <p
-                style={{
-                  color: "#3e39e6",
-                  fontFamily: "Rubik",
-                  fontSize: ".75rem",
-                }}
-              >
-                NFT Trader Protocol
-              </p>
-            </div>
-          </Col>
-          <Col lg={4} md={3} sm={3} xs={3} className="text-center">
-            <div className="home_section2_gif1">
-              <img
-                width="70%"
-                className="rounded-circle images"
-                src={gif1}
-                alt=""
-              />
-            </div>
-          </Col>
-        </Row>
-        <p
-          className="text-center mt-5 mt-md-0"
-          style={{ marginTop: "-20px", fontSize: "1.2vw" }}
-        >
-          Our protocol is totally on-chain, data is totally accessible.
-        </p>
+          <Row className="mt-n1 justify-content-center align-items-center">
+            <Col lg={4} md={3} sm={4} xs={4} className="text-center">
+              <div className="home_section2_gif">
+                <img
+                  width="70%"
+                  className="rounded-circle images"
+                  src={gif2}
+                  alt=""
+                />
+              </div>
+            </Col>
+            <Col lg={3} md={3} sm={4} xs={4}>
+              <div className="home_section2_gif_div text-center align-items-center">
+                <img width="10%" className="mb-4" src={logo} alt="" />
+                <p
+                  style={{
+                    color: "#3e39e6",
+                    fontFamily: "Rubik",
+                    fontSize: ".75rem",
+                  }}
+                >
+                  NFT Trader Protocol
+                </p>
+              </div>
+            </Col>
+            <Col lg={4} md={3} sm={4} xs={4} className="text-center">
+              <div className="home_section2_gif1">
+                <img
+                  width="70%"
+                  className="rounded-circle images"
+                  src={gif1}
+                  alt=""
+                />
+              </div>
+            </Col>
+          </Row>
+          <p
+            className="text-center mt-5 mt-md-0"
+            style={{ marginTop: "-20px", fontSize: "1.2vw" }}
+          >
+            Our protocol is totally on-chain, data is totally accessible.
+          </p>
+        </Box>
       </section>
       {/* ---------------------------- */}
-    
+
       <section className="home_section3">
         <Row className="justify-content-center m-0">
           <Col lg={5}>
@@ -218,7 +258,9 @@ const Home = () => {
           className="d-flex justify-content-center align-items-center gap-2"
           style={{ marginTop: "90px" }}
         >
-          <a className="text-decoration-none link-primary" href="">Check our volume data on Dune Analytics</a>
+          <a className="text-decoration-none link-primary" href="">
+            Check our volume data on Dune Analytics
+          </a>
           <img width="25px" src={img8} alt="" />
         </div>
       </section>
@@ -226,9 +268,12 @@ const Home = () => {
       {/* marquee tag section  */}
       <section className="mt-5 mb-1">
         <Container fluid className="home_container">
-          <div className="news position-relative "  style={{
-                
-                background: "#00008B"}}>
+          <div
+            className="news position-relative "
+            style={{
+              background: "#00008B",
+            }}
+          >
             <div
               className="title share_trades text-center text-white position-absolute "
               style={{
@@ -241,9 +286,11 @@ const Home = () => {
                 transform: "translate(-50%, -50%)",
               }}
             >
-              <h5 className="font-bold" style={{ fontWeight:"bold"}} >Share Trades With Your Community</h5>
+              <h5 className="font-bold" style={{ fontWeight: "bold" }}>
+                Share Trades With Your Community
+              </h5>
               <p>Access & configure a trading bot for your own Discord.</p>
-              <h6 style={{ fontWeight:"bold"}}>Read More</h6>
+              <h6 style={{ fontWeight: "bold" }}>Read More</h6>
             </div>
             <marquee className="news-content">
               <img src={img9} alt="" />
@@ -378,38 +425,41 @@ const Home = () => {
       <section className="others_trade">
         <div className="blue_section">
           <div className="blueColunm1">
-            <marquee direction={window.innerWidth > "900" ? "up" : "left"}>
+            <marquee
+              scrollamount="10"
+              direction={window.innerWidth > "900" ? "up" : "left"}
+            >
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
               <div className="mb-3">
                 {" "}
-                <img src={SliderBackground} className="sliderimg" />
+                <img src={gif1} className="sliderimg rounded-circle" />
               </div>
             </marquee>
             {/* <div className="marquee">
@@ -434,7 +484,7 @@ const Home = () => {
           <div className="yellow-section">
             <div className="yellow-cl1">
               <img src={Logo_rotating} className="logoRotate" />
-              <h3 className="cl1-heading"  style={{ fontWeight:"bold"}}>
+              <h3 className="cl1-heading" style={{ fontWeight: "bold" }}>
                 Build your application with our open technology
               </h3>
             </div>
@@ -451,7 +501,7 @@ const Home = () => {
       </section>
 
       {/* Know more Section */}
-      <section className="knowMore">
+      {/* <section className="knowMore">
         <h3 style={{ color: '#00008B',fontWeight:"bold", }} className=" text-center mt-5  ">Want To Know More?</h3>
         <div className="container">
           <div className="card-warpper">
@@ -481,7 +531,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <WanttoKnowmore />
 
       {/* Connect Wallet Modal */}
     </Container>

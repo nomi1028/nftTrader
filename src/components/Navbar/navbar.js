@@ -30,9 +30,8 @@ const Navbar = ({ connectWallet }) => {
         /^(0x[a-zA-Z0-9]{2})[a-zA-Z0-9]+([a-zA-Z0-9]{2})$/
       );
       if (!match) return address;
-      setAddress(`${match[1]}…${match[2]}`)
+      setAddress(`${match[1]}…${match[2]}`);
     }
-
   };
   return (
     <>

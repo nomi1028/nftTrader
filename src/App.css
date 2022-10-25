@@ -5,6 +5,11 @@
   background: #0c0a41;
   padding: 30px 0 30px 0;
 }
+
+.rcorners1 {
+  border-radius: 0px 0px 150px 0px;
+}
+
 .row {
   --bs-gutter-x: 0rem !important;
 }
@@ -61,7 +66,6 @@
   gap: 10px;
   flex-direction: column;
   place-items: center;
-
 }
 .dropdown {
   position: static !important;
@@ -123,6 +127,7 @@
   font-size: 3vw;
   font-weight: 600;
 }
+
 .home_container {
   --bs-gutter-x: unset !important;
   width: 100%;
@@ -166,10 +171,10 @@
 }
 .slider6 {
   position: absolute;
-  bottom: 20%;
-  left: 50%;
-  width: 15%;
-  height: 15%;
+  bottom: 15%;
+  left: 55%;
+  width: 22%;
+  height: 22%;
 }
 .slider7 {
   position: absolute;
@@ -178,6 +183,43 @@
   width: 15%;
   height: 15%;
 }
+
+.slider8 {
+  position: absolute;
+  top: 22%;
+  left: 10%;
+  width: 25%;
+  height: 25%;
+}
+.slider9 {
+  position: absolute;
+  bottom: 20%;
+  right: 40%;
+  width: 15%;
+  height: 15%;
+}
+.slider10 {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  width: 18%;
+  height: 18%;
+}
+.slider11 {
+  position: absolute;
+  bottom: 45%;
+  right: 0%;
+  width: 15%;
+  height: 15%;
+}
+.slider12 {
+  position: absolute;
+  bottom: 60%;
+  right: 3%;
+  width: 12%;
+  height: 12%;
+}
+
 .center_text {
   position: absolute;
   left: 50%;
@@ -234,8 +276,8 @@
   transform: translateX(350px); */
   margin: 0 auto;
 }
+
 .home_section2 {
-  min-height: 100vh;
   z-index: 99;
 }
 .home_section2_gif {
@@ -260,12 +302,9 @@
   width: 30%;
   height: 30%;
 }
-knowMore-heading
-yellow-cl1
-.cl1-heading {
+knowMore-heading yellow-cl1 .cl1-heading {
   color: blue;
   font-size: 1.2rem;
-  
 }
 .yellow-cl2 {
   display: flex;
@@ -392,8 +431,7 @@ yellow-cl1
   font-size: 1rem;
   font-weight: 600;
 }
-logoRotate
-.trade-history-btn:hover {
+logoRotate .trade-history-btn:hover {
   background: yellow;
 }
 .yout-trade-btn {
@@ -417,6 +455,11 @@ logoRotate
   font-size: 1.5vw;
   font-weight: 300;
 }
+
+.behind {
+  z-index: -1;
+}
+
 .sliderimg {
   width: 200px;
   height: 200px;
@@ -424,29 +467,21 @@ logoRotate
 }
 .knowMore {
   width: 100%;
-  height: 75vh; 
+
   background: white;
 }
+
 .blueColunm1 {
   /* width: 100%;
   height: 100%; */
   overflow: hidden;
   margin-left: 30%;
 }
-nav-btn
-card1-button
-
-knowMore-heading
-
-knowMore
-
-
-.knowMore-heading {
+nav-btn card1-button knowMore-heading knowMore .knowMore-heading {
   text-align: center;
   font-weight: 600;
   font-size: 1.875rem;
   padding-top: 50px;
- 
 }
 .card-warpper {
   display: grid;
@@ -487,6 +522,18 @@ knowMore
   width: 40%;
   height: 15%;
 }
+
+.card1-button2 {
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: white;
+  color: blue;
+  padding: 1px;
+  width: 150px;
+  height: 40px;
+  margin-top: 40px;
+}
 /* ----------------- */
 
 @font-face {
@@ -513,7 +560,7 @@ knowMore
   background-color: rgb(219 255 0) !important;
 }
 .bg-blue {
-  background-color: rgb(45 0 247) !important;
+  background-color: blue !important;
 }
 .bottom-radius {
   border-radius: 0px 0px 264px !important;
@@ -595,10 +642,7 @@ p {
 .nav-btn {
   font-size: 0.875rem !important;
   font-weight: 600 !important;
-  
 }
-
-
 
 .nav-btn:hover {
   background-color: #dbff00 !important;
@@ -636,8 +680,7 @@ p {
   border: 1px solid rgb(45 0 247);
 }
 
-trade-history-btn
-.wallet-search input:focus {
+trade-history-btn .wallet-search input:focus {
   outline: rgb(45 0 247);
   outline-width: thin;
 }
@@ -832,5 +875,64 @@ trade-history-btn
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .home_banner::after {
+    content: "";
+    width: 70%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 3%;
+    left: 12%;
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home_banner::after {
+    content: "";
+    width: 90%;
+    height: 150%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .slider8 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .slider9 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .slider10 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .slider11 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .slider12 {
+    display: none;
   }
 }
