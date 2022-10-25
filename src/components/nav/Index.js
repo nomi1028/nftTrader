@@ -89,6 +89,7 @@ const Index = () => {
       {navopen ? (
         <AppBar elevation={0} color="transparent">
           <Toolbar
+            disableGutters={true}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -98,24 +99,25 @@ const Index = () => {
             }}
           >
             <Box
-              width="70%"
+              width="100%"
               display="flex"
               justifyContent="space-between"
-              bgcolor="#202A44"
-              borderRadius="5px"
+              bgcolor="#03045e"
               alignItems="center"
               p={1}
             >
               <Typography
-                sx={{ marginLeft: "10px", color: "#FFCC00" }}
+                sx={{ marginLeft: "150px", color: "white" }}
                 variant="body"
+                fontSize="12px"
               >
-                jfs kajfd kjsfj kjsfbsjkf jksbfjks kjfbjskf kjsfbjksf jsfbkjsf
-                kjsfbskajf kjsabjkf
+                NFT Trader currently does not add any new erc20 tokens. We
+                recommend to always double check trading assets on Etherscan or
+                other marketplaces
               </Typography>
 
               <CloseIcon
-                sx={{ marginRight: "10px", color: "#FFCC00" }}
+                sx={{ marginRight: "10px", color: "white", fontSize: "12px" }}
                 onClick={() => setnavopen(false)}
               />
             </Box>
