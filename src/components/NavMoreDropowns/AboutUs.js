@@ -1,8 +1,24 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import img9 from "../../assets/images/9.png";
-import logo from "../../assets/images/logo.svg";
+import aboutcrs from "../../assets/images/aboutcrs.PNG";
+import john from "../../assets/images/john.jpeg";
 import logo2 from "../../assets/images/nftlogo.svg";
+import a from "../../assets/images/partners/1.svg";
+import b from "../../assets/images/partners/2.svg";
+import c from "../../assets/images/partners/3.svg";
+import d from "../../assets/images/partners/4.svg";
+import e from "../../assets/images/partners/5.svg";
+import f from "../../assets/images/partners/6.svg";
+import g from "../../assets/images/partners/7.svg";
+import h from "../../assets/images/partners/8.svg";
+import i from "../../assets/images/partners/9.png";
+import j from "../../assets/images/partners/10.png";
+import k from "../../assets/images/partners/11.svg";
+
+import b1 from "../../assets/images/partners/b1.svg";
+import b2 from "../../assets/images/partners/b2.svg";
+import b3 from "../../assets/images/partners/b3.svg";
+import b4 from "../../assets/images/partners/b4.svg";
 
 import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDissatisfiedOutlined";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -80,16 +96,20 @@ const AboutUs = () => {
         <div
           className="news position-relative "
           style={{
-            background: "#00008B",
+            background: "#2D00F7",
           }}
         >
-          <marquee className="news-content">
+          <marquee direction="right" className="news-content">
             <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-              <Box>
+              {/* <Box>
                 <img width="100px" height="70px" src={logo2} alt="" />
                 <ChatBubbleOutlineIcon
                   sx={{ color: "yellow", fontSize: "70px" }}
-                />
+                >
+                  <Typography variant="body" color="white">
+                    helo bubble
+                  </Typography>
+                </ChatBubbleOutlineIcon>
               </Box>
               <Box>
                 <img width="100px" height="70px" src={logo2} alt="" />
@@ -108,7 +128,10 @@ const AboutUs = () => {
                 <ChatBubbleOutlineIcon
                   sx={{ color: "yellow", fontSize: "70px" }}
                 />
-              </Box>
+              </Box> */}
+              <img src={aboutcrs} alt="" />
+              <img src={aboutcrs} alt="" />
+              <img src={aboutcrs} alt="" />
             </Box>
           </marquee>
         </div>
@@ -129,7 +152,8 @@ const AboutUs = () => {
             </h3>
           </Typography>
           <Box p={4} sx={{ display: "flex" }}>
-            <img width="100px" height="70px" src={logo2} alt="" />
+            {/* <img width="100px" height="70px" src={john} alt="" /> */}
+            <Avatar src={john} alt="" sx={{ width: 85, height: 85 }} />
             <Box
               sx={{ display: "flex", flexDirection: "column" }}
               marginLeft={4}
@@ -156,7 +180,7 @@ const AboutUs = () => {
                 establishing many key networks and partnerships throughout this
                 nascent space.
               </Typography>
-              <Box sx={{ display: "flex" }} color="blue" marginLeft={2}>
+              <Box sx={{ display: "flex" }} color="blue" gap={4} marginLeft={2}>
                 <TwitterIcon />
                 <LinkedInIcon />
                 <FacebookIcon />
@@ -223,7 +247,7 @@ const AboutUs = () => {
                 and all advantages that this technology could brings in our
                 society.
               </Typography>
-              <Box sx={{ display: "flex" }} color="blue" marginLeft={2}>
+              <Box sx={{ display: "flex" }} gap={4} color="blue" marginLeft={2}>
                 <TwitterIcon />
                 <LinkedInIcon />
               </Box>
@@ -249,82 +273,78 @@ const AboutUs = () => {
             flexWrap: "wrap",
           }}
         >
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>{" "}
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
+          <Box width="25%" height="50px">
+            <img height="80%" width="70%" src={a} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px">
+            <img height="80%" width="70%" src={b} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px">
+            <img height="80%" width="70%" src={c} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px">
+            <img height="80%" width="70%" src={d} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10}>
+            <img height="80%" width="70%" src={e} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10}>
+            <img height="80%" width="70%" src={f} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10}>
+            <img height="80%" width="70%" src={g} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10}>
+            <img height="80%" width="70%" src={h} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10} mb={5}>
+            <img height="80%" width="70%" src={i} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10} mb={5}>
+            <img height="80%" width="70%" src={j} alt="img1" />
+          </Box>
+          <Box width="25%" height="50px" mt={10} mb={5}>
+            <img height="80%" width="70%" src={k} alt="img1" />
+          </Box>
         </Box>
       </Grid>
       <Grid item bgcolor="#000080" justifyContent="center">
         <Box
-          p={10}
+          p={5}
           color="white"
           sx={{ display: "flex", justifyContent: "center" }}
         >
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
+          <Typography width="300px" p={2} display="flex">
+            <h4>Trusted By</h4>
           </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
-          <Typography width="25%" p={2} display="flex">
-            <AccountBalanceIcon />
-            <h5>MoonPay</h5>
-          </Typography>
+          <img
+            height="50"
+            width="100px"
+            src={b1}
+            alt="img1"
+            style={{ marginLeft: "20px" }}
+          />
+          <img
+            height="50"
+            width="100px"
+            src={b2}
+            alt="img1"
+            style={{ marginLeft: "20px" }}
+          />
+          <img
+            height="50"
+            width="100px"
+            src={b3}
+            alt="img1"
+            style={{ marginLeft: "20px" }}
+          />
+          <img
+            height="50"
+            width="100px"
+            src={b4}
+            alt="img1"
+            style={{ marginLeft: "20px" }}
+          />
         </Box>
       </Grid>
       <Grid

@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .news {
   background: #0c0a41;
-  padding: 30px 0 30px 0;
+  padding: 0px 0 15px 0;
 }
 
 .rcorners1 {
@@ -43,6 +43,7 @@
   height: 100%;
   object-fit: contain;
 }
+
 .modal-header {
   border-bottom: none !important;
   display: flex;
@@ -123,7 +124,8 @@
   background: #2001c9;
   overflow: hidden;
 }
-.header-heading {
+
+news .header-heading {
   font-size: 3vw;
   font-weight: 600;
 }
@@ -716,6 +718,7 @@ trade-history-btn .wallet-search input:focus {
   margin-top: 24px;
   margin-bottom: 60px;
 }
+
 .trades-swap-row {
   margin-top: 32px;
 }
