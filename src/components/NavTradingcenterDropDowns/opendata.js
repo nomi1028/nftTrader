@@ -21,8 +21,13 @@ export const CreateTradeData = [
   },
   {
     id: 5,
+    headline: "Review and verify the trade",
+    text: "In this step you can change the expiry date for the deal.",
+  },
+  {
+    id: 6,
     headline: "Confirm to create the trade deal",
-    text: "First, approve all the assets involved in the deal to be onchain (ETH gas payment required). Next, proceed with fee payment in order create the deal. Once these steps are completed the counterparty “Trader” will be able to see your trade pending in their own Hub & Trades Page. ",
+    text: "First, approve all the assets involved in the deal to be onchain (ETH gas payment required). Next, proceed with fee payment in order create the deal. Once these steps are completed the counterparty “Trader” will be able to see your trade pending in their own Hub & Trades Page.",
   },
 ];
 
@@ -49,7 +54,7 @@ export const CloseTradedata = [
   },
   {
     id: 5,
-    headline: "Confirm to accept the trade deal",
-    text: "If all is good then click Accept. You will then need to approve all the assets involved in the deal to go onchain (ETH gas payment required). Next, proceed with fee payment in order close the deal. Once these steps are completed, all the digital assets involved in the trade from each party will swap over to the rightful owners wallets.",
+    headline: "Review and verify the trade",
+    text: "In this step you can change the expiry date for the deal.",
   },
 ];

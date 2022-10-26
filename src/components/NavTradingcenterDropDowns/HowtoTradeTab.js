@@ -51,7 +51,7 @@ export default function BasicTabs() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box mb={4}>
+      <Box mb={6}>
         <Tabs
           value={value}
           onChange={handleChange}

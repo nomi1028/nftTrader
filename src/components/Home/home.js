@@ -4,6 +4,8 @@ import { Container, Col, Row, Button } from "react-bootstrap";
 // import Carousel from "react-bootstrap/Carousel";
 import bg from "../../assets/images/bg.svg";
 import img1 from "../../assets/images/1.png";
+import chain from "../../assets/images/chain.png";
+
 import img2 from "../../assets/images/2.png";
 import img3 from "../../assets/images/3.png";
 import img4 from "../../assets/images/4.png";
@@ -182,17 +184,27 @@ const Home = () => {
               </div>
             </Col>
             <Col lg={3} md={3} sm={4} xs={4}>
-              <div className="home_section2_gif_div text-center align-items-center">
-                <img width="10%" className="mb-4" src={logo} alt="" />
+              <div className="home_section2_gif_div text-center d-flex flex-column align-items-center justify-content-center">
+                <img width="15%" src={logo} alt="" />
                 <p
                   style={{
                     color: "#3e39e6",
                     fontFamily: "Rubik",
                     fontSize: ".75rem",
+                    fontWeight: "bold",
+                    marginBottom: "-40px",
+                    zIndex: 1,
                   }}
                 >
                   NFT Trader Protocol
                 </p>
+                <img
+                  className="home_section2_gif1 mt-n5"
+                  width="140%"
+                  style={{ zIndex: -1, marginTop: "-40px" }}
+                  src={chain}
+                  alt=""
+                />
               </div>
             </Col>
             <Col lg={4} md={3} sm={4} xs={4} className="text-center">

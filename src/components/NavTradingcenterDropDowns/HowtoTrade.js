@@ -1,7 +1,7 @@
 import React from "react";
 import youmadeit from "../../assets/youmadeit.svg";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-
+import logo2 from "../../assets/images/nftlogo.svg";
 import {
   Box,
   Button,
@@ -34,11 +34,12 @@ const HowtoTrade = () => {
           borderRadius=" 0px 0px 200px 0px "
         >
           <Typography variant="h1" fontSize="45px" marginBottom={2}>
-            <h3 style={{ fontWeight: "bold", fontSize: "50px" }}>FAQ</h3>
+            <h3 style={{ fontWeight: "bold", fontSize: "50px" }}>
+              How To Trade
+            </h3>
           </Typography>
           <Typography variant="body1" fontSize="15px">
-            Here you can find the answers about the common questions related to
-            NFT Trader platform
+            Instructions for each party involved in a deal
           </Typography>
         </Box>
       </Grid>
@@ -51,7 +52,7 @@ const HowtoTrade = () => {
         justifyContent="center"
       >
         <Box width="60%" height="500px" marginTop={-5}>
-          <iframe
+          {/* <iframe
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/5q2HlcFoDtM"
@@ -59,16 +60,27 @@ const HowtoTrade = () => {
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="video"
+          /> */}
+
+          <CardMedia
+            component="iframe"
+            sx={{ width: "100%", height: "100%" }}
+            // image={logo2}
+            src="https://www.youtube.com/embed/5q2HlcFoDtM"
+            alt="Live from space album cover"
+            allow="autoplay; encrypted-media"
           />
         </Box>
         <Typography
-          variant="13"
+          variant="h1"
           fontSize="15px"
-          width="70%"
+          width="80%"
           p={10}
-          color="blue"
+          color="#03045E"
         >
-          <h1 style={{ fontSize: "40px" }}>
+          <h1
+            style={{ fontSize: "40px", fontWeight: "600", textAlign: "center" }}
+          >
             Are you creating or closing a deal? Select an option.
           </h1>
         </Typography>
@@ -127,32 +139,39 @@ const HowtoTrade = () => {
         <Box
           width="65%"
           height="250px"
-          bgcolor="#FFFFFF"
-          borderRadius="15px"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
+          bgcolor="#FF6E65"
+          borderRadius="35px 0px 35px 35px"
         >
-          <Typography
-            variant="body"
-            fontWeight="bold"
-            color="blue"
-            fontSize="20px"
-            mt={5}
+          <Box
+            width="100%"
+            height="250px"
+            bgcolor="#FFFFFF"
+            borderRadius="35px"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
           >
-            Important Things To Know Before Using NFT Trader
-          </Typography>
-          <Typography
-            variant="body1"
-            paddingLeft={10}
-            paddingRight={10}
-            paddingTop={3}
-          >
-            Only ONE Trader/Initiator, creates the trade for both parties'
-            involved in the deal. The other Trader/Counterparty is the ONE who
-            closes the deal. This particular flow of trading provides security
-            layers in order to help prevent the act of fraudulent activities.
-          </Typography>
+            <Typography
+              variant="body"
+              fontWeight="bold"
+              color="blue"
+              fontSize="20px"
+              mt={5}
+            >
+              Important Things To Know Before Using NFT Trader
+            </Typography>
+            <Typography
+              variant="body1"
+              paddingLeft={10}
+              paddingRight={10}
+              paddingTop={3}
+            >
+              Only ONE Trader/Initiator, creates the trade for both parties'
+              involved in the deal. The other Trader/Counterparty is the ONE who
+              closes the deal. This particular flow of trading provides security
+              layers in order to help prevent the act of fraudulent activities.
+            </Typography>
+          </Box>
         </Box>
       </Grid>
 

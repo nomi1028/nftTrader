@@ -44,7 +44,12 @@ const GlobalDeals = () => {
             </Typography>
             <Button
               className="bg-white rounded-pill  nav-btn  "
-              style={{ color: "#0000FF", height: "40px", padding: "5px" }}
+              style={{
+                color: "#0000FF",
+                width: "150px",
+                height: "50px",
+                fontFamily: "museomoderno",
+              }}
             >
               Create Trade
             </Button>
@@ -81,7 +86,7 @@ const GlobalDeals = () => {
             className="inputRounded"
             placeholder="Search"
             sx={{
-              width: "80%",
+              width: "70%",
 
               marginBottom: "15px",
 

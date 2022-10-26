@@ -13,6 +13,8 @@ import {
 import "./TradeStyle.css";
 import { SearchOutlined } from "@mui/icons-material";
 import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
+import bgs from "../../assets/images/bgs.svg";
+import opensea from "../../assets/opensea.svg";
 
 const TradSquardNFT = () => {
   return (
@@ -28,8 +30,8 @@ const TradSquardNFT = () => {
           color="white"
           borderRadius=" 0px 0px 200px 0px "
         >
-          <Typography variant="h1" fontSize="45px" marginBottom={2}>
-            <h3 style={{ fontWeight: "bold", fontSize: "50px" }}>
+          <Typography variant="h1" fontSize="42px" marginBottom={2}>
+            <h3 style={{ fontWeight: "600", fontSize: "48px" }}>
               Mint a TradeSquad NFT
             </h3>
           </Typography>
@@ -40,43 +42,54 @@ const TradSquardNFT = () => {
         item
         p={5}
         mt={5}
-        xs={6}
+        xs={5}
         display="flex"
         justifyContent="center"
         alignItems="center"
       >
-        <Box
-          borderRadius="10px"
-          p={5}
-          bgcolor="gray"
-          height="500px"
-          width="50%"
-        ></Box>
+        <Box bgcolor="#F3F4F6" height="500px" width="60%">
+          <img src={bgs} alt="nothing" />
+        </Box>
       </Grid>
-      <Grid item mt={5} xs={6} p={5} display="flex" flexDirection="column">
+      <Grid item mt={5} xs={7} p={5} display="flex" flexDirection="column">
         <Typography
           variant="h1"
-          fontSize="30px"
+          fontSize="28px"
           marginBottom={2}
-          color="#000080"
+          color="#03045E"
         >
-          <h3 style={{ fontWeight: "bold", fontSize: "30px" }}>
+          <h3
+            style={{
+              fontWeight: "600",
+              fontSize: "40px",
+            }}
+          >
             Bypass Platform Trading Fee
           </h3>
         </Typography>
-        <Typography variant="body1" fontSize="15px" color="#000080" mb={10}>
+        <Typography
+          variant="body"
+          fontSize="15px"
+          color="#03045E"
+          mb={10}
+          fontWeight="700"
+        >
           Mint your own Trade Squad NFT, keep it in your connected trading
           wallet and don’t pay our platform trading fee
         </Typography>
         <Divider />
 
-        <a
-          style={{ marginTop: "20px" }}
-          className="text-decoration-none link-primary"
-          href=""
+        <span
+          style={{
+            marginTop: "80px",
+            alignSelf: "center",
+            textAlign: "center",
+            color: "#2D00F7",
+          }}
         >
+          {" "}
           Minting is only available in the Ethereum Mainnet
-        </a>
+        </span>
       </Grid>
 
       <Grid
@@ -114,6 +127,7 @@ const TradSquardNFT = () => {
             us on Twitter and read our Medium.
           </Typography>
           <Button
+            endIcon={<img width="50px" height="30px" src={opensea} alt="" />}
             className="bg-white rounded-pill w-75 p-3 nav-btn  "
             style={{ color: "#0000FF", padding: "5px" }}
           >
