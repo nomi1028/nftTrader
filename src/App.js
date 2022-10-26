@@ -39,12 +39,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Mytrades" element={<Mytrades />} />
-          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/faq" element={<Faqpage />} />
-          <Route path="/globaldeal" element={<GlobalDeals />} />
-          <Route path="/howtotrade" element={<HowtoTrade />} />
-          <Route path="/tradsquard" element={<TradSquardNFT />} />
-          <Route path="/yourhubandtrad" element={<YourHubandTrades />} />
+          <Route path="/globaldeals" element={<GlobalDeals />} />
+          <Route path="/how-to-trade" element={<HowtoTrade />} />
+          <Route path="/tradesquads" element={<TradSquardNFT />} />
+          <Route path="/mytrades" element={<YourHubandTrades />} />
         </Routes>
         <Footer />
       </Web3ReactProvider>

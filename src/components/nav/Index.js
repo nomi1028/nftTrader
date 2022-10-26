@@ -169,7 +169,7 @@ const Index = () => {
                     >
                       <NavDropdown.Item
                         as={Link}
-                        to={"/yourhubandtrad"}
+                        to={"/mytrades"}
                         style={{ fontWeight: "bold" }}
                       >
                         Your Hubs & Trades
@@ -177,21 +177,21 @@ const Index = () => {
 
                       <NavDropdown.Item
                         as={Link}
-                        to={"/globaldeal"}
+                        to={"/globaldeals"}
                         style={{ fontWeight: "bold" }}
                       >
                         Global Deals
                       </NavDropdown.Item>
                       <NavDropdown.Item
                         as={Link}
-                        to={"/howtotrade"}
+                        to={"/how-to-trade"}
                         style={{ fontWeight: "bold" }}
                       >
                         How To Trade
                       </NavDropdown.Item>
                       <NavDropdown.Item
                         as={Link}
-                        to={"/tradsquard"}
+                        to={"/tradesquads"}
                         style={{ fontWeight: "bold" }}
                       >
                         TradeSquad NFT
@@ -218,7 +218,7 @@ const Index = () => {
                     >
                       <NavDropdown.Item
                         as={Link}
-                        to={"/aboutus"}
+                        to={"/about"}
                         style={{ fontWeight: "bold" }}
                       >
                         About
