@@ -23,7 +23,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
 
   return (
     <>
-      <Typography
+      {/* <Typography
         sx={{
           backgroundColor: "blue",
           padding: "15px",
@@ -63,7 +63,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
             <Typography>Cancel Deal</Typography>
           </Typography>
         </Typography>
-      </Typography>
+      </Typography> */}
       <Modal
         show={false}
         // onHide={() => setWalletInfo(false)}
@@ -98,7 +98,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
           lg={12}
           sx={{ paddingX: "70px", paddingY: "20px" }}
         >
-          <Grid item md={3} sm={3} lg={3}>
+          <Grid item md={1.5} sm={1.5} lg={1.5}>
             <Typography
               sx={{
                 display: "flex",
@@ -114,15 +114,15 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 />
               </Typography>
               <Typography>
-                <Typography>Your Wallet</Typography>
+                <Typography sx={{ fontSize: "10px" }}>Your Wallet</Typography>
                 <Typography sx={{ fontSize: "10px" }}>
-                  {tableData?.actorData?.AdminWallet}
+                  {tableData?.actorData?.AdminWallet.slice(1, 16)}
                 </Typography>
               </Typography>
             </Typography>
           </Grid>
 
-          <Grid item md={6} sm={6} lg={6}>
+          <Grid item md={9} sm={9} lg={9}>
             <Typography
               sx={{
                 display: "flex",
@@ -135,25 +135,14 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
               <Typography sx={{ color: "blue", fontWeight: "bold" }}>
                 What You Are Trading
               </Typography>
-              <Typography
-                sx={{
-                  padding: "5px",
-                  backgroundColor: "blue",
-                  color: "white",
-                  borderRadius: "30px",
-                  width: "46px",
-                  height: "46px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Typography sx={{ textAlign: "center" }}>OUT</Typography>
-              </Typography>
+
+              {/* <Typography sx={{ textAlign: "center" }}>OUT</Typography> */}
+              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>OUT</Avatar>
+              {/* </Typography> */}
               <Typography variant="body2">
                 <CompareArrowsIcon />
               </Typography>
-              <Typography
+              {/* <Typography
                 sx={{
                   padding: "5px",
                   backgroundColor: "blue",
@@ -167,7 +156,8 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 }}
               >
                 <Typography sx={{ textAlign: "center" }}>IN</Typography>
-              </Typography>
+              </Typography> */}
+              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>IN</Avatar>
               <Typography sx={{ color: "blue", fontWeight: "bold" }}>
                 What You Will Receive
               </Typography>
@@ -175,12 +165,14 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
             <Typography sx={{ marginTop: "20px", marginBottom: "20px" }}>
               <Typography
                 sx={{
-                  padding: "15px",
+                  // paddingY: "13px",
+                  // paddingX: "5px",
                   borderRadius: "30px",
                   border: "1px solid blue",
                   color: "black",
-                  width: "40%",
+                  width: "30%",
                   margin: "auto",
+                  fontSize: "14px",
                 }}
               >
                 <Typography sx={{ textAlign: "center", color: "blue" }}>
@@ -212,7 +204,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
               )}
             </Typography>
           </Grid>
-          <Grid item md={3} sm={3} lg={3}>
+          <Grid item md={1.5} sm={1.5} lg={1.5}>
             <Typography
               sx={{
                 display: "flex",
@@ -222,12 +214,12 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
               }}
             >
               <Typography>
-                <Typography>
+                <Typography sx={{ fontSize: "10px" }}>
                   {" "}
                   {"<"}username not set{">"}
                 </Typography>
                 <Typography sx={{ fontSize: "10px" }}>
-                  {tableData?.actorData?.Coinname}
+                  {tableData?.actorData?.Nftadress.slice(1, 16)}
                 </Typography>
               </Typography>
               <Typography>
@@ -300,7 +292,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
                     // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
-                    src={tableData?.actorData?.NftIcon}
+                    src={tableData?.actorData?.takerImageURL}
                   />
                   <Button size="small">
                     {tableData?.actorData?.Tokenname}
@@ -366,7 +358,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
                     // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
-                    src={tableData?.actorData?.ClientIcon}
+                    src={tableData?.actorData?.makerImageURL}
                   />
                   <Button size="small">{tableData?.actorData?.nftnname}</Button>
                 </CardActions>
