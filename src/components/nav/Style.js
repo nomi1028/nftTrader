@@ -1,16 +1,13 @@
 import styled from "styled-components";
 
-
-
 const Style = styled.div`
-   height: 88px;
+  height: 88px;
   width: 100%;
-  background: rgb(45 0 247);
+  background: rgb(45 0 247z);
   .nav_class {
     gap: 0px !important;
     display: flex;
     justify-content: center;
-
   }
   .container {
     max-width: 98%;
@@ -35,12 +32,13 @@ const Style = styled.div`
   }
   .dropdown-menu.show {
     display: inline-flex !important;
-    
+    align-items: center;
     color: #1636b8 !important;
   }
   .dropdown:hover .dropdown-menu {
     display: inline-flex;
     margin-top: 0;
+    align-items: center;
     color: #1636b8 !important;
   }
   .address_bar {

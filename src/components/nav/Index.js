@@ -18,8 +18,16 @@ import { useWeb3React } from "@web3-react/core";
 import { injected } from "../wallet/connector";
 import { Typography } from "@mui/material";
 import { color } from "@mui/system";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import DirtyLensIcon from "@mui/icons-material/DirtyLens";
+
+import { AppBar, Box, Toolbar } from "@mui/material";
+
+import CloseIcon from "@mui/icons-material/Close";
 
 const Index = () => {
+  const [navopen, setnavopen] = useState(false);
   const { active, account, library, connector, activate, deactivate } =
     useWeb3React();
   const [show, setShow] = useState(false);
@@ -42,6 +50,7 @@ const Index = () => {
     }
   }
   useEffect(() => {
+    setnavopen(true);
     connect();
   }, []);
 
@@ -76,220 +85,349 @@ const Index = () => {
   };
 
   return (
-    <Style>
-      <Navbar collapseOnSelect expand="lg" bg="blue" variant="dark" fixed="top">
-        <Container>
-
-          <Navbar.Brand href="/">
-            {" "}
-            <img width="190px" src={logo} alt="" />
-          </Navbar.Brand>
-
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-
-            <Nav className="me-auto nav_class d-flex w-75 justify-content-center"
-            style={{fontWeight:"bold" }}
+    <>
+      {navopen ? (
+        <AppBar elevation={0} color="transparent">
+          <Toolbar
+            disableGutters={true}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              background: "transparent",
+              height: "80px",
+              alignItems: "flex-start",
+            }}
+          >
+            <Box
+              width="100%"
+              display="flex"
+              justifyContent="space-between"
+              bgcolor="#03045e"
+              alignItems="center"
+              p={1}
             >
-              
-              <Nav.Link as={Link} to="/" >
-                Home
-              </Nav.Link>
-              <NavDropdown title="Trading center" id="collasible-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/Mytrades">
-                  Your Hubs & Trades
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Global Deals
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  How To Trade
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  TradeSquad NFT
-                </NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="More" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">About</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">SDK</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">FAQ</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">FAQ</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+              <Typography
+                sx={{ marginLeft: "150px", color: "white" }}
+                variant="body"
+                fontSize="12px"
+              >
+                NFT Trader currently does not add any new erc20 tokens. We
+                recommend to always double check trading assets on Etherscan or
+                other marketplaces
+              </Typography>
 
-            <Nav>
-              {account ? (
-                <>
-                  <div
-                    className="rounded-pill address_bar"
-                    variant="outline-primary"
+              <CloseIcon
+                sx={{ marginRight: "10px", color: "white", fontSize: "12px" }}
+                onClick={() => setnavopen(false)}
+              />
+            </Box>
+          </Toolbar>
+        </AppBar>
+      ) : null}
+      <Style>
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          bg="blue"
+          variant="dark"
+          fixed="top"
+        >
+          <Container>
+            <Navbar.Brand href="/">
+              {" "}
+              <img width="190px" src={logo} alt="" />
+            </Navbar.Brand>
+
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav
+                className="me-auto nav_class d-flex w-75 justify-content-center"
+                style={{ fontWeight: "bold" }}
+              >
+                <Nav.Link as={Link} to="/">
+                  Home
+                </Nav.Link>
+                <NavDropdown
+                  title="Trading center"
+                  id="collasible-nav-dropdown"
+                >
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
                   >
-                    <div className="icon rounded-pill">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0"
-                        y="0"
-                        height="32"
-                        width="32"
-                      >
-                        <rect
-                          x="0"
-                          y="0"
-                          rx="0"
-                          ry="0"
-                          height="32"
-                          width="32"
-                          transform="translate(3.1602487871877405 6.466544689491581) rotate(225.5 16 16)"
-                          fill="#fc3d00"
-                        ></rect>
-                        <rect
-                          x="0"
-                          y="0"
-                          rx="0"
-                          ry="0"
-                          height="32"
-                          width="32"
-                          transform="translate(-8.301731641348697 15.364445614061914) rotate(144.1 16 16)"
-                          fill="#f38c00"
-                        ></rect>
-                        <rect
-                          x="0"
-                          y="0"
-                          rx="0"
-                          ry="0"
-                          height="32"
-                          width="32"
-                          transform="translate(13.91005781928204 -18.739658659816975) rotate(318.0 16 16)"
-                          fill="#018c71"
-                        ></rect>
-                        <rect
-                          x="0"
-                          y="0"
-                          rx="0"
-                          ry="0"
-                          height="32"
-                          width="32"
-                          transform="translate(10.082927498103224 37.44236705287915) rotate(239.0 16 16)"
-                          fill="#f16702"
-                        ></rect>
-                      </svg>
-                    </div>
-                    <div className="d-flex flex-column">
-                      <div className="username">Username is not set</div>
-                      <div className="address"> {account?.slice(0, 19)}</div>
-                    </div>
-                  </div>
-                  &nbsp; &nbsp;
-                  <Button
-                    className="rounded-pill bg-white WalletButon "
-                    onClick={() => setWalletInfo("true")}
-                  >
-                    <img src={Wallet} alt="Wallet Icon" />
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button
-                    className="bg-white rounded-pill  nav-btn  "
-                    
-                    style={{color:"#0000FF",padding:"12px"}}
-                  >
-                    Buy Crypto
-                  </Button>
-                  {account && (
-                    <Typography
+                    <Box
                       sx={{
-                        padding: "5px",
-                        border: "2px solid white",
-                        // backgroundColor: "white",
-                        borderRadius: "25px",
-                        color: "white",
+                        width: "50%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        p: 4,
                       }}
                     >
-                      <Typography sx={{ fontSize: "10px" }}>
-                        {account?.slice(0, 19)}
-                      </Typography>
-                    </Typography>
-                  )}
-                  {account ? null : (
-                    <Button
-                      className=" bg-white rounded-pill  nav-btn  "
-                     style={{padding:"12px",marginLeft:"2px" ,color:"#0000FF"}}
-                      // onClick={handleShow}
-                      onClick={connect}
-                    >
-                      Connect Wallet
-                    </Button>
-                  )}
-                </>
-              )}
-            </Nav>
+                      <NavDropdown.Item
+                        as={Link}
+                        to={"/mytrades"}
+                        style={{ fontWeight: "bold" }}
+                      >
+                        Your Hubs & Trades
+                      </NavDropdown.Item>
 
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Modal
-        show={walletInfo}
-        onHide={() => setWalletInfo(false)}
-        // contentClassName="modalPosition"
-        sx={{ position: "relative", right: "0", top: "20" }}
-      >
-        <Modal.Header className="border-bottom text-right display-4">
-          <Modal.Title>Connected Wallet address</Modal.Title>
-          <Modal.Title>{account?.slice(0, 19)}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h6>Balance</h6>
-          <div className="d-flex">
-            <div>
-              <p>0.0 ETH</p>
-              <p>$0.00 USD</p>
+                      <NavDropdown.Item
+                        as={Link}
+                        to={"/globaldeals"}
+                        style={{ fontWeight: "bold" }}
+                      >
+                        Global Deals
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        as={Link}
+                        to={"/how-to-trade"}
+                        style={{ fontWeight: "bold" }}
+                      >
+                        How To Trade
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        as={Link}
+                        to={"/tradesquads"}
+                        style={{ fontWeight: "bold" }}
+                      >
+                        TradeSquad NFT
+                      </NavDropdown.Item>
+                    </Box>
+                  </Box>
+                </NavDropdown>
+                <NavDropdown title="More" id="collasible-nav-dropdown">
+                  <Box
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "50%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        p: 4,
+                      }}
+                    >
+                      <NavDropdown.Item
+                        as={Link}
+                        to={"/about"}
+                        style={{ fontWeight: "bold" }}
+                      >
+                        About
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        style={{ fontWeight: "bold" }}
+                        href="#action/3.2"
+                      >
+                        SDK
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        style={{ fontWeight: "bold" }}
+                        as={Link}
+                        to={"/faq"}
+                      >
+                        FAQ
+                      </NavDropdown.Item>
+                      <NavDropdown.Item
+                        style={{ fontWeight: "bold" }}
+                        href="#action/3.3"
+                      >
+                        Contact with Us
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action/3.3">
+                        <TwitterIcon />
+                        <FormatBoldIcon />
+                        <DirtyLensIcon />
+                      </NavDropdown.Item>
+                    </Box>
+                  </Box>
+                </NavDropdown>
+              </Nav>
+
+              <Nav>
+                {account ? (
+                  <>
+                    <div
+                      className="rounded-pill address_bar"
+                      variant="outline-primary"
+                    >
+                      <div className="icon rounded-pill">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          x="0"
+                          y="0"
+                          height="32"
+                          width="32"
+                        >
+                          <rect
+                            x="0"
+                            y="0"
+                            rx="0"
+                            ry="0"
+                            height="32"
+                            width="32"
+                            transform="translate(3.1602487871877405 6.466544689491581) rotate(225.5 16 16)"
+                            fill="#fc3d00"
+                          ></rect>
+                          <rect
+                            x="0"
+                            y="0"
+                            rx="0"
+                            ry="0"
+                            height="32"
+                            width="32"
+                            transform="translate(-8.301731641348697 15.364445614061914) rotate(144.1 16 16)"
+                            fill="#f38c00"
+                          ></rect>
+                          <rect
+                            x="0"
+                            y="0"
+                            rx="0"
+                            ry="0"
+                            height="32"
+                            width="32"
+                            transform="translate(13.91005781928204 -18.739658659816975) rotate(318.0 16 16)"
+                            fill="#018c71"
+                          ></rect>
+                          <rect
+                            x="0"
+                            y="0"
+                            rx="0"
+                            ry="0"
+                            height="32"
+                            width="32"
+                            transform="translate(10.082927498103224 37.44236705287915) rotate(239.0 16 16)"
+                            fill="#f16702"
+                          ></rect>
+                        </svg>
+                      </div>
+                      <div className="d-flex flex-column">
+                        <div className="username">Username is not set</div>
+                        <div className="address"> {account?.slice(0, 19)}</div>
+                      </div>
+                    </div>
+                    &nbsp; &nbsp;
+                    <Button
+                      className="rounded-pill bg-white WalletButon "
+                      onClick={() => setWalletInfo("true")}
+                    >
+                      <img src={Wallet} alt="Wallet Icon" />
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button
+                      className="bg-white rounded-pill  nav-btn  "
+                      style={{ color: "#0000FF", padding: "12px" }}
+                    >
+                      Buy Crypto
+                    </Button>
+                    {account && (
+                      <Typography
+                        sx={{
+                          padding: "5px",
+                          border: "2px solid white",
+                          // backgroundColor: "white",
+                          borderRadius: "25px",
+                          color: "white",
+                        }}
+                      >
+                        <Typography sx={{ fontSize: "10px" }}>
+                          {account?.slice(0, 19)}
+                        </Typography>
+                      </Typography>
+                    )}
+                    {account ? null : (
+                      <Button
+                        className=" bg-white rounded-pill  nav-btn  "
+                        style={{
+                          padding: "12px",
+                          marginLeft: "2px",
+                          color: "#0000FF",
+                        }}
+                        // onClick={handleShow}
+                        onClick={connect}
+                      >
+                        Connect Wallet
+                      </Button>
+                    )}
+                  </>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <Modal
+          show={walletInfo}
+          onHide={() => setWalletInfo(false)}
+          // contentClassName="modalPosition"
+          sx={{ position: "relative", right: "0", top: "20" }}
+        >
+          <Modal.Header className="border-bottom text-right display-4">
+            <Modal.Title>Connected Wallet address</Modal.Title>
+            <Modal.Title>{account?.slice(0, 19)}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h6>Balance</h6>
+            <div className="d-flex">
+              <div>
+                <p>0.0 ETH</p>
+                <p>$0.00 USD</p>
+              </div>
+              <div>
+                <img />
+              </div>
             </div>
-            <div>
-              <img />
-            </div>
-          </div>
-          <button className="buyCrypto ">Buy Crypto</button>
-          <button onClick={disconnect} className="disconnect">
-            Disconnect
-          </button>
-        </Modal.Body>
-      </Modal>
-      <Modal show={show} onHide={handleClose} className="align-items-center">
-        <Modal.Header closeButton>
-          <Modal.Title>Connect your Wallet</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <button
-            onClick={connectMetamask}
-            className="metamask-btn rounded-pill"
-          >
-            <div className="metamask-btn-logo">
-              <img src={MetaMask} />
-            </div>
-            Connect Metamask
-          </button>
-          <button className="metamask-btn rounded-pill">
-            <div className="metamask-btn-logo">
-              <img src={WalletConnect} />
-            </div>
-            Connect Wallet
-          </button>
-          <button className="metamask-btn rounded-pill">
-            <div className="metamask-btn-logo">
-              <img src={CoinbaseWallet} />
-            </div>
-            Coinbase Wallet
-          </button>
-          <button className="metamask-btn rounded-pill">
-            <div className="metamask-btn-logo">
-              <img src={Unstoppable} />
-            </div>
-            Unstoppable Domains
-          </button>
-        </Modal.Body>
-      </Modal>
-    </Style>
+            <button className="buyCrypto ">Buy Crypto</button>
+            <button onClick={disconnect} className="disconnect">
+              Disconnect
+            </button>
+          </Modal.Body>
+        </Modal>
+        <Modal show={show} onHide={handleClose} className="align-items-center">
+          <Modal.Header closeButton>
+            <Modal.Title>Connect your Wallet</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <button
+              onClick={connectMetamask}
+              className="metamask-btn rounded-pill"
+            >
+              <div className="metamask-btn-logo">
+                <img src={MetaMask} />
+              </div>
+              Connect Metamask
+            </button>
+            <button className="metamask-btn rounded-pill">
+              <div className="metamask-btn-logo">
+                <img src={WalletConnect} />
+              </div>
+              Connect Wallet
+            </button>
+            <button className="metamask-btn rounded-pill">
+              <div className="metamask-btn-logo">
+                <img src={CoinbaseWallet} />
+              </div>
+              Coinbase Wallet
+            </button>
+            <button className="metamask-btn rounded-pill">
+              <div className="metamask-btn-logo">
+                <img src={Unstoppable} />
+              </div>
+              Unstoppable Domains
+            </button>
+          </Modal.Body>
+        </Modal>
+      </Style>
+    </>
   );
 };
 
