@@ -51,7 +51,7 @@ const HowtoTrade = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Box width="60%" height="500px" marginTop={-5}>
+        <Box width="70%" height="500px" marginTop={-5}>
           {/* <iframe
             width="100%"
             height="100%"
@@ -65,7 +65,6 @@ const HowtoTrade = () => {
           <CardMedia
             component="iframe"
             sx={{ width: "100%", height: "100%" }}
-            // image={logo2}
             src="https://www.youtube.com/embed/5q2HlcFoDtM"
             alt="Live from space album cover"
             allow="autoplay; encrypted-media"

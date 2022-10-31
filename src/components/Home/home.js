@@ -230,11 +230,8 @@ const Home = () => {
 
       <section className="home_section3">
         <Row className="justify-content-center m-0">
-          <Col lg={5}>
-            <div
-              className="pe-5"
-              style={{ borderRight: "1px solid lightgray" }}
-            >
+          <Col lg={7}>
+            <div className="p-5" style={{ borderRight: "1px solid lightgray" }}>
               <h3
                 style={{
                   color: "#3e39e6",
@@ -244,13 +241,12 @@ const Home = () => {
               >
                 Top 5 Collections
               </h3>
-              <div>
-                <Colection />
-              </div>
+
+              <Colection />
             </div>
           </Col>
           <Col lg={5}>
-            <div className="ps-4">
+            <div className="p-5">
               <h3
                 style={{
                   color: "#3e39e6",
@@ -436,8 +432,21 @@ const Home = () => {
       {/* others trade */}
       <section className="others_trade">
         <div className="blue_section">
-          <div className="blueColunm1">
+          <div className="blueColunm1 ">
+            {/* <marquee
+              className="news-content"
+              scrollamount="10"
+              direction={window.innerWidth > "900" ? "up" : "left"}
+            >
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
+              <img src={img9} alt="" />
+            </marquee> */}
             <marquee
+              className="news-content"
               scrollamount="10"
               direction={window.innerWidth > "900" ? "up" : "left"}
             >
