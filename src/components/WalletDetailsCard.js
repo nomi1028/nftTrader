@@ -142,7 +142,8 @@ const WalletDetailsCard = ({ setShown }) => {
                     <Col sm={1} xs={1}>
                       <Image
                         // src="/profile.png"
-                        src={tableData?.actorData?.NftIcontrade}
+                        // src={tableData?.actorData?.NftIcontrade}
+                        src="/Group 60174.png"
                         style={{ width: "25px" }}
                       ></Image>
                     </Col>
