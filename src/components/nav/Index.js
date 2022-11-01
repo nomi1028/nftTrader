@@ -107,15 +107,16 @@ const Index = () => {
   return (
     <>
       {navopen ? (
-        <Box bgcolor="#03045e" sx={{ width: "100%" }}>
+        <Box
+          bgcolor="#03045e"
+          sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
           <Collapse in={open}>
             <Alert
               severity="info"
               sx={{
                 background: "#03045e",
                 color: "white",
-                paddingLeft: "50px",
-                paddingRight: "50px",
               }}
               action={
                 <IconButton
