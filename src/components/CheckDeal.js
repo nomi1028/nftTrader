@@ -10,28 +10,128 @@ import {
   Typography,
 } from "@mui/material";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import CloseIcon from "@mui/icons-material/Close";
+import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import React, { useState } from "react";
 import moment from "moment";
-import Modal from "react-bootstrap/Modal";
+import Box from "@mui/material/Box";
 
-const CheckDeal = ({ tableData, unixTime, Time }) => {
+import Modal from "@mui/material/Modal";
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  maxWidth: 500,
+  bgcolor: "rgb(45 0 247)",
+  borderRadius: "30px",
+
+  boxShadow: 24,
+  p: 4,
+};
+
+const CheckDeal = ({
+  tableData,
+  unixTime,
+  Time,
+  setValue,
+  setShown,
+  setDis,
+}) => {
   const [modalState, setModalState] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const modalHandler = () => {
-    setModalState(true);
+    setValue(true);
+    setShown(true);
+    setDis(true);
+    setOpen(false);
   };
 
   return (
     <>
-      {/* <Typography
+      <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography
+              id="modal-modal-title"
+              variant="h6"
+              component="h2"
+              sx={{ color: "white", textAlign: "center" }}
+            >
+              <strong> Go Back To Trade Hub?</strong>
+            </Typography>
+            <Typography
+              id="modal-modal-description"
+              sx={{
+                mt: "20px !important",
+                color: "white",
+                textAlign: "center",
+                width: "95%",
+                margin: "auto",
+              }}
+            >
+              You can return later as this deal will remain live until it hits
+              expiration date
+            </Typography>
+            <Typography
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginTop: "25px",
+              }}
+            >
+              <Button
+                sx={{
+                  color: "white",
+                  border: "1px solid white",
+                  padding: "15px",
+                  borderRadius: "30px",
+                }}
+                onClick={handleClose}
+              >
+                <strong> Dismiss</strong>
+              </Button>
+              <Button
+                sx={{
+                  color: "white",
+                  border: "1px solid white",
+                  padding: "15px",
+                  borderRadius: "30px",
+                }}
+                onClick={modalHandler}
+              >
+                <strong> Go Back To Trade Hub?</strong>
+              </Button>
+            </Typography>
+          </Box>
+        </Modal>
+      </div>
+      <Typography
         sx={{
           backgroundColor: "blue",
-          padding: "15px",
+          paddingX: "15px",
+          paddingY: "20px",
           color: "white",
-          marginTop: "20px",
-          marginBottom: "20px",
+          // marginTop: "20px",
+          // marginBottom: "80px",
           // position: "absolute",
           // top: "0px",
+          // zIndex: "2",
+          borderBottomLeftRadius: "40px",
+          borderBottomRightRadius: "40px",
+          position: "fixed",
+          width: "100%",
+          zIndex: "1",
+          top: "0",
         }}
       >
         <Typography
@@ -41,34 +141,39 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
             alignItems: "center",
           }}
         >
-          <Typography sx={{ display: "flex" }}>
-            <Typography
-              sx={{ paddingX: "20px" }}
-              onClick={() => modalHandler()}
-            >
-              Close
+          <Typography sx={{ display: "flex", alignItems: "center" }}>
+            <Typography sx={{ paddingX: "20px" }} onClick={handleOpen}>
+              <CloseIcon
+                sx={{ width: "40px", height: "40px", cursor: "pointer" }}
+              />
             </Typography>
-            <Typography>Check Your Assets</Typography>
+            <Typography sx={{ fontSize: "1.225rem" }}>
+              <strong>Check Your Assets</strong>
+            </Typography>
           </Typography>
 
           <Typography
             sx={{
               background: "white",
               color: "blue",
-              padding: "15px",
+              paddingY: "15px",
+              paddingX: "25px",
               borderRadius: "30px",
             }}
           >
             {" "}
-            <Typography>Cancel Deal</Typography>
+            <Typography sx={{ fontSize: ".9rem" }}>
+              <strong>Cancel Deal</strong>
+            </Typography>
           </Typography>
         </Typography>
-      </Typography> */}
-      <Modal
-        show={false}
+      </Typography>
+
+      {/* <Modal
+        show={true}
         // onHide={() => setWalletInfo(false)}
         // contentClassName="modalPosition"
-        // sx={{ position: "relative", right: "0", top: "20" }}
+        style={{ display: "flex", alignItems: "center" }}
       >
         <Modal.Header className="">
           <Modal.Title>Go Back To Trade Hub?</Modal.Title>
@@ -81,13 +186,14 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
             <Button className="disconnect">Go back to trade hub</Button>
           </Typography>
         </Modal.Body>
-      </Modal>
+      </Modal> */}
 
       <Grid
         container
         md={12}
         lg={12}
-        sx={{ marginBottom: "50px" }}
+        // sx={{ marginBottom: "50px" }}
+        sx={{ marginTop: "120px", marginBottom: "50px" }}
         // display={"flex"}
       >
         <Grid
@@ -96,14 +202,15 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
           md={12}
           sm={12}
           lg={12}
-          sx={{ paddingX: "70px", paddingY: "20px" }}
+          sx={{ paddingX: "40px", paddingY: "20px" }}
         >
-          <Grid item md={1.5} sm={1.5} lg={1.5}>
+          <Grid item md={2} sm={2} lg={2}>
             <Typography
               sx={{
                 display: "flex",
-                // justifyContent: "center",
+
                 alignItems: "center",
+                gap: "20px",
               }}
             >
               <Typography>
@@ -114,15 +221,19 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 />
               </Typography>
               <Typography>
-                <Typography sx={{ fontSize: "10px" }}>Your Wallet</Typography>
-                <Typography sx={{ fontSize: "10px" }}>
-                  {tableData?.actorData?.AdminWallet.slice(1, 16)}
+                <Typography sx={{ fontSize: ".75rem" }}>
+                  <strong>Your Wallet</strong>
+                </Typography>
+                <Typography sx={{ fontSize: ".75rem", color: "gray" }}>
+                  {tableData?.actorData?.AdminWallet.slice(0, 9)}
+                  ...
+                  {tableData?.actorData?.AdminWallet.slice(32, 42)}
                 </Typography>
               </Typography>
             </Typography>
           </Grid>
 
-          <Grid item md={9} sm={9} lg={9}>
+          <Grid item md={8} sm={8} lg={8}>
             <Typography
               sx={{
                 display: "flex",
@@ -132,15 +243,19 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 margin: "auto",
               }}
             >
-              <Typography sx={{ color: "blue", fontWeight: "bold" }}>
-                What You Are Trading
+              <Typography
+                sx={{ color: "blue", fontWeight: "700", fontSize: "1.125rem" }}
+              >
+                <strong>What You Are Trading</strong>
               </Typography>
 
               {/* <Typography sx={{ textAlign: "center" }}>OUT</Typography> */}
-              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>OUT</Avatar>
+              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>
+                <strong>OUT</strong>
+              </Avatar>
               {/* </Typography> */}
               <Typography variant="body2">
-                <CompareArrowsIcon />
+                <SyncAltIcon sx={{ width: "40px", height: "40px" }} />
               </Typography>
               {/* <Typography
                 sx={{
@@ -157,15 +272,19 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
               >
                 <Typography sx={{ textAlign: "center" }}>IN</Typography>
               </Typography> */}
-              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>IN</Avatar>
-              <Typography sx={{ color: "blue", fontWeight: "bold" }}>
-                What You Will Receive
+              <Avatar sx={{ bgcolor: "blue", fontSize: "15px" }}>
+                <strong>IN</strong>
+              </Avatar>
+              <Typography
+                sx={{ color: "blue", fontWeight: "700", fontSize: "1.125rem" }}
+              >
+                <strong>What You Will Receive</strong>
               </Typography>
             </Typography>
-            <Typography sx={{ marginTop: "20px", marginBottom: "20px" }}>
+            <Typography sx={{ marginTop: "40px", marginBottom: "20px" }}>
               <Typography
                 sx={{
-                  // paddingY: "13px",
+                  paddingY: "13px",
                   // paddingX: "5px",
                   borderRadius: "30px",
                   border: "1px solid blue",
@@ -175,16 +294,22 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                   fontSize: "14px",
                 }}
               >
-                <Typography sx={{ textAlign: "center", color: "blue" }}>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: ".875rem",
+                    fontWeight: "semibold",
+                  }}
+                >
                   {unixTime ? (
                     <>
-                      {unixTime * 1000 > Date.now()
-                        ? " This Trade will expire "
-                        : "Expired"}
-                      <Typography sx={{ fontWeight: "bold" }}>
-                        {" "}
-                        {moment.unix(unixTime).fromNow()}
-                      </Typography>
+                      <strong>
+                        {unixTime * 1000 > Date.now()
+                          ? "This Trade will expire"
+                          : "Expired"}
+                      </strong>
+
+                      <strong> {moment.unix(unixTime).fromNow()}</strong>
                     </>
                   ) : (
                     "Not Started yet"
@@ -192,7 +317,13 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 </Typography>
               </Typography>
             </Typography>
-            <Typography sx={{ textAlign: "center" }}>
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: ".75rem",
+                color: "gray",
+              }}
+            >
               {unixTime ? (
                 <>
                   {unixTime * 1000 > Date.now() ? " Expire Date" : "Expired on"}
@@ -204,22 +335,28 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
               )}
             </Typography>
           </Grid>
-          <Grid item md={1.5} sm={1.5} lg={1.5}>
+          <Grid item md={2} sm={2} lg={2}>
             <Typography
               sx={{
                 display: "flex",
                 // justifyContent: "center",
                 alignItems: "center",
                 justifyContent: "end",
+                gap: "20px",
               }}
             >
               <Typography>
-                <Typography sx={{ fontSize: "10px" }}>
+                <Typography sx={{ fontSize: ".75rem", color: "gray" }}>
                   {" "}
-                  {"<"}username not set{">"}
+                  <strong sx={{ fontWeight: "400" }}>
+                    {" "}
+                    {"<"}username not set{">"}
+                  </strong>
                 </Typography>
-                <Typography sx={{ fontSize: "10px" }}>
-                  {tableData?.actorData?.Nftadress.slice(1, 16)}
+                <Typography sx={{ fontSize: ".75rem", color: "gray" }}>
+                  {tableData?.actorData?.Nftadress.slice(0, 10)}
+                  ...
+                  {tableData?.actorData?.Nftadress.slice(32, 42)}
                 </Typography>
               </Typography>
               <Typography>
@@ -233,12 +370,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid
-        container
-        md={12}
-        lg={12}
-        // display={"flex"}
-      >
+      <Grid container md={12} lg={12}>
         <Grid
           item
           container
@@ -268,7 +400,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 1 NFT
               </Typography>
             </Typography>
-            <Typography sx={{ padding: "40px" }}>
+            <Typography sx={{ padding: "40px", marginBottom: "80px" }}>
               <Card sx={{ maxWidth: 170, borderRadius: "20px" }}>
                 <Typography sx={{ padding: "10px" }}>
                   <CardMedia
@@ -336,7 +468,7 @@ const CheckDeal = ({ tableData, unixTime, Time }) => {
                 {tableData?.actorData?.Eth} ETH
               </Typography>
             </Typography>
-            <Typography sx={{ padding: "40px" }}>
+            <Typography sx={{ padding: "40px", marginBottom: "80px" }}>
               <Card sx={{ maxWidth: 170, borderRadius: "20px" }}>
                 <Typography sx={{ padding: "10px" }}>
                   <CardMedia

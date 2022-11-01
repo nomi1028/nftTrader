@@ -6,6 +6,15 @@
   padding: 0px 0 15px 0;
 }
 
+.fade.modal.show {
+  display: flex !important;
+}
+
+.modal-content {
+  width: 500px !important;
+  max-width: 500px;
+}
+
 .rcorners1 {
   border-radius: 0px 0px 150px 0px;
 }

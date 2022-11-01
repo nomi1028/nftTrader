@@ -18,11 +18,12 @@ import TradSquardNFT from "./components/NavTradingcenterDropDowns/TradSquardNFT"
 import YourHubandTrades from "./components/NavTradingcenterDropDowns/YourHubandTrades";
 
 function App() {
-  // const [wallet, setWallet] = useState(false);
+  const [dis, setDis] = useState(true);
 
   function getLibrary(provider) {
     return new Web3(provider);
   }
+  console.log(dis);
   // useEffect(() => {
   //   if (account) {
   //     setWallet(true);
@@ -35,10 +36,10 @@ function App() {
     <div className="App">
       <Web3ReactProvider getLibrary={getLibrary}>
         {/* <Navbar connectWallet={connectWallet} /> */}
-        <Nav1 />
+        {dis ? <Nav1 /> : ""}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Mytrades" element={<Mytrades />} />
+          <Route path="/Mytrades" element={<Mytrades setDis={setDis} />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/faq" element={<Faqpage />} />
           <Route path="/globaldeals" element={<GlobalDeals />} />
@@ -46,7 +47,7 @@ function App() {
           <Route path="/tradesquads" element={<TradSquardNFT />} />
           <Route path="/mytrades" element={<YourHubandTrades />} />
         </Routes>
-        <Footer />
+        {dis ? <Footer /> : ""}
       </Web3ReactProvider>
     </div>
   );

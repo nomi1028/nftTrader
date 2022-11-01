@@ -6,7 +6,7 @@ import CheckDeal from "./CheckDeal";
 import CreateTrade from "./CreateTrade";
 import moment from "moment";
 
-const WalletDetailsCard = ({ setShown }) => {
+const WalletDetailsCard = ({ setShown, setDis }) => {
   const { active, account, library, connector, activate, deactivate } =
     useWeb3React();
 
@@ -19,6 +19,7 @@ const WalletDetailsCard = ({ setShown }) => {
   const handler = () => {
     setValue(false);
     setShown(false);
+    setDis(false);
   };
 
   //   const [timeLeft, settimeLeft] = useState(false);
@@ -193,7 +194,15 @@ const WalletDetailsCard = ({ setShown }) => {
       ) : (
         <>
           {tableData && (
-            <CheckDeal tableData={tableData} unixTime={unixTime} Time={Time} />
+            <CheckDeal
+              tableData={tableData}
+              unixTime={unixTime}
+              Time={Time}
+              heading={true}
+              setValue={setValue}
+              setShown={setShown}
+              setDis={setDis}
+            />
           )}
         </>
       )}
