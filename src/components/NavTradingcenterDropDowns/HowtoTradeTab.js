@@ -58,8 +58,8 @@ export default function BasicTabs() {
           aria-label="basic tabs example"
           centered
         >
-          <Tab label="Create Trade" {...a11yProps(0)} />
-          <Tab label="Close Trade" {...a11yProps(1)} />
+          <Tab  label="Create Trade" {...a11yProps(0)} />
+          <Tab  label="Close Trade" {...a11yProps(1)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

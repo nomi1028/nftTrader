@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .news {
   background: #0c0a41;
-  padding: 0px 0 15px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .rcorners1 {
@@ -773,7 +774,13 @@ trade-history-btn .wallet-search input:focus {
   background-color: rgb(3 4 94) !important;
 
 }
+.cardmedia{
+  background-image: url("./assets/images/bgimg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
+}
 @media (max-width: 600px) {
   .hub-trades {
     flex-direction: column;

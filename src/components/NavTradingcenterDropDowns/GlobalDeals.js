@@ -1,5 +1,5 @@
 import React from "react";
-
+import Modal from "@mui/material/Modal";
 import {
   Box,
   Button,
@@ -15,6 +15,8 @@ import "./TradeStyle.css";
 import { SearchOutlined } from "@mui/icons-material";
 
 import logo2 from "../../assets/images/nftlogo.svg";
+import logo3 from "../../assets/images/logo3.svg";
+import TradeBox from "./TradeBox";
 
 const GlobalDeals = () => {
   const [value, setValue] = React.useState("one");
@@ -22,6 +24,10 @@ const GlobalDeals = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Grid container direction="column">
@@ -43,16 +49,27 @@ const GlobalDeals = () => {
               </h3>
             </Typography>
             <Button
+              onClick={handleOpen}
               className="bg-white rounded-pill  nav-btn  "
               style={{
                 color: "#0000FF",
                 width: "150px",
                 height: "50px",
                 fontFamily: "museomoderno",
+                // fontSize: "0.875rem",
               }}
             >
               Create Trade
             </Button>
+
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <TradeBox />
+            </Modal>
           </Box>
           <Typography variant="body1" fontSize="15px">
             Check what deals other Traders have made
@@ -60,14 +77,16 @@ const GlobalDeals = () => {
         </Box>
       </Grid>
       <Grid item pt={2} container marginTop={4}>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <Box
             sx={{
               width: "60%",
               display: "flex",
-              marginLeft: "30px",
+              marginLeft: "250px",
               alignItems: "center",
               marginTop: "5px",
+              
+             
             }}
           >
             <Tabs
@@ -76,18 +95,19 @@ const GlobalDeals = () => {
               textColor="primary"
               indicatorColor="primary"
               aria-label="secondary tabs example"
+              
             >
-              <Tab value="one" label="All" />
+              <Tab  value="one" label="All" />
             </Tabs>
           </Box>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             className="inputRounded"
             placeholder="Search"
             sx={{
-              width: "70%",
-
+              width: "35%",
+             marginLeft: "250px",
               marginBottom: "15px",
 
               [`& fieldset`]: {
@@ -96,7 +116,7 @@ const GlobalDeals = () => {
             }}
             InputProps={{
               endAdornment: (
-                <IconButton>
+                <IconButton style={{ color: "blue" }}>
                   <SearchOutlined />
                 </IconButton>
               ),
@@ -117,7 +137,7 @@ const GlobalDeals = () => {
           width="250px"
           height="150px"
           style={{ marginTop: "20px", marginBottom: "20px" }}
-          src={logo2}
+          src={logo3}
           alt=""
         />
         <Typography

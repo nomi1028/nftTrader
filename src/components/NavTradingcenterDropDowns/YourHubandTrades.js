@@ -89,7 +89,7 @@ const YourHubandTrades = () => {
             className="inputRounded"
             placeholder="Search"
             sx={{
-              width: "80%",
+              width:  "80%",
 
               marginBottom: "15px",
 
@@ -99,7 +99,7 @@ const YourHubandTrades = () => {
             }}
             InputProps={{
               endAdornment: (
-                <IconButton>
+                <IconButton style={{ color: "blue" }}>
                   <SearchOutlined />
                 </IconButton>
               ),
