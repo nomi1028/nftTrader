@@ -346,14 +346,13 @@ knowMore-heading yellow-cl1 .cl1-heading {
   }
 }
 .home_section2_heading {
-  color: blue;
+  color: rgb(62, 57, 230);
   font-size: 2.8vw !important;
   font-weight: 600 !important;
   max-width: 370px;
   margin: auto;
   margin-bottom: -20px;
 }
-
 .home_section4 {
   /* background-image: url('./assets/images/bg2.svg');
    min-height: 70vh; 
@@ -384,7 +383,7 @@ knowMore-heading yellow-cl1 .cl1-heading {
 /* -------- collection comp style ----------- */
 
 .collection_img_div {
-  background-image: url("./assets/images/4.png");
+  background-image: url("./assets/images/5.png");
   background-position: center;
   background-repeat: no-repeat;
   width: 60px;
@@ -776,7 +775,21 @@ trade-history-btn .wallet-search input:focus {
 .trade-check-deal button:hover {
   background-color: rgb(3 4 94) !important;
 }
+.take-comfort{
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.rounded-pill-hov:hover{
+  background-color: rgb(3 4 94) !important;
 
+}
+.cardmedia{
+  background-image: url("./assets/images/bgimg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
 @media (max-width: 600px) {
   .hub-trades {
     flex-direction: column;
@@ -882,7 +895,9 @@ trade-history-btn .wallet-search input:focus {
   animation-direction: alternate;
   /* transform: translateY(0); */
 }
-
+.create-trade:hover{
+  background-color:#DBFF00;
+}
 @keyframes marquee {
   0% {
     transform: translateY(0);

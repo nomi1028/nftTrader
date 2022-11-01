@@ -1,15 +1,15 @@
 const collectionAray2=[
     {
-        title:"Daily Volume", no:"21.1 ETH"
+        title:"Daily Volume", no:"13.95 ETH"
     },
     {
-        title:"Total Volume", no:"4.71K ETH"
+        title:"Total Volume", no:"6.48K ETH"
     },
     {
-        title:"Swapped", no:"2480 NFTs"
+        title:"Swapped", no:"4600 NFTs"
     },
     {
-        title:"Total Swapped", no:"756 swaps"
+        title:"Total Swapped", no:"1459 swaps"
     },
    
 ]

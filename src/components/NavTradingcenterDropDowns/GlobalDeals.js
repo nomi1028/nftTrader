@@ -15,6 +15,7 @@ import "./TradeStyle.css";
 import { SearchOutlined } from "@mui/icons-material";
 
 import logo2 from "../../assets/images/nftlogo.svg";
+import logo3 from "../../assets/images/logo3.svg";
 import TradeBox from "./TradeBox";
 
 const GlobalDeals = () => {
@@ -55,6 +56,7 @@ const GlobalDeals = () => {
                 width: "150px",
                 height: "50px",
                 fontFamily: "museomoderno",
+                // fontSize: "0.875rem",
               }}
             >
               Create Trade
@@ -75,14 +77,16 @@ const GlobalDeals = () => {
         </Box>
       </Grid>
       <Grid item pt={2} container marginTop={4}>
-        <Grid item xs={8}>
+        <Grid item xs={6}>
           <Box
             sx={{
               width: "60%",
               display: "flex",
-              marginLeft: "30px",
+              marginLeft: "250px",
               alignItems: "center",
               marginTop: "5px",
+              
+             
             }}
           >
             <Tabs
@@ -91,18 +95,19 @@ const GlobalDeals = () => {
               textColor="primary"
               indicatorColor="primary"
               aria-label="secondary tabs example"
+              
             >
-              <Tab value="one" label="All" />
+              <Tab  value="one" label="All" />
             </Tabs>
           </Box>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             className="inputRounded"
             placeholder="Search"
             sx={{
-              width: "70%",
-
+              width: "35%",
+             marginLeft: "250px",
               marginBottom: "15px",
 
               [`& fieldset`]: {
@@ -111,7 +116,7 @@ const GlobalDeals = () => {
             }}
             InputProps={{
               endAdornment: (
-                <IconButton>
+                <IconButton style={{ color: "blue" }}>
                   <SearchOutlined />
                 </IconButton>
               ),
@@ -132,7 +137,7 @@ const GlobalDeals = () => {
           width="250px"
           height="150px"
           style={{ marginTop: "20px", marginBottom: "20px" }}
-          src={logo2}
+          src={logo3}
           alt=""
         />
         <Typography
