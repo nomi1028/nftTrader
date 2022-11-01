@@ -130,9 +130,7 @@ const Index = () => {
                 </IconButton>
               }
             >
-              NFT Trader currently does not add any new erc20 tokens. We
-              recommend to always double check trading assets on Etherscan or
-              other marketplaces
+              Celebrating NFT TRADER'S 2 year anniversary! Trade with 0% Fees
             </Alert>
           </Collapse>
         </Box>
