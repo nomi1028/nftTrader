@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .news {
   background: #0c0a41;
-  padding: 0px 0 15px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .fade.modal.show {

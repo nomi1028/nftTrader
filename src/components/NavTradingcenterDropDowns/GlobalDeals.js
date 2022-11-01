@@ -1,5 +1,5 @@
 import React from "react";
-
+import Modal from "@mui/material/Modal";
 import {
   Box,
   Button,
@@ -15,6 +15,7 @@ import "./TradeStyle.css";
 import { SearchOutlined } from "@mui/icons-material";
 
 import logo2 from "../../assets/images/nftlogo.svg";
+import TradeBox from "./TradeBox";
 
 const GlobalDeals = () => {
   const [value, setValue] = React.useState("one");
@@ -22,6 +23,10 @@ const GlobalDeals = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <Grid container direction="column">
@@ -43,6 +48,7 @@ const GlobalDeals = () => {
               </h3>
             </Typography>
             <Button
+              onClick={handleOpen}
               className="bg-white rounded-pill  nav-btn  "
               style={{
                 color: "#0000FF",
@@ -53,6 +59,15 @@ const GlobalDeals = () => {
             >
               Create Trade
             </Button>
+
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <TradeBox />
+            </Modal>
           </Box>
           <Typography variant="body1" fontSize="15px">
             Check what deals other Traders have made

@@ -125,13 +125,7 @@ const Index = () => {
         </AppBar>
       ) : null}
       <Style>
-        <Navbar
-          collapseOnSelect
-          expand="lg"
-          bg="blue"
-          variant="dark"
-          fixed="top"
-        >
+        <Navbar collapseOnSelect expand="lg" bg="blue" variant="dark">
           <Container>
             <Navbar.Brand href="/">
               {" "}

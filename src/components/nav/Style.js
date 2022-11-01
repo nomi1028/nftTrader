@@ -21,7 +21,7 @@ const Style = styled.div`
   /* Nav bar Style Tabash */
   .dropdown-menu {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    margin-top: 0px !important;
+    margin-top: -22px !important;
     width: 100% !important;
     text-align: center !important;
     min-height: 80px;
