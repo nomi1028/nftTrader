@@ -65,7 +65,7 @@ const Home = () => {
             Swap Your Digital Assets More Secure, More Social
           </h1>
           <button
-            className="rounded-pill border-0 p-3 mt-4 text-primary"
+            className="rounded-pill create-trade border-0 p-3 mt-4 text-primary"
             type="button"
           >
             Create Trade
@@ -484,7 +484,7 @@ const Home = () => {
           <div className="blueColunm2">
             <h1 className="trade-heading">Check What Others Have Traded</h1>
             <p className="trade-para">Review, Compare, Evaluate Past Deals</p>
-            <div className="trade-buttons">
+            <div className="trade-buttons trade-butt">
               <button className="trade-history-btn">
                 View global trade history
               </button>

@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <Style>
       <div className="container">
-        <div className="wrapper">
+        <div className="wrapper take-comfort">
           <div className="colunm1 xs-col-6 sm-col-6 md-col-6">
             <div className="colunm1-wrapper">
               <h5 className="small-heading">
