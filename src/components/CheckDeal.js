@@ -424,7 +424,7 @@ const CheckDeal = ({
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
                     // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
-                    src={tableData?.actorData?.takerImageURL}
+                    src={tableData?.actorData?.NftIcon}
                   />
                   <Button size="small">
                     {tableData?.actorData?.Tokenname}
@@ -490,7 +490,7 @@ const CheckDeal = ({
                     sx={{ width: "25px", height: "25px" }}
                     alt="Remy Sharp"
                     // src="https://lh3.googleusercontent.com/FIUUEPmmfgkjsHFZgcamA41h-mGW3rr_DqNq1ZsHzLKH9tUuYuCVRM8AHchOkLhr4OwtX1519oYBKg82GES9zHZ1kY-6T30BwjOuOA=s250"
-                    src={tableData?.actorData?.makerImageURL}
+                    src={tableData?.actorData?.ClientIcon}
                   />
                   <Button size="small">{tableData?.actorData?.nftnname}</Button>
                 </CardActions>

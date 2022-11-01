@@ -94,7 +94,7 @@ const WalletDetailsCard = ({ setShown, setDis }) => {
                 <Col lg={2} md={2} sm={12} xs={12}>
                   <Row className="align-items-center justify-content-evenly trade-swaps">
                     <Col sm={3} xs={3}>
-                      <Image src={tableData?.actorData?.takerImageURL}></Image>
+                      <Image src={tableData?.actorData?.NftIcon}></Image>
                     </Col>
                     <Col sm={1} xs={1}>
                       {tableData?.actorData?.NftIcontrade ? (
@@ -130,7 +130,7 @@ const WalletDetailsCard = ({ setShown, setDis }) => {
                       )}
                     </Col>
                     <Col sm={3} xs={3}>
-                      <Image src={tableData?.actorData?.makerImageURL}></Image>
+                      <Image src={tableData?.actorData?.ClientIcon}></Image>
                     </Col>
                   </Row>
                 </Col>
