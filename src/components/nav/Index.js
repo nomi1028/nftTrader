@@ -44,6 +44,14 @@ const Index = () => {
   const handleShow = () => setShow(true);
 
   console.log(account, "account");
+  const handlerstate = () => {
+    setIsClicked(false);
+  };
+
+  const handlerstate2 = () => {
+    setIsClicked2(false);
+  };
+
   const hideInfo = () => {
     setWalletInfo("false");
   };
@@ -89,6 +97,12 @@ const Index = () => {
       setAddress(`${match[1]}…${match[2]}`);
     }
   };
+
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isClicked2, setIsClicked2] = useState(false);
 
   return (
     <>
@@ -148,6 +162,10 @@ const Index = () => {
                   title="Trading center"
                   id="collasible-nav-dropdown"
                   style={{ height: "88px", paddingTop: "23px" }}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onToggle={() => setIsClicked(!isClicked)}
+                  show={isClicked || isHovered}
                 >
                   <Box
                     sx={{
@@ -165,35 +183,42 @@ const Index = () => {
                         p: 4,
                       }}
                     >
-                      <NavDropdown.Item
-                        as={Link}
-                        to={"/mytrades"}
-                        style={{ fontWeight: "bold" }}
-                      >
-                        Your Hubs & Trades
-                      </NavDropdown.Item>
-
-                      <NavDropdown.Item
-                        as={Link}
-                        to={"/globaldeals"}
-                        style={{ fontWeight: "bold" }}
-                      >
-                        Global Deals
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        as={Link}
-                        to={"/how-to-trade"}
-                        style={{ fontWeight: "bold" }}
-                      >
-                        How To Trade
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        as={Link}
-                        to={"/tradesquads"}
-                        style={{ fontWeight: "bold" }}
-                      >
-                        TradeSquad NFT
-                      </NavDropdown.Item>
+                      <div onClick={handlerstate}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={"/mytrades"}
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Your Hubs & Trades
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={"/globaldeals"}
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Global Deals
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={"/how-to-trade"}
+                          style={{ fontWeight: "bold" }}
+                        >
+                          How To Trade
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={"/tradesquads"}
+                          style={{ fontWeight: "bold" }}
+                        >
+                          TradeSquad NFT
+                        </NavDropdown.Item>
+                      </div>
                     </Box>
                   </Box>
                 </NavDropdown>
@@ -201,6 +226,10 @@ const Index = () => {
                   title="More"
                   id="collasible-nav-dropdown"
                   style={{ height: "88px", paddingTop: "23px" }}
+                  onMouseEnter={() => setIsHovered2(true)}
+                  onMouseLeave={() => setIsHovered2(false)}
+                  onToggle={() => setIsClicked2(!isClicked)}
+                  show={isClicked2 || isHovered2}
                 >
                   <Box
                     sx={{
@@ -218,32 +247,40 @@ const Index = () => {
                         p: 4,
                       }}
                     >
-                      <NavDropdown.Item
-                        as={Link}
-                        to={"/about"}
-                        style={{ fontWeight: "bold" }}
-                      >
-                        About
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        style={{ fontWeight: "bold" }}
-                        href="#action/3.2"
-                      >
-                        SDK
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        style={{ fontWeight: "bold" }}
-                        as={Link}
-                        to={"/faq"}
-                      >
-                        FAQ
-                      </NavDropdown.Item>
-                      <NavDropdown.Item
-                        style={{ fontWeight: "bold" }}
-                        href="#action/3.3"
-                      >
-                        Contact with Us
-                      </NavDropdown.Item>
+                      <div onClick={handlerstate2}>
+                        <NavDropdown.Item
+                          as={Link}
+                          to={"/about"}
+                          style={{ fontWeight: "bold" }}
+                        >
+                          About
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate2}>
+                        <NavDropdown.Item
+                          style={{ fontWeight: "bold" }}
+                          href="#action/3.2"
+                        >
+                          SDK
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate2}>
+                        <NavDropdown.Item
+                          style={{ fontWeight: "bold" }}
+                          as={Link}
+                          to={"/faq"}
+                        >
+                          FAQ
+                        </NavDropdown.Item>
+                      </div>
+                      <div onClick={handlerstate2}>
+                        <NavDropdown.Item
+                          style={{ fontWeight: "bold" }}
+                          href="#action/3.3"
+                        >
+                          Contact with Us
+                        </NavDropdown.Item>
+                      </div>
                       <NavDropdown.Item href="#action/3.3">
                         <TwitterIcon />
                         <FormatBoldIcon />
