@@ -1,7 +1,9 @@
 import React from "react";
 import youmadeit from "../../assets/youmadeit.svg";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import logo2 from "../../assets/images/nftlogo.svg";
+import dsrd from "../../assets/dsrd.svg";
+import bgimg from "../../assets/images/bgimg.PNG";
+
 import {
   Box,
   Button,
@@ -18,8 +20,14 @@ import "./TradeStyle.css";
 import { SearchOutlined } from "@mui/icons-material";
 import BasicTabs from "./HowtoTradeTab";
 import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
+import { useState } from "react";
 
 const HowtoTrade = () => {
+  const [status, setStatus] = useState(true);
+  const handler = () => {
+    setStatus(false);
+  };
+
   return (
     <Grid container direction="column">
       <Grid item bgcolor="yellow">
@@ -51,7 +59,13 @@ const HowtoTrade = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Box width="70%" height="500px" marginTop={-5}>
+        <Box
+          width="70%"
+          height="500px"
+          marginTop={-5}
+          display="flex"
+          justifyContent="center"
+        >
           {/* <iframe
             width="100%"
             height="100%"
@@ -62,13 +76,29 @@ const HowtoTrade = () => {
             title="video"
           /> */}
 
-          <CardMedia
-            component="iframe"
-            sx={{ width: "100%", height: "100%" }}
-            src="https://www.youtube.com/embed/5q2HlcFoDtM"
-            alt="Live from space album cover"
-            allow="autoplay; encrypted-media"
-          />
+          {status ? (
+            <img
+              sx={{
+                width: "150%",
+                height: "100%",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+              src={bgimg}
+              alt="Live from space album cover"
+              allow="autoplay; encrypted-media"
+              onClick={handler}
+            />
+          ) : (
+            <CardMedia
+              component="iframe"
+              sx={{ width: "100%", height: "100%" }}
+              src="https://www.youtube.com/embed/5q2HlcFoDtM"
+              alt="Live from space album cover"
+              allow="autoplay; encrypted-media"
+            />
+          )}
         </Box>
         <Typography
           variant="h1"
@@ -121,7 +151,14 @@ const HowtoTrade = () => {
         </Typography>
         <Button
           className="bg-white rounded-pill  nav-btn  "
-          style={{ color: "#0000FF", height: "40px", padding: "5px" }}
+          style={{
+            color: "#0000FF",
+            width: "180px",
+            height: "50px",
+            fontFamily: "museomoderno",
+            fontSize: "16px",
+          }}
+          endIcon={<img width="16px" height="16px" src={dsrd} />}
         >
           Join Discord
         </Button>

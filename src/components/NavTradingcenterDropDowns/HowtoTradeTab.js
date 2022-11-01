@@ -57,6 +57,12 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
           centered
+          sx={{
+            "& button": {
+              fontFamily: "MuseoModerno",
+              fontWeight: "bold",
+            },
+          }}
         >
           <Tab label="Create Trade" {...a11yProps(0)} />
           <Tab label="Close Trade" {...a11yProps(1)} />
