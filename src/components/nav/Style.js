@@ -5,7 +5,7 @@ const Style = styled.div`
   width: 100%;
   background: rgb(45 0 247z);
   .nav_class {
-    gap: 0px !important;
+    gap: 20px !important;
     display: flex;
     justify-content: center;
   }
@@ -14,6 +14,7 @@ const Style = styled.div`
   }
   .dropdown {
     position: static !important;
+    
   }
   .dropdown-item {
     color: blue;
@@ -21,7 +22,7 @@ const Style = styled.div`
   /* Nav bar Style Tabash */
   .dropdown-menu {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    margin-top: -22px !important;
+    margin-top: px !important;
     width: 100% !important;
     text-align: center !important;
     min-height: 80px;
@@ -36,11 +37,14 @@ const Style = styled.div`
     color: #1636b8 !important;
   }
   .dropdown:hover .dropdown-menu {
-    display: inline-flex;
+    display: block
     margin-top: 0;
     align-items: center;
     color: #1636b8 !important;
   }
+ 
+
+
   .address_bar {
     border: 1px solid white;
     color: white;

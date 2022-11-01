@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from "react";
+
+import Alert from "@mui/material/Alert";
+import IconButton from "@mui/material/IconButton";
+import Collapse from "@mui/material/Collapse";
+import CloseIcon from "@mui/icons-material/Close";
+
 import Style from "./Style";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -24,9 +30,9 @@ import DirtyLensIcon from "@mui/icons-material/DirtyLens";
 
 import { AppBar, Box, Toolbar } from "@mui/material";
 
-import CloseIcon from "@mui/icons-material/Close";
-
 const Index = () => {
+  const [open, setOpen] = React.useState(true);
+
   const [navopen, setnavopen] = useState(false);
   const { active, account, library, connector, activate, deactivate } =
     useWeb3React();
@@ -87,42 +93,35 @@ const Index = () => {
   return (
     <>
       {navopen ? (
-        <AppBar elevation={0} color="transparent">
-          <Toolbar
-            disableGutters={true}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              background: "transparent",
-              height: "80px",
-              alignItems: "flex-start",
-            }}
-          >
-            <Box
-              width="100%"
-              display="flex"
-              justifyContent="space-between"
-              bgcolor="#03045e"
-              alignItems="center"
-              p={1}
+        <Box bgcolor="#03045e" sx={{ width: "100%" }}>
+          <Collapse in={open}>
+            <Alert
+              severity="info"
+              sx={{
+                background: "#03045e",
+                color: "white",
+                paddingLeft: "50px",
+                paddingRight: "50px",
+              }}
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
             >
-              <Typography
-                sx={{ marginLeft: "150px", color: "white" }}
-                variant="body"
-                fontSize="12px"
-              >
-                NFT Trader currently does not add any new erc20 tokens. We
-                recommend to always double check trading assets on Etherscan or
-                other marketplaces
-              </Typography>
-
-              <CloseIcon
-                sx={{ marginRight: "10px", color: "white", fontSize: "12px" }}
-                onClick={() => setnavopen(false)}
-              />
-            </Box>
-          </Toolbar>
-        </AppBar>
+              NFT Trader currently does not add any new erc20 tokens. We
+              recommend to always double check trading assets on Etherscan or
+              other marketplaces
+            </Alert>
+          </Collapse>
+        </Box>
       ) : null}
       <Style>
         <Navbar collapseOnSelect expand="lg" bg="blue" variant="dark">
@@ -135,15 +134,20 @@ const Index = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav
-                className="me-auto nav_class d-flex w-75 justify-content-center"
-                style={{ fontWeight: "bold" }}
+                className="me-auto nav_class d-flex  w-75 justify-content-center align-items-center"
+                style={{ fontWeight: "bold", height: "88px" }}
               >
-                <Nav.Link as={Link} to="/">
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  style={{ height: "88px", paddingTop: "30px" }}
+                >
                   Home
                 </Nav.Link>
                 <NavDropdown
                   title="Trading center"
                   id="collasible-nav-dropdown"
+                  style={{ height: "88px", paddingTop: "23px" }}
                 >
                   <Box
                     sx={{
@@ -193,7 +197,11 @@ const Index = () => {
                     </Box>
                   </Box>
                 </NavDropdown>
-                <NavDropdown title="More" id="collasible-nav-dropdown">
+                <NavDropdown
+                  title="More"
+                  id="collasible-nav-dropdown"
+                  style={{ height: "88px", paddingTop: "23px" }}
+                >
                   <Box
                     sx={{
                       width: "100%",
