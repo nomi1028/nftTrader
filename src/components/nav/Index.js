@@ -147,7 +147,7 @@ const Index = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav
-                className="me-auto nav_class d-flex  w-75 justify-content-center align-items-center"
+                className="me-auto nav_class d-flex  w-100 justify-content-center align-items-center"
                 style={{ fontWeight: "bold", height: "88px" }}
               >
                 <Nav.Link
@@ -364,7 +364,7 @@ const Index = () => {
                   <>
                     <Button
                       className="bg-white rounded-pill  nav-btn  "
-                      style={{ color: "#0000FF", padding: "12px" }}
+                      style={{ color: "#0000FF", width: "110px" }}
                     >
                       Buy Crypto
                     </Button>
@@ -387,7 +387,8 @@ const Index = () => {
                       <Button
                         className=" bg-white rounded-pill  nav-btn  "
                         style={{
-                          padding: "12px",
+                          height: "50px",
+                          width: "150px",
                           marginLeft: "2px",
                           color: "#0000FF",
                         }}

@@ -1,0 +1,33 @@
+@media screen and (max-width: 768px) {
+  .home_banner {
+    height: 464px;
+    width: 100% !important;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home_banner {
+    height: 768px;
+    width: 100% !important;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+/* .home_banner::after {
+    content: "";
+    width: 90%;
+    height: 150%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    background: #2001c9;
+    overflow: hidden;
+  } */

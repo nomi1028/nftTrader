@@ -5,29 +5,23 @@ import { Container, Col, Row, Button } from "react-bootstrap";
 import bg from "../../assets/images/bg.svg";
 import img1 from "../../assets/images/1.png";
 import chain from "../../assets/images/chain.png";
-
-import img2 from "../../assets/images/2.png";
-import img3 from "../../assets/images/3.png";
-import img4 from "../../assets/images/4.png";
-import img5 from "../../assets/images/5.png";
-import img6 from "../../assets/images/6.png";
-import img7 from "../../assets/images/7.png";
+import img2 from "../../assets/images/3.png";
+import img3 from "../../assets/images/4.png";
+import img4 from "../../assets/images/7.png";
+import img5 from "../../assets/images/8.png";
+import img6 from "../../assets/images/9.png";
+import img7 from "../../assets/images/11.gif";
+import img88 from "../../assets/images/14.png";
+import img99 from "../../assets/images/15.png";
+import img10 from "../../assets/images/17.png";
+import img11 from "../../assets/images/19.png";
 
 import gif1 from "../../assets/images/1.gif";
 import gif2 from "../../assets/images/2.gif";
 import logo from "../../assets/images/logo2.svg";
 import img8 from "../../assets/images/8.png";
 import img9 from "../../assets/images/9.png";
-import mascotte from "../../assets/images/mascotte.svg";
-import verified from "../../assets/images/verified.svg";
-import Guide from "../../assets/guide.svg";
-import Slider1 from "../carousel/carousel1";
-import Slider2 from "../carousel/carousel2";
-import Slider3 from "../carousel/carousel3";
-import Slider4 from "../carousel/carousel4";
-import Slider5 from "../carousel/carousel5";
-import Slider6 from "../carousel/carousel6";
-import Slider7 from "../carousel/carousel7";
+
 import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
 import SliderBackground from "../../assets/sliderBackgroung.svg";
@@ -38,7 +32,7 @@ import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
 import { Box } from "@mui/material";
 const Home = () => {
   return (
-    <Container fluid className="home_container ">
+    <Container fluid className="home_container p-0 ">
       <section className="home_banner">
         {/* <div
           className="Bubble position-relative inline-flex align-items-center justify-content-center rounded-full overflow-hidden"
@@ -60,33 +54,258 @@ const Home = () => {
           />
         </div>*/}
 
-        <div className="center_text text-center mt-5">
-          <h1 className="text-white header-heading">
+        <div className="center_text text-center ">
+          <h1
+            className="text-white header-heading "
+            style={{ fontWeight: "bold" }}
+          >
             Swap Your Digital Assets More Secure, More Social
           </h1>
           <button
-            className="rounded-pill create-trade border-0 p-3 mt-4 text-primary"
+            className="rounded-pill create-trade border-0 p-3 mt-4 text-primary "
+            style={{ fontWeight: "bold" }}
             type="button"
           >
             Create Trade
           </button>
-          <div className="slider6  behind">
+          {/* <div className="slider6  behind">
             <img
               className="d-block w-100 rounded-circle "
               src={img6}
               alt="Second slide"
             />
-          </div>
+          </div> */}
         </div>
 
-        <div className="slider1 ">
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "8%",
+            left: "4%",
+            width: { xs: "7%" },
+            height: { xs: "7%" },
+            display: { xs: "block" },
+          }}
+        >
           <img
-            className="d-block w-100 rounded-circle"
+            className="d-block w-100 rounded-circle "
             src={img1}
             alt="Second slide"
           />
-        </div>
-        <div className="slider2 ">
+        </Box>
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "35%",
+            left: "-5%",
+            width: { xs: "14%", md: "20%", lg: "16%", xl: "14%" },
+            height: { xs: "14%", md: "20%", lg: "16%", xl: "14%" },
+            display: { xs: "none", lg: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img2}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            bottom: "16%",
+            left: "1%",
+            width: { xs: "10%" },
+            height: { xs: "10%" },
+            display: { xs: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img3}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: { xs: "7%", lg: "7", xl: "7%" },
+            left: { xs: "25%", lg: "30", xl: "25%" },
+            width: { xs: "10%", xl: "10%", lg: "12%" },
+            height: { xs: "10%", xl: "10%", lg: "12%" },
+            display: { xs: "none", lg: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img4}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "45%",
+            left: "13%",
+            width: { xs: "14%" },
+            height: { xs: "14%" },
+            display: { xl: "block", xs: "none" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img5}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+
+            position: "absolute",
+            top: { xs: "70%", sm: "65%", md: "70%", lg: "60%", xl: "55%" },
+            left: { xs: "80%", sm: "70%", md: "55%", lg: "25", xl: "33%" },
+            width: { xs: "10%", sm: "14%", md: "14%", xl: "10%", lg: "12%" },
+            height: { xs: "10%", sm: "14%", md: "14%", xl: "10%", lg: "12%" },
+
+            display: { xs: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img6}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            // top: "4%",
+            // right: "20%",
+            // width: { xs: "17%" },
+            // height: { xs: "17%" },
+            top: { xs: "4%", md: "4%", lg: "4%", xl: "0%" },
+            right: { xs: "10%", md: "5%", lg: "5%", xl: "15%" },
+            width: { xs: "25%", md: "25%", xl: "18%", lg: "20%" },
+            height: { xs: "25%", md: "25%", xl: "18%", lg: "20%" },
+
+            display: { xs: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img7}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            // top: "68%",
+            // right: "16%",
+            // width: { xs: "15%" },
+            // height: { xs: "15%" },
+
+            top: { xs: "68%", lg: "72", xl: "60%" },
+            right: { xs: "16%", lg: "5%", xl: "16%" },
+            width: { xs: "15%", xl: "15%", lg: "15%" },
+            height: { xs: "15%", xl: "15%", lg: "15%" },
+
+            display: { xs: "none", lg: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img88}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "20%",
+            right: "5%",
+            width: { xl: "7%" },
+            height: { xl: "7%" },
+            display: { xl: "block", xs: "none" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img99}
+            alt="Second slide"
+          />
+        </Box>
+
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "40%",
+            right: "2%",
+            width: { xl: "9%" },
+            height: { xl: "9%" },
+            display: { xl: "block", xs: "none" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img3}
+            alt="Second slide"
+          />
+        </Box>
+        <Box
+          zIndex="1"
+          sx={{
+            position: "absolute",
+            top: "65%",
+            right: "-2%",
+            width: { xl: "14%" },
+            height: { xl: "14%" },
+            display: { xl: "block", xs: "none" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img11}
+            alt="Second slide"
+          />
+        </Box>
+
+        {/* <Box
+          zIndex="-1"
+          sx={{
+            position: "absolute",
+            top: "8%",
+            left: "4%",
+            width: { xs: "5%" },
+            height: { xs: "5%" },
+            display: { xs: "none", md: "block" },
+          }}
+        >
+          <img
+            className="d-block w-100 rounded-circle "
+            src={img1}
+            alt="Second slide"
+          />
+        </Box> */}
+
+        {/* <div className="slider2 ">
           <img
             className="d-block w-100 rounded-circle"
             src={gif1}
@@ -106,7 +325,7 @@ const Home = () => {
             src={gif1}
             alt="Second slide"
           />
-        </div>
+        </div> */}
         {/* <div className="slider4">
         <img
           className="d-block w-100 rounded-circle"
@@ -114,7 +333,7 @@ const Home = () => {
           alt="Second slide"
         />
         </div> */}
-        <div className="slider5">
+        {/* <div className="slider5">
           <img
             className="d-block w-100 rounded-circle"
             src={img5}
@@ -163,7 +382,7 @@ const Home = () => {
             src={gif1}
             alt="Second slide"
           />
-        </div>
+        </div> */}
       </section>
       {/* -------------------------------- */}
       <section className="home_section2 pt-5">
