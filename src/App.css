@@ -115,7 +115,7 @@
 
 /* ======== home page style =========  */
 .home_banner {
-  min-height: 120vh;
+  min-height: 500px;
   width: 100% !important;
   background-color: blue;
   position: relative;
@@ -124,23 +124,159 @@
 }
 .home_banner::after {
   content: "";
-  width: 90%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   z-index: -1;
   position: absolute;
   top: 0%;
-  left: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   background: #2001c9;
   overflow: hidden;
 }
+
+/* ======== Home banner Media Quries down =========  */
+
+@media (min-width: 400px) and (max-width: 768px) {
+  .home_banner {
+    height: 500px;
+    width: 100% !important;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .home_banner {
+    height: 700px;
+    width: 100% !important;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  .home_banner::after {
+    content: "";
+    width: 120%;
+    height: 140%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .home_banner::after {
+    content: "";
+    width: 110%;
+    height: 140%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1536px) {
+  .home_banner::after {
+    content: "";
+    width: 90%;
+    height: 150%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1536px) {
+  .home_banner::after {
+    content: "";
+    width: 70%;
+    height: 150%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2001c9;
+    overflow: hidden;
+  }
+}
+@media (min-width: 0px) and (max-width: 700px) {
+  .center_text {
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: MuseoModerno !important;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  .center_text {
+    z-index: 5;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: MuseoModerno !important;
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .center_text {
+    z-index: 5;
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: MuseoModerno !important;
+  }
+}
+@media (min-width: 1200px) {
+  .center_text {
+    z-index: 5;
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: MuseoModerno !important;
+  }
+}
+/* ======== Home banner Media Quries up =========  */
 
 news .header-heading {
   font-size: 3vw;
   font-weight: 600;
 }
 
-.home_container {
+center_text .home_container {
   --bs-gutter-x: unset !important;
   width: 100%;
   position: relative;
@@ -233,6 +369,9 @@ news .header-heading {
 }
 
 .center_text {
+  z-index: 5;
+
+  width: 30%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -775,15 +914,14 @@ trade-history-btn .wallet-search input:focus {
 .trade-check-deal button:hover {
   background-color: rgb(3 4 94) !important;
 }
-.take-comfort{
+.take-comfort {
   margin-left: 120px;
   margin-right: 120px;
 }
-.rounded-pill-hov:hover{
+.rounded-pill-hov:hover {
   background-color: rgb(3 4 94) !important;
-
 }
-.cardmedia{
+.cardmedia {
   background-image: url("./assets/images/bgimg.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -900,8 +1038,8 @@ trade-history-btn .wallet-search input:focus {
   animation-direction: alternate;
   /* transform: translateY(0); */
 }
-.create-trade:hover{
-  background-color:#DBFF00;
+.create-trade:hover {
+  background-color: #dbff00;
 }
 @keyframes marquee {
   0% {
@@ -912,40 +1050,7 @@ trade-history-btn .wallet-search input:focus {
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .home_banner::after {
-    content: "";
-    width: 70%;
-    height: 70%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    z-index: -1;
-    position: absolute;
-    top: 3%;
-    left: 12%;
-    background: #2001c9;
-    overflow: hidden;
-  }
-}
-@media screen and (max-width: 1600px) {
-  .home_banner::after {
-    content: "";
-    width: 90%;
-    height: 150%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    z-index: -1;
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    background: #2001c9;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
   .slider8 {
     display: none;
   }
@@ -969,4 +1074,4 @@ trade-history-btn .wallet-search input:focus {
   .slider12 {
     display: none;
   }
-}
+} */
