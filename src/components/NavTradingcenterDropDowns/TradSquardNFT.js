@@ -15,6 +15,7 @@ import { SearchOutlined } from "@mui/icons-material";
 import WanttoKnowmore from "../NavMoreDropowns/WanttoKnowmore";
 import bgs from "../../assets/images/bgs.svg";
 import opensea from "../../assets/opensea.svg";
+import lightimg from "../../assets/images/lightimg.svg";
 
 const TradSquardNFT = () => {
   return (
@@ -47,11 +48,11 @@ const TradSquardNFT = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Box bgcolor="#F3F4F6" height="500px" width="60%">
-          <img src={bgs} alt="nothing" />
-        </Box>
+    
+    <img height="400px" width="300px" src={lightimg} alt="nothing" />
+    
       </Grid>
-      <Grid item mt={5} xs={7} p={5} display="flex" flexDirection="column">
+      <Grid item mt={5} xs={7} p={5} sx={{textAlign:"start",  margin:"auto " }} display="flex" flexDirection="column">
         <Typography
           variant="h1"
           fontSize="28px"
@@ -73,16 +74,24 @@ const TradSquardNFT = () => {
           color="#03045E"
           mb={10}
           fontWeight="700"
+          width="70%"
+         
+          
         >
+        
           Mint your own Trade Squad NFT, keep it in your connected trading
           wallet and don’t pay our platform trading fee
+          
         </Typography>
+        
         <Divider />
+      
 
         <span
           style={{
             marginTop: "80px",
-            alignSelf: "center",
+            // alignSelf: "center",
+            width: "70%",
             textAlign: "center",
             color: "#2D00F7",
           }}
@@ -111,13 +120,14 @@ const TradSquardNFT = () => {
             variant="h1"
             fontSize="30px"
             marginBottom={2}
+            textAlign="center"
           >
-            <h3 style={{ fontWeight: "bold", fontSize: "30px" }}>
+            <h3 style={{ fontWeight: "600", fontSize: "2.25rem" }}>
               Trade Squad NFTs will support the NFT Trader community and whole
               ecosystem!
             </h3>
           </Typography>
-          <Typography color="white" variant="body1" fontSize="15px" mb={10}>
+          <Typography color="white" variant="body1" fontWeight="300" fontFamily="Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;"  fontSize="15px" mb={4} textAlign="center">
             Trade Squads are a utility token which at first will offer owners a
             full discount of the platform trading fee when securing trades on
             the platform. The purpose of this token is not to be aesthetic but
@@ -126,9 +136,12 @@ const TradSquardNFT = () => {
             Squads NFTs over time. To keep updated and in the loop please follow
             us on Twitter and read our Medium.
           </Typography>
+          <Typography color="white"  variant="body1"  fontWeight="300" fontFamily="Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;" fontSize="15px" mb={10}>
+          To keep updated and in the loop please follow us on Twitter and read our Medium.
+          </Typography>
           <Button
             endIcon={<img width="50px" height="30px" src={opensea} alt="" />}
-            className="bg-white rounded-pill w-75 p-3 nav-btn  "
+            className="bg-white rounded-pill w-65 p-3 nav-btn  "
             style={{ color: "#0000FF", padding: "5px" }}
           >
             Trad Squar which already been minted

@@ -928,6 +928,12 @@ trade-history-btn .wallet-search input:focus {
   background-repeat: no-repeat;
   background-position: center;
 }
+.ourservice{
+ padding-left: 150px;
+ padding-right: 250px;
+ overflow: hidden;
+  
+}
 @media (max-width: 600px) {
   .hub-trades {
     flex-direction: column;

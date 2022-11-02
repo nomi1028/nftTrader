@@ -17,7 +17,7 @@ export const CreateTradeData = [
   {
     id: 4,
     headline: "Review and verify the trade",
-    text: "In this step you can change the expiry date for the deal.",
+    text: "Search and select the NFT collections and the specific NFTs which the counterparty “Trader” owns that you would like to trade for. In this step you can include other crypto tokens (ex.ETH, WETH, etc.) that you would like from counterparty Trader.Plus if you cannot find a specific collection of NFTs in the available list, you can add the custom NFT Collection by inputting the Collection Address.",
   },
   {
     id: 5,

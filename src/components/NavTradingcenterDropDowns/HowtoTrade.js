@@ -93,7 +93,7 @@ const HowtoTrade = () => {
           ) : (
             <CardMedia
               component="iframe"
-              sx={{ width: "100%", height: "100%" }}
+              sx={{ width: "75%", height: "100%" }}
               src="https://www.youtube.com/embed/5q2HlcFoDtM"
               alt="Live from space album cover"
               allow="autoplay; encrypted-media"
@@ -110,11 +110,11 @@ const HowtoTrade = () => {
           <h1
             style={{ fontSize: "40px", fontWeight: "600", textAlign: "center" }}
           >
-            Are you creating or closing a deal? Select an option.
+            Are you creating or closing a deal? Select an option
           </h1>
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} style={{marginLeft:"140px" , marginRight: "180px" }} >
         <BasicTabs />
       </Grid>
       <Grid
@@ -156,7 +156,8 @@ const HowtoTrade = () => {
             width: "180px",
             height: "50px",
             fontFamily: "museomoderno",
-            fontSize: "16px",
+            // fontWeight: "1000"
+            fontSize: "0.875rem",
           }}
           endIcon={<img width="16px" height="16px" src={dsrd} />}
         >
@@ -189,10 +190,11 @@ const HowtoTrade = () => {
           >
             <Typography
               variant="body"
-              fontWeight="bold"
-              color="blue"
-              fontSize="20px"
+              fontWeight="600"
+              color="rgb(45,0,247)"
+              fontSize="1.25rem"
               mt={5}
+              mb={4}
             >
               Important Things To Know Before Using NFT Trader
             </Typography>
@@ -211,25 +213,28 @@ const HowtoTrade = () => {
         </Box>
       </Grid>
 
-      <Grid item container xs={12} bgcolor="#2D00F7">
-        <Grid item p={10} xs={6}>
-          <Typography
+      <Grid   item container  xs={12} bgcolor="#2D00F7">
+        <Grid  item sx={{margin:"auto ",width:"70%",marginY:"30px !important ", textAlign:"center"}} p={10} xs={6} mt={8}>
+          <Typography 
+          
             variant="body"
             fontWeight="bold"
             color="white"
-            fontSize="20px"
+            fontSize="20px" 
+            
+            
           >
             Our Smart Contracts
           </Typography>
         </Grid>
-        <Grid item p={5} xs={6} display="flex" flexDirection="column">
+        <Grid item p={5} xs={6}  display="flex" flexDirection="column" sx={{ margin:"auto " , textAlign:"initial"}}>
           <Box
-            width="100%"
+            // width="100%"
             display="flex"
             p={5}
             sx={{ borderBottom: 1, borderColor: "black" }}
           >
-            <Typography color="yellow">
+            <Typography color="yellow" >
               <FiberManualRecordIcon />
             </Typography>
             <Box
@@ -240,9 +245,9 @@ const HowtoTrade = () => {
             >
               <Typography
                 variant="body"
-                fontWeight="bold"
+                fontWeight="600"
                 color="white"
-                fontSize="20px"
+                fontSize="1.25rem"
               >
                 Ethereum Contract Address
               </Typography>
@@ -269,9 +274,9 @@ const HowtoTrade = () => {
             >
               <Typography
                 variant="body"
-                fontWeight="bold"
+                fontWeight="600"
                 color="white"
-                fontSize="20px"
+                fontSize="1.25rem"
               >
                 Polygon Contract Address
               </Typography>
