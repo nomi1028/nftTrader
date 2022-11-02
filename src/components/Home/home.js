@@ -20,7 +20,7 @@ import gif1 from "../../assets/images/1.gif";
 import gif2 from "../../assets/images/2.gif";
 import logo from "../../assets/images/logo2.svg";
 import img8 from "../../assets/images/8.png";
-import img9 from "../../assets/images/9.png";
+import img9 from "../../assets/images/mimg.PNG";
 
 import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
@@ -519,13 +519,13 @@ const Home = () => {
               <p>Access & configure a trading bot for your own Discord.</p>
               <h6 style={{ fontWeight: "bold" }}>Read More</h6>
             </div>
-            <marquee className="news-content">
-              <img src={img9} alt="" />
-              <img src={img9} alt="" />
-              <img src={img9} alt="" />
-              <img src={img9} alt="" />
-              <img src={img9} alt="" />
-              <img src={img9} alt="" />
+            <marquee className="news-content ">
+              <img style={{ marginLeft: "-300px" }} src={img9} alt="" />
+              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
             </marquee>
           </div>
         </Container>
