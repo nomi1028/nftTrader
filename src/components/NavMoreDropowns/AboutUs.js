@@ -62,8 +62,8 @@ const AboutUs = () => {
         </Box>
       </Grid>
 
-      <Grid item>
-        <Box p={10}>
+      <Grid item >
+        <Box p={10} xs={12} width="80% " margin="auto">
           <Typography variant="body1" fontSize="15px" p={2}>
             NFT Trader was founded with a simple mission: provide a safe
             platform and community for the trading of digital assets in the Web3

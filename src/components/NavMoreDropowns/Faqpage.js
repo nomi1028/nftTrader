@@ -51,7 +51,7 @@ const Faqpage = () => {
         </Box>
       </Grid>
       <Grid item xs={12} pt={2}>
-        <Box width="100%" sx={{ display: "flex", justifyContent: "center" }}>
+        <Box width="75%" margin="auto" sx={{ display: "flex", justifyContent: "center" }}>
           <TextField
             className="inputRounded"
             placeholder="Search FAQ"
@@ -74,7 +74,7 @@ const Faqpage = () => {
           />
         </Box>
       </Grid>
-      <Grid item pt={5} xs={12}>
+      <Grid width="70%" margin="auto" item pt={5} xs={12}>
         {data.map((elem) => {
           return <FaqList elem={elem} />;
         })}

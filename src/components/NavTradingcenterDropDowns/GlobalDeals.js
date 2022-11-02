@@ -56,7 +56,6 @@ const GlobalDeals = () => {
                 width: "150px",
                 height: "50px",
                 fontFamily: "museomoderno",
-                // fontSize: "0.875rem",
               }}
             >
               Create Trade
@@ -76,17 +75,12 @@ const GlobalDeals = () => {
           </Typography>
         </Box>
       </Grid>
-      <Grid item pt={2} container marginTop={4}>
-        <Grid item xs={6}>
+      <Grid item pt={2} container  sx={{margin:"auto ",width:"70%",marginY:"30px !important"}}>
+        <Grid item xs={6} >
           <Box
             sx={{
-              width: "60%",
               display: "flex",
-              marginLeft: "250px",
-              alignItems: "center",
-              marginTop: "5px",
-              
-             
+              marginTop: "5px", 
             }}
           >
             <Tabs
@@ -94,22 +88,18 @@ const GlobalDeals = () => {
               onChange={handleChange}
               textColor="primary"
               indicatorColor="primary"
-              aria-label="secondary tabs example"
-              
+              aria-label="secondary tabs example" 
             >
               <Tab  value="one" label="All" />
             </Tabs>
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} sx={{textAlign:"end"}} >
           <TextField
             className="inputRounded"
             placeholder="Search"
             sx={{
-              width: "35%",
-             marginLeft: "250px",
               marginBottom: "15px",
-
               [`& fieldset`]: {
                 borderRadius: "25px",
               },
