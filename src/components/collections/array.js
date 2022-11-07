@@ -27,7 +27,7 @@ const collectionAray = [
   },
   {
     img: img5,
-    title: "CLONE X - X TAKASHI MURAKAMI ",
+    title: "X TAKASHI MURAKAMI ",
     eth: "11.71K ETH",
   },
 ];

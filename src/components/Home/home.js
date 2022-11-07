@@ -385,9 +385,9 @@ const Home = () => {
         </div> */}
       </section>
       {/* -------------------------------- */}
-      <section className="home_section2 pt-5">
-        <Box mt={5} mb={15}>
-          <h2 className="home_section2_heading text-center mt-5">
+      <section className="home_section2 ">
+        <Box>
+          <h2 className="home_section2_heading text-center ">
             Trade NFTs & Crypto Like a Boss
           </h2>
 
@@ -438,7 +438,7 @@ const Home = () => {
             </Col>
           </Row>
           <p
-            className="text-center mt-5 mt-md-0"
+            className="text-center downheading mt-5  mt-md-0"
             style={{ marginTop: "-20px", fontSize: "1.2vw" }}
           >
             Our protocol is totally on-chain, data is totally accessible.
@@ -449,13 +449,19 @@ const Home = () => {
 
       <section className="home_section3">
         <Row className="justify-content-center m-0">
-          <Col lg={7}>
-            <div className="p-5" style={{ borderRight: "1px solid lightgray" }}>
+          <Col lg={7} className="mb-2">
+            <div
+              className="p-sm-1 p-md-5"
+              style={{ borderRight: "1px solid lightgray" }}
+            >
               <h3
                 style={{
                   color: "#3e39e6",
                   fontSize: "1.675rem",
                   fontWeight: "600",
+                  textAlign: "start",
+                  marginBottom: "20px",
+                  paddingLeft: "10px",
                 }}
               >
                 Top 5 Collections
@@ -465,12 +471,15 @@ const Home = () => {
             </div>
           </Col>
           <Col lg={5}>
-            <div className="p-5">
+            <div className="p-sm-3 p-md-5">
               <h3
                 style={{
                   color: "#3e39e6",
                   fontSize: "1.675rem",
                   fontWeight: "600",
+                  textAlign: "start",
+                  marginBottom: "20px",
+                  marginLeft: "10px",
                 }}
               >
                 NFT Trader Numbers
@@ -494,41 +503,23 @@ const Home = () => {
       {/* -------------------------- */}
       {/* marquee tag section  */}
       <section className="mt-5 mb-1">
-        <Container fluid className="home_container">
-          <div
-            className="news position-relative "
-            style={{
-              background: "#00008B",
-            }}
-          >
-            <div
-              className="title share_trades text-center text-white position-absolute "
-              style={{
-                width: "600px",
-                background: "#00008B",
-                padding: "40px 50px 40px 50px",
-                zIndex: "9",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-              }}
-            >
-              <h5 className="font-bold" style={{ fontWeight: "bold" }}>
-                Share Trades With Your Community
-              </h5>
-              <p>Access & configure a trading bot for your own Discord.</p>
-              <h6 style={{ fontWeight: "bold" }}>Read More</h6>
-            </div>
-            <marquee className="news-content ">
-              <img style={{ marginLeft: "-300px" }} src={img9} alt="" />
-              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
-              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
-              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
-              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
-              <img style={{ marginLeft: "30px" }} src={img9} alt="" />
-            </marquee>
+        <div className="news position-relative ">
+          <marquee className="news-content ">
+            <img style={{ marginLeft: "-300px" }} src={img9} alt="" />
+            <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+            <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+            <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+            <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+            <img style={{ marginLeft: "30px" }} src={img9} alt="" />
+          </marquee>
+          <div className="title  text-center text-white ">
+            <h5 className="font-bold" style={{ fontWeight: "bold" }}>
+              Share Trades With Your Community
+            </h5>
+            <p>Access & configure a trading bot for your own Discord.</p>
+            <h6 style={{ fontWeight: "bold" }}>Read More</h6>
           </div>
-        </Container>
+        </div>
       </section>
       {/* ---------------------- */}
       <section className="home_section4">
@@ -666,41 +657,18 @@ const Home = () => {
             </marquee> */}
             <marquee
               className="news-content"
-              scrollamount="10"
+              scrollamount="20"
               direction={window.innerWidth > "900" ? "up" : "left"}
             >
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
-              <div className="mb-3">
-                {" "}
-                <img src={gif1} className="sliderimg rounded-circle" />
-              </div>
+              {" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />{" "}
+              <img src={gif1} className="sliderimg rounded-circle " />
             </marquee>
             {/* <div className="marquee">
           <img src={SliderBackground} className="sliderimg"/>

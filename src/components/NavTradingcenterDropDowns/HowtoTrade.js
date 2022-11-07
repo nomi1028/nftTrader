@@ -114,7 +114,7 @@ const HowtoTrade = () => {
           </h1>
         </Typography>
       </Grid>
-      <Grid item xs={12} style={{marginLeft:"140px" , marginRight: "180px" }} >
+      <Grid item xs={12} style={{ marginLeft: "140px", marginRight: "180px" }}>
         <BasicTabs />
       </Grid>
       <Grid
@@ -213,28 +213,45 @@ const HowtoTrade = () => {
         </Box>
       </Grid>
 
-      <Grid   item container  xs={12} bgcolor="#2D00F7">
-        <Grid  item sx={{margin:"auto ",width:"70%",marginY:"30px !important ", textAlign:"center"}} p={10} xs={6} mt={8}>
-          <Typography 
-          
+      <Grid item container xs={12} bgcolor="#2D00F7">
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          sx={{
+            margin: "auto ",
+            width: "70%",
+            marginY: "30px !important ",
+            textAlign: "center",
+          }}
+          p={10}
+          mt={8}
+        >
+          <Typography
             variant="body"
             fontWeight="bold"
             color="white"
-            fontSize="20px" 
-            
-            
+            fontSize="20px"
           >
             Our Smart Contracts
           </Typography>
         </Grid>
-        <Grid item p={5} xs={6}  display="flex" flexDirection="column" sx={{ margin:"auto " , textAlign:"initial"}}>
+        <Grid
+          item
+          p={5}
+          xs={12}
+          sm={6}
+          display="flex"
+          flexDirection="column"
+          sx={{ margin: "auto ", textAlign: "initial" }}
+        >
           <Box
             // width="100%"
             display="flex"
             p={5}
             sx={{ borderBottom: 1, borderColor: "black" }}
           >
-            <Typography color="yellow" >
+            <Typography color="yellow">
               <FiberManualRecordIcon />
             </Typography>
             <Box

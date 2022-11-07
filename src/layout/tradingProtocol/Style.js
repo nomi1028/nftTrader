@@ -5,7 +5,7 @@ import Circle_bg from "../../assets/circle_bg.svg";
 const Style = styled.div`
   background: url(${TradingProtocolBg});
   background-repeat: no-repeat;
-  background-size: cover ;
+  background-size: cover;
   background-position: 50% center;
   width: 100%;
   height: 100%;
