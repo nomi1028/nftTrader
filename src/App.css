@@ -1095,7 +1095,7 @@ trade-history-btn .wallet-search input:focus {
     height: auto;
   }
   .home_section4 {
-    height: 200vh;
+    height: 150vh;
   }
 }
 @media (max-width: 800px) {
