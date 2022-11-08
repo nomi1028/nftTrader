@@ -145,7 +145,10 @@ const Index = () => {
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            <Navbar.Collapse
+              id="responsive-navbar-nav"
+              style={{ zIndex: 2, background: "#0000FF" }}
+            >
               <Nav
                 className="me-auto nav_class d-flex  w-100 justify-content-center align-items-center"
                 style={{ fontWeight: "bold", height: "88px" }}
