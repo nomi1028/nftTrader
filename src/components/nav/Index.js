@@ -147,10 +147,10 @@ const Index = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse
               id="responsive-navbar-nav"
-              style={{ zIndex: 2, background: "#0000FF" }}
+              style={{ zIndex: 5, background: "#0000FF" }}
             >
               <Nav
-                className="me-auto nav_class d-flex  w-100 justify-content-center align-items-center"
+                className="me-auto nav_class d-flex  w-100 justify-content-center align-items-center mttop2"
                 style={{ fontWeight: "bold", height: "88px" }}
               >
                 <Nav.Link
@@ -238,6 +238,7 @@ const Index = () => {
                       width: "100%",
                       display: "flex",
                       justifyContent: "center",
+                      zIndex: 5,
                     }}
                   >
                     <Box
@@ -293,7 +294,7 @@ const Index = () => {
                 </NavDropdown>
               </Nav>
 
-              <Nav>
+              <Nav className="mttop">
                 {account ? (
                   <>
                     <div
@@ -366,7 +367,7 @@ const Index = () => {
                 ) : (
                   <>
                     <Button
-                      className="bg-white rounded-pill  nav-btn  "
+                      className="bg-white rounded-pill  nav-btn nav-btn2   "
                       style={{ color: "#0000FF", width: "110px" }}
                     >
                       Buy Crypto
@@ -388,7 +389,7 @@ const Index = () => {
                     )}
                     {account ? null : (
                       <Button
-                        className=" bg-white rounded-pill  nav-btn  "
+                        className=" bg-white rounded-pill  nav-btn  nav-btn2 "
                         style={{
                           height: "50px",
                           width: "150px",

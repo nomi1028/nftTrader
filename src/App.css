@@ -1234,9 +1234,21 @@ news-content */
   }
 
   .blueColunm2 h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .blueColunm2 p {
-    font-size: 20px;
+    font-size: 10px;
+  }
+}
+@media (min-width: 0px) and (max-width: 991px) {
+  .mttop {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  .mttop2 {
+    padding-top: 100px;
   }
 }
