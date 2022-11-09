@@ -167,27 +167,36 @@ const HowtoTrade = () => {
       <div className="tra-c2">
         
             <Typography
+            className="tra-c2p"
               variant="body"
-              fontWeight="600"
-              color="rgb(45,0,247)"
-              fontSize="1.25rem"
-              mt={5}
-              mb={4}
-              paddingLeft={10}
-              paddingRight={10}
+             
+
             >
+              
               Important Things To Know Before Using NFT Trader
             </Typography>
             <Typography
-              variant="body1"
-              paddingLeft={10}
-              paddingRight={10}
-              paddingTop={3}
-              paddingBottom={3}
+            className="tra-c2p2"
+              
+             
             >
               Only ONE Trader/Initiator, creates the trade for both parties'
-              involved in the deal. The other Trader/Counterparty is the ONE who
-              closes the deal. This particular flow of trading provides security
+              involved in the deal. 
+            </Typography>
+            <Typography
+            className="tra-c2p21"
+              
+             
+            >
+             The other Trader/Counterparty is the ONE who
+              closes the deal.
+            </Typography>
+            <Typography
+            className="tra-c2p22"
+              
+             
+            >
+        This particular flow of trading provides security
               layers in order to help prevent the act of fraudulent activities.
             </Typography>
          </div>
@@ -202,7 +211,7 @@ const HowtoTrade = () => {
             
             
           >
-            Our Smart Contracts
+           <h3> Our Smart Contracts</h3>
           </Typography>
           </div>
         
@@ -212,8 +221,8 @@ const HowtoTrade = () => {
             
             
           >
-            <Typography color="yellow">
-              <FiberManualRecordIcon />
+            <Typography  className="trade-bm-rt12"  color="yellow">
+              <FiberManualRecordIcon  />
             </Typography>
             
             <Box
@@ -230,7 +239,7 @@ const HowtoTrade = () => {
                 
            
                 <p className="tp">
-               0x657E383EdB9A7407E468acBCc9Fe4C973
+                https://etherscan.io/address/0x657E383EdB9A7407E468acBCc9Fe4C9730c7C275#code
                 </p>
             
             </Box>
@@ -249,10 +258,11 @@ const HowtoTrade = () => {
                  <h5 className="tp1"> 
                 Polygon Contract Address
              </h5>
+             <Typography className="tp">
              
-             <p className="tp">
-               0x4ee6e8885b684a3de405a3dca83b8823a
-             </p>
+             https://polygonscan.com/address/0x4ee6e8885b684a3de405a3dca83b8823a5acf216#code
+            
+             </Typography>
             </Box>
           </Box>
           

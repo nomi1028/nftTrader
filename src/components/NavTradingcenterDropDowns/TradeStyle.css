@@ -90,14 +90,32 @@
 }
 #t-btn{
     color: #0000FF;
-     padding: 10px;
+     padding-top: 10px;
      margin-bottom:86px;
 }
+
+@media(max-width:420px){
+    #t-btn{
+        color: #0000FF;
+        margin-left: 5px;
+        margin-right: 5px;
+         margin-bottom:36px;
+    }
+}
+@media(max-width:380px){
+    #t-btn{
+        color: #0000FF;
+        margin-left: 10px;
+        margin-right: 10px;
+         margin-bottom:36px;
+    }
+}
+
 
 @media(max-width:768px){
     #t-btn{
     color: #0000FF;
-     padding: 10px;
+     padding: 20px;
      margin-bottom:36px;
 }
 

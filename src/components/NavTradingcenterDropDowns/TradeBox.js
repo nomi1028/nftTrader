@@ -15,7 +15,7 @@ const style = {
   width: 550,
   bgcolor: "#2D00F7",
   display: "flex",
-  display: "flex",
+ 
   justifyContent: "center",
   flexDirection: "column",
   color: "white",

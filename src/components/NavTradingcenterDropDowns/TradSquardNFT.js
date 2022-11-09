@@ -123,7 +123,7 @@ const TradSquardNFT = () => {
            
             id="t-btn"
           >
-            Trad Squar which already been minted
+            Trade Squads which already been minted
           </Button>
         </Box>
         </div>
