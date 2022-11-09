@@ -29,7 +29,7 @@ const HowtoTrade = () => {
   };
 
   return (
-   <Grid container direction="column">
+   <Grid container direction="column" width="100%">
  
       <Grid item xs={12}>
         <div className="top_mai">

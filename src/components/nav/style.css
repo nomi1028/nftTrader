@@ -1,0 +1,18 @@
+.nav-o{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+@media(max-width:720px){
+    .nav-o{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+      
+        align-items: center;
+        padding: 25px;
+        z-index: 10;
+    } 
+}

@@ -4,7 +4,7 @@ import Alert from "@mui/material/Alert";
 import IconButton from "@mui/material/IconButton";
 import Collapse from "@mui/material/Collapse";
 import CloseIcon from "@mui/icons-material/Close";
-
+import "./style.css";
 import Style from "./Style";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -109,6 +109,7 @@ const Index = () => {
       {navopen ? (
         <Box
           bgcolor="#03045e"
+         
           sx={{ width: "auto", display: "flex", justifyContent: "center" }}
         >
           <Collapse in={open}>
@@ -177,13 +178,8 @@ const Index = () => {
                     }}
                   >
                     <Box
-                      sx={{
-                        width: "50%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        p: 4,
-                      }}
+                    className="nav-o"
+                    
                     >
                       <div onClick={handlerstate}>
                         <NavDropdown.Item
@@ -242,13 +238,8 @@ const Index = () => {
                     }}
                   >
                     <Box
-                      sx={{
-                        width: "50%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        p: 4,
-                      }}
+                    className="nav-o"
+                    
                     >
                       <div onClick={handlerstate2}>
                         <NavDropdown.Item
