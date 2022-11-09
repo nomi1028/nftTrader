@@ -76,7 +76,7 @@ const TradeBox = () => {
             >
               MetaMask
             </Typography>
-            <Typography variant="body">Connect your wallet to trad</Typography>
+            <Typography variant="body">Connect your wallet to trade</Typography>
           </Box>
         </Box>
       </Button>

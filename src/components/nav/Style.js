@@ -8,6 +8,7 @@ const Style = styled.div`
     gap: 20px !important;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .container {
     max-width:100%;

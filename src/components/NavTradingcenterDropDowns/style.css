@@ -406,6 +406,26 @@ width: 100%;
         padding-bottom: 20px;
     }
 }
+.basic-main{
+    width:100%;
+    padding-left: 48px;
+    padding-right: 48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.basic{
+    width: 100%;
+ 
+}
+.basic-h{
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #03045E;
+    padding: 80px;
+}
 
 
 

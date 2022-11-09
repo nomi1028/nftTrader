@@ -29,45 +29,46 @@ const HowtoTrade = () => {
   };
 
   return (
-    <Grid container direction="column">
-      <Grid item xs={12}    >
+   <Grid container direction="column">
+ 
+      <Grid item xs={12}>
         <div className="top_mai">
-        <div className="top_m">
-       
-          <Typography>
-            <h3  className="top_h2">
-              How To Trade
-            </h3>
-          </Typography>
-          <Typography variant="body1" fontSize="15px">
-            <p className="top_p2">Instructions for each party involved in a deal</p>
-          </Typography>
-       
-        </div>
+          <div className="top_m">
+
+            <Typography>
+              <h3 className="top_h2">
+                How To Trade
+              </h3>
+            </Typography>
+            <Typography variant="body1" fontSize="15px">
+              <p className="top_p2">Instructions for each party involved in a deal</p>
+            </Typography>
+
+          </div>
         </div>
       </Grid>
 
-        <div className="trade-t">
-          
+      <div className="trade-t">
+
         <Box
-        className="trade-m"
-          
+          className="trade-m"
+
         >
           {/* <iframe
-           
-            height="100%"
-            src="https://www.youtube.com/embed/5q2HlcFoDtM"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-            title="video"
-          /> */}
+     
+      height="100%"
+      src="https://www.youtube.com/embed/5q2HlcFoDtM"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="video"
+    /> */}
 
           {status ? (
             <img
-            className="i-1"
+              className="i-1"
               sx={{
-                width:"100%",
+                width: "100%",
                 height: "100%",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -76,44 +77,43 @@ const HowtoTrade = () => {
               src={bgimg}
               alt="Live from space album cover"
               allow="autoplay; encrypted-media"
-              onClick={handler}
-            />
+              onClick={handler} />
           ) : (
             <CardMedia
               component="iframe"
-              sx={{  height: "100%" ,width:"100%"}}
+              sx={{ height: "100%", width: "100%" }}
               src="https://www.youtube.com/embed/5q2HlcFoDtM"
               alt="Live from space album cover"
-              allow="autoplay; encrypted-media"
-            />
+              allow="autoplay; encrypted-media" />
           )}
         </Box>
-        
-        
 
-       
 
-      
 
+
+ 
+
+          <div className="basic-m">
+            <div  className="basic-t">
         <Typography
           variant="h1"
-          fontSize="15px"
-          width="80%"
-          p={10}
-          color="#03045E"
+       
+         
+        
         >
           <h1
-            style={{ fontSize: "40px", fontWeight: "600", textAlign: "center" }}
+            className="basic-h"
           >
             Are you creating or closing a deal? Select an option
           </h1>
         </Typography>
+        </div>
+      
+        <div className="basic">
+        <BasicTabs    />
         
-     
-      <Grid item xs={12} style={{ marginLeft: "140px", marginRight: "180px" }} >
-        <BasicTabs />
-        
-      </Grid>
+      </div>
+      </div>
       <Grid
         item
         display="flex"
@@ -129,7 +129,7 @@ const HowtoTrade = () => {
           </h1>
         </Typography>
       </Grid>
-      </div>
+      </div >
      
         <div  className="htd-c">
           <div>
@@ -190,38 +190,29 @@ const HowtoTrade = () => {
               closes the deal. This particular flow of trading provides security
               layers in order to help prevent the act of fraudulent activities.
             </Typography>
-         
-          </div> 
-          </div> 
-        </div>
-      
+         </div>
+         </div>
+         </div>
 
-      
-        <div container className="trade-bm">
-          <div className="trade-bm-l">
-       
-          <h5
-            className="trade-bm-lt"
-        
+        <div className="trade-bm">
+   <div className="trade-bm-l">
+          <Typography 
           
-           
-           
-
-
+                className="trade-bm-lt" 
+            
+            
           >
             Our Smart Contracts
-          </h5>
- 
-        </div>
-        <div className="trade-bm-r">
+          </Typography>
+          </div>
         
-         
+    <div className="trade-bm-r">
           <Box
             className="trade-bm-rt1"
             
             
           >
-            <Typography color="yellow" >
+            <Typography color="yellow">
               <FiberManualRecordIcon />
             </Typography>
             
@@ -239,7 +230,7 @@ const HowtoTrade = () => {
                 
            
                 <p className="tp">
-               0x657E383EdB9A7407E468acBCc9Fe4C9730c7C275#code
+               0x657E383EdB9A7407E468acBCc9Fe4C973
                 </p>
             
             </Box>
@@ -265,16 +256,17 @@ const HowtoTrade = () => {
             </Box>
           </Box>
           
+          </div>
         </div>
-        </div>
+        
     
       <Grid item sx={12} width="100%">
         <WanttoKnowmore />
       </Grid>
      
-    </Grid>
-   
+      
+   </Grid>
   );
-};
+}
 
 export default HowtoTrade;

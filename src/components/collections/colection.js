@@ -7,7 +7,7 @@ const Colection = () => {
       {collectionAray.map((props) => {
         return (
           <>
-            <div className="d-flex justify-content-between p-3">
+            <div className="d-flex justify-content-between align-items-center p-3">
               <div
                 className="d-flex align-items-center gap-6"
                 style={{ color: "rgb(12, 10, 65)", fontWeight: "600" }}
@@ -27,7 +27,7 @@ const Colection = () => {
                     alt="image"
                   />
                 </div>
-                <div className="title"> {props.title}</div>
+                <div className="titlet"> {props.title}</div>
               </div>
               <div
                 className="title2"

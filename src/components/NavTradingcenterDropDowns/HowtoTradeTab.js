@@ -50,13 +50,14 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box mb={6}>
+    <Box className="" sx={{ width: "100%" }}>
+      <Box mb={6} ml={-1} mr={-1}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
           centered
+          width="100%"
           sx={{
             "& button": {
               fontFamily: "MuseoModerno",
