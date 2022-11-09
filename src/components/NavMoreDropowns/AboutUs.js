@@ -139,26 +139,29 @@ const AboutUs = () => {
           </marquee>
         </div>
       <Grid item xs={12} container>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={8} direction="column">
+        
+        <Grid item xs={12}  direction="column">
           <Typography
             variant="h4"
             fontWeight="bold"
             color="blue"
             pt={10}
             pb={8}
+            pl={2}
+            pr={2}
+
           >
-            <h3 style={{ fontWeight: "bold", fontSize: "35px" }}>
+            <h3 style={{ textAlign:"center", fontWeight: "bold", fontSize: "35px" }}>
               {" "}
               Created with passion by
             </h3>
           </Typography>
-          <Box p={4} sx={{ display: "flex" }}>
+          <Box p={4}  sx={{ display: "flex" }}>
             {/* <img width="100px" height="70px" src={john} alt="" /> */}
             <Avatar src={john} alt="" sx={{ width: 85, height: 85 }} />
             <Box
               sx={{ display: "flex", flexDirection: "column" }}
-              marginLeft={4}
+             paddingLeft={3}
             >
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <Typography
