@@ -695,7 +695,7 @@ nav-btn card1-button knowMore-heading knowMore .knowMore-heading {
 .navbar {
   height: 88px;
   background-color: rgb(45 0 247) !important;
-  padding: 0px 24px;
+  /* padding: 0px 24px; */
   /* border-radius: 0px  0px 50px 50px; */
 }
 .nftTraderLogo {

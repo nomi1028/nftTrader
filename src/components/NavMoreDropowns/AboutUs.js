@@ -62,9 +62,10 @@ const AboutUs = () => {
         </Box>
       </Grid>
 
-      <Grid item >
-        <Box p={10} xs={12} width="80% " margin="auto">
-          <Typography variant="body1" fontSize="15px" p={2}>
+      
+       <div  className="ab-main">
+        <div className="ab-main1">
+          <Typography variant="body1" fontSize="15px"  pb={3}>
             NFT Trader was founded with a simple mission: provide a safe
             platform and community for the trading of digital assets in the Web3
             space.
@@ -72,8 +73,8 @@ const AboutUs = () => {
           <Typography
             variant="body1"
             fontSize="15px"
-            p={2}
-            sx={{ opacity: 0.9 }}
+          pb={3}
+            sx={{ opacity: 0.9  ,}}
           >
             It has not been an easy journey since launch by no means but we have
             been fortunate with the opportunity to learn something new each day.
@@ -84,7 +85,7 @@ const AboutUs = () => {
           <Typography
             variant="body1"
             fontSize="15px"
-            p={2}
+           
             sx={{ opacity: 0.9 }}
           >
             With the great support we have been given we are impelled now more
@@ -92,12 +93,14 @@ const AboutUs = () => {
             something that will offer a safe haven and community driven platform
             for owners of all forms of digital assets!
           </Typography>
-        </Box>
-        <div
+          </div>
+        </div>
+      
+      <div
           className="news position-relative "
           style={{
             background: "#2D00F7",
-          }}
+            width:"100%"         }}
         >
           <marquee direction="right" className="news-content">
             <Box sx={{ display: "flex", justifyContent: "space-around" }}>
@@ -135,7 +138,6 @@ const AboutUs = () => {
             </Box>
           </marquee>
         </div>
-      </Grid>
       <Grid item xs={12} container>
         <Grid item xs={2}></Grid>
         <Grid item xs={8} direction="column">
@@ -256,7 +258,8 @@ const AboutUs = () => {
         </Grid>
         <Grid item xs={2}></Grid>
       </Grid>
-      <Grid item height="100vh" bgcolor="blue" color="white">
+      <Grid item width="100%" height="100%" bgcolor="blue" color="white">
+      <Grid item>
         <Typography
           variant="h4"
           fontWeight="bold"
@@ -266,86 +269,102 @@ const AboutUs = () => {
         >
           <h2 style={{ fontWeight: "bold" }}>Our Partners</h2>
         </Typography>
-        <Box
-          p={10}
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-        >
-          <Box width="25%" height="50px">
-            <img height="80%" width="70%" src={a} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px">
-            <img height="80%" width="70%" src={b} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px">
-            <img height="80%" width="70%" src={c} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px">
-            <img height="80%" width="70%" src={d} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10}>
-            <img height="80%" width="70%" src={e} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10}>
-            <img height="80%" width="70%" src={f} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10}>
-            <img height="80%" width="70%" src={g} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10}>
-            <img height="80%" width="70%" src={h} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10} mb={5}>
-            <img height="80%" width="70%" src={i} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10} mb={5}>
-            <img height="80%" width="70%" src={j} alt="img1" />
-          </Box>
-          <Box width="25%" height="50px" mt={10} mb={5}>
-            <img height="80%" width="70%" src={k} alt="img1" />
-          </Box>
-        </Box>
+        </Grid>
+      <Grid container xs={12} width="100%" height="100%" alignItems="center" pl={10} pr={10} rowSpacing={8} mt={7} mb={8}>
+   
+          
+          <Grid item xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+            <img height="50%" width="50%" src={a} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={b} alt="img1" />
+            </Grid>
+          <Grid item xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={c} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={3}  md={2} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={d} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+         
+            <img height="50%" width="50%" src={e} alt="img1" />
+          
+            </Grid>
+          <Grid item xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={f} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={g} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+         
+            <img height="50%" width="50%" src={h} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+          
+            <img height="50%" width="50%" src={i} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+
+            <img height="50%" width="50%" src={j} alt="img1" />
+            </Grid>
+          <Grid item  xs={12} sm={6}  md={3} display="flex" justifyContent="center">
+
+            <img height="50%" width="50%" src={k} alt="img1" />
+         
+          </Grid>
+          </Grid>
       </Grid>
-      <Grid item bgcolor="#000080" justifyContent="center">
-        <Box
-          p={5}
-          color="white"
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          <Typography width="300px" p={2} display="flex">
+      <Grid container xs={12} width="100%" bgcolor="#000080" alignItems="center" p={9}>
+     
+        
+          <Grid item xs={12} sm={3} >
+          <Typography  color="white" p={2} display="flex" justifyContent="center" >
             <h4>Trusted By</h4>
           </Typography>
+          </Grid>
+          <Grid item xs={6} sm={2} display="flex" justifyContent="center">
           <img
             height="50"
             width="100px"
             src={b1}
             alt="img1"
-            style={{ marginLeft: "20px" }}
+          
           />
+          </Grid>
+          <Grid item xs={6} sm={2} display="flex" justifyContent="center">
           <img
             height="50"
             width="100px"
             src={b2}
             alt="img1"
-            style={{ marginLeft: "20px" }}
+            
           />
+          </Grid>
+          <Grid item xs={6} sm={2} display="flex" justifyContent="center">
           <img
             height="50"
             width="100px"
             src={b3}
             alt="img1"
-            style={{ marginLeft: "20px" }}
+          
           />
+          </Grid>
+          <Grid item xs={6} sm={2} display="flex" justifyContent="center">
           <img
             height="50"
             width="100px"
             src={b4}
             alt="img1"
-            style={{ marginLeft: "20px" }}
+           
           />
-        </Box>
+          
+       </Grid>
       </Grid>
       <Grid
         item
@@ -427,7 +446,7 @@ const AboutUs = () => {
         </Box>
       </Grid>
 
-      <Grid item xs={12} bgcolor="blue">
+      <Grid item xs={12} width="100%" bgcolor="blue">
         <Box
           p={10}
           width="100%"
@@ -447,7 +466,7 @@ const AboutUs = () => {
           <button className="card1-button2 rounded-pill">Email Us!</button>
         </Box>
       </Grid>
-      <Grid xs={12} item>
+      <Grid xs={12} item width="100%">
         <WanttoKnowmore />
       </Grid>
     </Grid>

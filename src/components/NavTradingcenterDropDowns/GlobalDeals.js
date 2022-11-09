@@ -18,6 +18,7 @@ import logo2 from "../../assets/images/nftlogo.svg";
 import logo3 from "../../assets/images/logo3.svg";
 import TradeBox from "./TradeBox";
 
+
 const GlobalDeals = () => {
   const [value, setValue] = React.useState("one");
 
@@ -30,120 +31,133 @@ const GlobalDeals = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <Grid container direction="column">
-      <Grid item bgcolor="yellow">
-        <Box
-          width="100%"
-          height="100%"
-          bgcolor="blue"
-          direction="column"
-          alignItems="center"
-          p={10}
-          color="white"
-          borderRadius=" 0px 0px 200px 0px "
-        >
-          <Box display="flex" justifyContent="space-between">
-            <Typography variant="h1" fontSize="45px" marginBottom={2}>
-              <h3 style={{ fontWeight: "bold", fontSize: "50px" }}>
-                Global Deals
-              </h3>
-            </Typography>
-            <Button
-              onClick={handleOpen}
-              className="bg-white rounded-pill  nav-btn  "
-              style={{
-                color: "#0000FF",
-                width: "150px",
-                height: "50px",
-                fontFamily: "museomoderno",
-              }}
-            >
-              Create Trade
-            </Button>
+    <div container className="globle">
+      <Grid container direction="column">
+        <Grid item xs={12}>
+          <div className="top_main">
+            <div className="top_m">
+              <div className="top-b">
 
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              <TradeBox />
-            </Modal>
-          </Box>
-          <Typography variant="body1" fontSize="15px">
-            Check what deals other Traders have made
-          </Typography>
-        </Box>
-      </Grid>
-      <Grid item pt={2} container  sx={{margin:"auto ",width:"70%",marginY:"30px !important"}}>
-        <Grid item xs={6} >
-          <Box
-            sx={{
-              display: "flex",
-              marginTop: "5px", 
-            }}
-          >
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              textColor="primary"
-              indicatorColor="primary"
-              aria-label="secondary tabs example" 
-            >
-              <Tab  value="one" label="All" />
-            </Tabs>
-          </Box>
+
+                <Typography variant="h1" fontSize="45px" marginBottom={2}>
+                  <h3 className="top_h3" >
+                    Global Deals
+                  </h3>
+                  <p className="top_p">Check what deals other Traders have made</p>
+
+
+                </Typography>
+                <div className="top-btn">
+                  <Button
+                    onClick={handleOpen}
+                    className="bg-white rounded-pill  nav-btn  "
+                    style={{
+                      color: "#0000FF",
+                      width: "150px",
+                      height: "50px",
+                      fontFamily: "museomoderno",
+                    }}
+                  >
+                    Create Trade
+                  </Button
+                  >
+
+                  <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  >
+                    <TradeBox />
+                  </Modal>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
         </Grid>
-        <Grid item xs={6} sx={{textAlign:"end"}} >
-          <TextField
-            className="inputRounded"
-            placeholder="Search"
-            sx={{
-              marginBottom: "15px",
-              [`& fieldset`]: {
-                borderRadius: "25px",
-              },
-            }}
-            InputProps={{
-              endAdornment: (
-                <IconButton style={{ color: "blue" }}>
-                  <SearchOutlined />
-                </IconButton>
-              ),
-            }}
-          />
+        <Grid item xs={12} pt={2} lg={{ margin: "auto ", width: "100%", marginY: "30px !important" }}>
+          <div className="mid-m">
+            <div className="mid-l">
+              <Box
+                sx={{
+                  display: "flex",
+                  marginTop: "5px",
+                  borderBottomWidth:"2px"
+                }}
+              >
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  textColor="primary"
+                  indicatorColor="primary"
+                  aria-label="secondary tabs example"
+                  
+                >
+                  <Tab style={{borderBottomWidth:"2px"}} value="one" label="All" />
+                </Tabs>
+              </Box>
+
+            </div>
+            <div className="mid-r">
+              <TextField
+                className="sea"
+                placeholder="Search"
+
+                sx={{
+
+                  marginBottom: "15px",
+                  [`& fieldset`]: {
+                    borderRadius: "25px",
+                    
+                  },
+                }}
+                InputProps={{
+                  endAdornment: (
+                    <IconButton style={{ color: "blue" }}>
+                      <SearchOutlined />
+                    </IconButton>
+                  ),
+                }}
+              />
+
+            </div>
+          </div>
         </Grid>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        padding="50px"
-      >
-        <img
-          width="250px"
-          height="150px"
-          style={{ marginTop: "20px", marginBottom: "20px" }}
-          src={logo3}
-          alt=""
-        />
-        <Typography
-          color="#202A44"
-          variant="body"
-          fontWeight="bold"
-          fontSize="25px"
-          mt={2}
+
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          padding="30px"
         >
-          Connect Your Wallet First
-        </Typography>
-        <Typography variant="body">
-          Please, connect your wallet if you want to browse this page
-        </Typography>
+          <img
+            width="250px"
+            height="150px"
+            style={{ marginBottom: "20px" }}
+            src={logo3}
+            alt=""
+          />
+          <Typography
+            color="#202A44"
+            variant="body"
+            fontWeight="600"
+            fontSize="1.876rem"
+            mt={2}
+          >
+            Connect Your Wallet First
+          </Typography>
+          <Typography variant="body" pb={3}>
+            Please, connect your wallet if you want to browse this page
+          </Typography>
+        </Grid>
       </Grid>
-    </Grid>
+    </div >
   );
 };
 

@@ -21,7 +21,7 @@ const FaqList = ({ elem }) => {
 
   return (
     <>
-      <Divider variant="middle" />
+      <Divider variant="middle" sx={{color:"black"}} />
       <Box
         pt={2}
         pb={2}
@@ -36,6 +36,7 @@ const FaqList = ({ elem }) => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              borderBottomColor:"black",
             }}
           >
             <Typography variant="h1" fontWeight="bold" color="blue">

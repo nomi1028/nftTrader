@@ -10,7 +10,7 @@ const Style = styled.div`
     justify-content: center;
   }
   .container {
-    max-width: 98%;
+    max-width:100%;
   }
   .dropdown {
     position: static !important;

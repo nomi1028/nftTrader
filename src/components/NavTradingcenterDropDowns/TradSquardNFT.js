@@ -19,40 +19,29 @@ import lightimg from "../../assets/images/lightimg.svg";
 
 const TradSquardNFT = () => {
   return (
-    <Grid container>
-      <Grid item xs={12} bgcolor="yellow">
-        <Box
-          width="100%"
-          height="100%"
-          bgcolor="blue"
-          direction="column"
-          alignItems="center"
-          p={10}
-          color="white"
-          borderRadius=" 0px 0px 200px 0px "
-        >
-          <Typography variant="h1" fontSize="42px" marginBottom={2}>
-            <h3 style={{ fontWeight: "600", fontSize: "48px" }}>
+    <Grid container >
+   <Grid item xs={12}>
+        <div className="top-m">
+       <div className="top-main">
+        
+            <h5 className="top-h" >
               Mint a TradeSquad NFT
-            </h3>
-          </Typography>
-        </Box>
-      </Grid>
-
-      <Grid
-        item
-        p={5}
-        mt={5}
-        xs={5}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
+            </h5>
+         
+          </div>
+        
+        </div>
+        </Grid>
+      
+        <div className="trade-mid">
     
-    <img height="400px" width="300px" src={lightimg} alt="nothing" />
+    <div className="trade-mid-l">
+    <img className="trade-img" src={lightimg} alt="nothing" />
+    </div>
     
-      </Grid>
-      <Grid item mt={5} xs={7} p={5} sx={{textAlign:"start",  margin:"auto " }} display="flex" flexDirection="column">
+      <div className="trade-mid-r">
+      {/* <Grid item mt={5} xs={7} p={5} sx={{textAlign:"start",  margin:"auto " }} display="flex" flexDirection="column"> */}
+        
         <Typography
           variant="h1"
           fontSize="28px"
@@ -60,57 +49,44 @@ const TradSquardNFT = () => {
           color="#03045E"
         >
           <h3
-            style={{
-              fontWeight: "600",
-              fontSize: "40px",
-            }}
+          className="trade-mid-rh1"
+         
           >
             Bypass Platform Trading Fee
           </h3>
         </Typography>
         <Typography
           variant="body"
-          fontSize="15px"
+          
           color="#03045E"
-          mb={10}
-          fontWeight="700"
-          width="70%"
+          
          
           
         >
-        
+        <p className="trade-mid-rp">
           Mint your own Trade Squad NFT, keep it in your connected trading
           wallet and don’t pay our platform trading fee
-          
+          </p>
         </Typography>
         
-        <Divider />
+        <Divider  className="divider"/>
       
 
         <span
-          style={{
-            marginTop: "80px",
-            // alignSelf: "center",
-            width: "70%",
-            textAlign: "center",
-            color: "#2D00F7",
-          }}
+        className="trade-mid-re"
+         
         >
           {" "}
           Minting is only available in the Ethereum Mainnet
         </span>
-      </Grid>
-
-      <Grid
-        item
-        xs={12}
-        display="flex"
-        p={15}
-        justifyContent="center"
-        bgcolor="blue"
-      >
+        
+      {/* </Grid> */}
+      </div>
+         </div>
+     
+        <div className="t-b">
         <Box
-          width="60%"
+          width="100%"
           display="flex"
           flexDirection="column"
           alignItems="center"
@@ -122,12 +98,13 @@ const TradSquardNFT = () => {
             marginBottom={2}
             textAlign="center"
           >
-            <h3 style={{ fontWeight: "600", fontSize: "2.25rem" }}>
+            <h3 className="t-bh">
               Trade Squad NFTs will support the NFT Trader community and whole
               ecosystem!
             </h3>
           </Typography>
-          <Typography color="white" variant="body1" fontWeight="300" fontFamily="Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;"  fontSize="15px" mb={4} textAlign="center">
+          <Typography color="white" >
+            <p className="t-bp">
             Trade Squads are a utility token which at first will offer owners a
             full discount of the platform trading fee when securing trades on
             the platform. The purpose of this token is not to be aesthetic but
@@ -135,20 +112,23 @@ const TradSquardNFT = () => {
             Our target will be to add these future utilities into our Trade
             Squads NFTs over time. To keep updated and in the loop please follow
             us on Twitter and read our Medium.
+            </p>
           </Typography>
-          <Typography color="white"  variant="body1"  fontWeight="300" fontFamily="Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;" fontSize="15px" mb={10}>
+          <Typography color="white"  variant="body1"  fontWeight="300" fontFamily="Rubik,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;" fontSize="15px" mb={10} pl={2} pr={2}>
           To keep updated and in the loop please follow us on Twitter and read our Medium.
           </Typography>
           <Button
-            endIcon={<img width="50px" height="30px" src={opensea} alt="" />}
+            endIcon={<img width="48px" height="30px" src={opensea} alt="" />}
             className="bg-white rounded-pill w-65 p-3 nav-btn  "
-            style={{ color: "#0000FF", padding: "5px" }}
+           
+            id="t-btn"
           >
             Trad Squar which already been minted
           </Button>
         </Box>
-      </Grid>
-      <Grid item xs={12}>
+        </div>
+     
+      <Grid item xs={12} >
         <WanttoKnowmore />
       </Grid>
     </Grid>

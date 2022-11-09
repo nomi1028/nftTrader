@@ -74,11 +74,16 @@ const Faqpage = () => {
           />
         </Box>
       </Grid>
-      <Grid width="70%" margin="auto" item pt={5} xs={12}>
+  
+
+
+
+        <div className="faq">
         {data.map((elem) => {
           return <FaqList elem={elem} />;
         })}
-      </Grid>
+        </div>
+      
     </Grid>
   );
 };
