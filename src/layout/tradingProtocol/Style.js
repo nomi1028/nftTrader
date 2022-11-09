@@ -95,6 +95,39 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 424px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+      .colunm1 {
+        &-wrapper {
+          transform: translateY(10%);
+          align-items: center;
+          width: 100%;
+          heigth:40%
+        }
+      }
+    .colunm2 {
+     
+      height: 35vh;
+      &-wrapper {
+        top: 40%;
+        width: 100%;
+        .btn {
+          top: -11%;
+          right: 25%;
+        }
+        .icon {
+          left: 13%;
+          top: -20%;
+        }
+      }
+    }
+  }
+}
+
+  }
   @media (max-width: 1024px) {
     background: #f3f4f6;
 
@@ -109,12 +142,13 @@ const Style = styled.div`
           width: 100%;
         }
       }
+
       .colunm2 {
         /* background: url(${Circle_bg}) !important;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover; */
-        height: 85vh;
+        height: 55vh;
         &-wrapper {
           top: 40%;
           width: 100%;
